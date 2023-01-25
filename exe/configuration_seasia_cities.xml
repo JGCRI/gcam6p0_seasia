@@ -5,7 +5,7 @@
 		<Value name="BatchFileName">batch_ag.xml</Value>
 		<Value name="policy-target-file">../input/policy/forcing_target_4p5.xml</Value>
 		<Value name="GHGInputFileName">../input/magicc/inputs/input_gases.emk</Value>
-		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_basexdb</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_seasia_cities_test</Value>
 		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
 		<Value write-output="1" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
 		<Value write-output="1" append-scenario-name="0" name="climatFileName">gas.emk</Value>
@@ -19,7 +19,6 @@
 	<ScenarioComponents>
         <Value name = "climate">../input/gcamdata/xml/hector.xml</Value>
 		<Value name = "socioeconomics">../input/gcamdata/xml/socioeconomics_gSSP2.xml</Value>
-
 		<Value name = "resources">../input/gcamdata/xml/resources.xml</Value>
 		<Value name = "energy_supply">../input/gcamdata/xml/en_supply.xml</Value>
 		<Value name = "energy_transformation">../input/gcamdata/xml/en_transformation.xml</Value>
@@ -84,31 +83,48 @@
 		<Value name = "nonco2_energy">../input/gcamdata/xml/all_energy_emissions.xml</Value>
 		<Value name = "nonco2_fgas">../input/gcamdata/xml/all_fgas_emissions.xml</Value>
 		<Value name = "nonco2_unmgd">../input/gcamdata/xml/all_unmgd_emissions.xml</Value>
-		<Value name = "nonco2_aglu">../input/gcamdata/xml/all_aglu_emissions_IRR_MGMT.xml</Value>
+		<!--<Value name = "nonco2_aglu">../input/gcamdata/xml/all_aglu_emissions_IRR_MGMT.xml</Value>-->
 		<Value name = "nonco2_aglu_prot">../input/gcamdata/xml/all_protected_unmgd_emissions.xml</Value>
 		<Value name = "nonco2_em_controls">../input/gcamdata/xml/emission_factor_controls.xml</Value>
 		
 		<!-- Global nonCO2 GHG MAC files -->
 		<Value name = "nonco2_energy">../input/gcamdata/xml/all_energy_emissions_MAC.xml</Value>
 		<Value name = "nonco2_fgas">../input/gcamdata/xml/all_fgas_emissions_MAC.xml</Value>
-		<Value name = "nonco2_aglu">../input/gcamdata/xml/all_aglu_emissions_IRR_MGMT_MAC.xml</Value> 
+		<!--<Value name = "nonco2_aglu">../input/gcamdata/xml/all_aglu_emissions_IRR_MGMT_MAC.xml</Value> -->
 		<Value name = "nonco2_proc">../input/gcamdata/xml/ind_urb_processing_sectors_MAC.xml</Value> 
 		
 		<Value name = "bio_feedstock_limit">../input/gcamdata/xml/liquids_limits.xml</Value>
 		<Value name = "bio_elec_w_feed_limit">../input/gcamdata/xml/water_elec_liquids_limits.xml</Value>
 		<Value name = "bio_neg_emiss_budget">../input/gcamdata/xml/negative_emissions_budget_gSSP2.xml</Value>
 		<Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
-		<Value name = "wind_update">../input/gcamdata/xml/onshore_wind.xml</Value>
-		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 
-        <!-- set up the near-term / long-term policy inputs -->
-		<Value name = "long-term-co2">../input/policy/carbon_tax_0.xml</Value>
-		<Value name = "near-term-co2">../input/policy/spa14_tax.xml</Value>
-		<Value name = "co2-link">../input/policy/2025_target_finder_phasein.xml</Value>
+        <Value name = "wind_update">../input/gcamdata/xml/onshore_wind.xml</Value>
+		
+		<!-- CITY ADD-ONS -->
+		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Malaysia.xml</Value>
+		<Value name = "cities">../input/gcamdata/xml/building_Subregions_Malaysia.xml</Value>
+		<!--<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Malaysia.xml</Value>-->
+        <Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
+		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Malaysia.xml</Value>
+		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Malaysia.xml</Value>
+		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Malaysia.xml</Value>
+
+		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Thailand.xml</Value>
+		<Value name = "cities">../input/gcamdata/xml/building_Subregions_Thailand.xml</Value>
+		<!--Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Thailand.xml</Value-->
+        <Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
+		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Thailand.xml</Value>
+		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Thailand.xml</Value>
+		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Thailand.xml</Value>-->
+
+
+		
+		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
+		
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">4p5</Value>
-		<Value name="debug-region">USA</Value>
+		<Value name="scenarioName">BAU_cities</Value>
+		<Value name="debug-region">Malaysia</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
 		<Value name="AbatedGasForCostCurves">CO2</Value>
@@ -116,7 +132,7 @@
 	<Bools>
 		<Value name="CalibrationActive">1</Value>
 		<Value name="BatchMode">0</Value>
-		<Value name="find-path">1</Value>
+		<Value name="find-path">0</Value>
 		<Value name="createCostCurve">0</Value>
 		<Value name="debugChecking">0</Value>
 		<Value name="simulActive">1</Value>
@@ -133,7 +149,7 @@
 		<Value name="climateOutputInterval">5</Value>
 		<Value name="parallel-grain-size">50</Value>
 		<Value name="stop-period">-1</Value>
-		<Value name="stop-year">-1</Value>
+		<Value name="stop-year">2020</Value>
 		<Value name="restart-period">-1</Value>
 		<Value name="restart-year">-1</Value>
 		<Value name="max-parallelism">-1</Value>

@@ -1,0 +1,262 @@
+# File: Subregions_Malaysia_pcgdp.csv
+# Title: Subregions and rest-of-Malaysia pcgdp
+# Units: thousand 2005 USD per capita
+# Description: Computed off-line
+# Column types: cin
+# ----------
+"region","year","pcgdp"
+"Malaysia",1971,1.816174558
+"Malaysia",1972,1.94063198
+"Malaysia",1973,2.117775279
+"Malaysia",1974,2.239948206
+"Malaysia",1975,2.203866838
+"Malaysia",1976,2.398278111
+"Malaysia",1977,2.519315894
+"Malaysia",1978,2.618816846
+"Malaysia",1979,2.791913636
+"Malaysia",1980,3.014694588
+"Malaysia",1981,3.147342337
+"Malaysia",1982,3.256708341
+"Malaysia",1983,3.379017705
+"Malaysia",1984,3.551919464
+"Malaysia",1985,3.423862206
+"Malaysia",1986,3.370236
+"Malaysia",1987,3.44259175
+"Malaysia",1988,3.673435397
+"Malaysia",1989,3.890474703
+"Malaysia",1990,4.12313707
+"Malaysia",1991,4.397179185
+"Malaysia",1992,4.666248697
+"Malaysia",1993,5.001056619
+"Malaysia",1994,5.32708088
+"Malaysia",1995,5.705012223
+"Malaysia",1996,6.117412274
+"Malaysia",1997,6.399379759
+"Malaysia",1998,5.780481709
+"Malaysia",1999,5.98726813
+"Malaysia",2000,6.367908604
+"Malaysia",2001,6.261874084
+"Malaysia",2002,6.463343837
+"Malaysia",2003,6.701707045
+"Malaysia",2004,7.016590541
+"Malaysia",2005,7.246895368
+"Malaysia",2006,7.502296429
+"Malaysia",2007,7.820128398
+"Malaysia",2008,8.042773272
+"Malaysia",2009,7.778520903
+"Malaysia",2010,8.215948952
+"Malaysia",2011,8.517157994
+"Malaysia",2012,8.854398366
+"Malaysia",2013,9.143941899
+"Malaysia",2014,9.564125669
+"Malaysia",2015,9.910828799
+"Malaysia",2020,13.53850689
+"Malaysia",2025,14.91167999
+"Malaysia",2030,16.71954289
+"Malaysia",2035,18.89162833
+"Malaysia",2040,21.26301014
+"Malaysia",2045,23.61566861
+"Malaysia",2050,25.81622045
+"Malaysia",2055,27.81740698
+"Malaysia",2060,29.6753037
+"Malaysia",2065,31.46953239
+"Malaysia",2070,33.26649764
+"Malaysia",2075,35.13620508
+"Malaysia",2080,37.20188743
+"Malaysia",2085,39.51427652
+"Malaysia",2090,42.04373284
+"Malaysia",2095,44.74979412
+"Malaysia",2100,47.62105154
+"KualaLumpur",1970,2.837598282
+"KualaLumpur",1971,2.730440429
+"KualaLumpur",1972,2.820488687
+"KualaLumpur",1973,3.447898362
+"KualaLumpur",1974,3.893673441
+"KualaLumpur",1975,3.772155998
+"KualaLumpur",1976,3.982020553
+"KualaLumpur",1977,4.265081089
+"KualaLumpur",1978,4.729711428
+"KualaLumpur",1979,4.875348403
+"KualaLumpur",1980,5.177429374
+"KualaLumpur",1981,4.999772651
+"KualaLumpur",1982,4.850110469
+"KualaLumpur",1983,5.012813974
+"KualaLumpur",1984,4.961955018
+"KualaLumpur",1985,4.394441463
+"KualaLumpur",1986,4.685605526
+"KualaLumpur",1987,5.260713095
+"KualaLumpur",1988,6.094616778
+"KualaLumpur",1989,6.765087045
+"KualaLumpur",1990,7.601160962
+"KualaLumpur",1991,8.372265372
+"KualaLumpur",1992,9.200981073
+"KualaLumpur",1993,10.29079594
+"KualaLumpur",1994,11.4438783
+"KualaLumpur",1995,12.93421925
+"KualaLumpur",1996,13.46364893
+"KualaLumpur",1997,10.35527922
+"KualaLumpur",1998,7.410481755
+"KualaLumpur",1999,8.224299913
+"KualaLumpur",2000,8.170577501
+"KualaLumpur",2001,7.701635254
+"KualaLumpur",2002,8.100888048
+"KualaLumpur",2003,8.673173903
+"KualaLumpur",2004,9.900294526
+"KualaLumpur",2005,10.37657283
+"KualaLumpur",2006,11.28704925
+"KualaLumpur",2007,13.43953835
+"KualaLumpur",2008,13.41983758
+"KualaLumpur",2009,12.79478725
+"KualaLumpur",2010,14.54278303
+"KualaLumpur",2011,16.08766688
+"KualaLumpur",2012,16.91712119
+"KualaLumpur",2013,18.13977732
+"KualaLumpur",2014,17.87596539
+"KualaLumpur",2015,17.81760179
+"KualaLumpur",2016,18.3622407
+"KualaLumpur",2017,19.89152969
+"KualaLumpur",2018,21.77367294
+"KualaLumpur",2019,23.52338128
+"KualaLumpur",2020,21.58694822
+"KualaLumpur",2021,21.21269588
+"KualaLumpur",2022,22.14720473
+"KualaLumpur",2023,22.58903089
+"KualaLumpur",2024,23.04407456
+"KualaLumpur",2025,23.51218447
+"KualaLumpur",2026,23.99394138
+"KualaLumpur",2027,24.48967465
+"KualaLumpur",2028,24.99961891
+"KualaLumpur",2029,25.52389727
+"KualaLumpur",2030,26.06252391
+"KualaLumpur",2031,26.6154542
+"KualaLumpur",2032,27.18264826
+"KualaLumpur",2033,27.59587495
+"KualaLumpur",2034,28.19131716
+"KualaLumpur",2035,28.63220148
+"KualaLumpur",2036,29.2574511
+"KualaLumpur",2037,29.7284656
+"KualaLumpur",2038,30.38744704
+"KualaLumpur",2039,30.89321155
+"KualaLumpur",2040,31.41796928
+"KualaLumpur",2041,31.90107958
+"KualaLumpur",2042,32.38774965
+"KualaLumpur",2043,32.87800121
+"KualaLumpur",2044,33.37185589
+"KualaLumpur",2045,33.87504817
+"KualaLumpur",2046,34.39087099
+"KualaLumpur",2047,34.91958159
+"KualaLumpur",2048,35.28136683
+"KualaLumpur",2049,35.83539926
+"KualaLumpur",2050,36.22070578
+"KualaLumpur",2051,36.8003763
+"KualaLumpur",2052,37.20927918
+"KualaLumpur",2053,37.8146174
+"KualaLumpur",2054,38.2466084
+"KualaLumpur",2055,38.87699028
+"KualaLumpur",2056,39.33125987
+"KualaLumpur",2057,39.79574112
+"KualaLumpur",2058,40.46163361
+"KualaLumpur",2059,40.94614789
+"KualaLumpur",2060,41.43905847
+"KualaLumpur",2061,42.13591279
+"KualaLumpur",2062,42.64589527
+"KualaLumpur",2063,43.16311732
+"KualaLumpur",2064,43.88758783
+"KualaLumpur",2065,44.4196247
+"KualaLumpur",2066,44.95778012
+"KualaLumpur",2067,45.50168864
+"KualaLumpur",2068,46.05089479
+"KualaLumpur",2069,46.81296581
+"KualaLumpur",2070,47.372918
+"KualaLumpur",2071,47.93697631
+"KualaLumpur",2072,48.50503072
+"KualaLumpur",2073,49.07719029
+"KualaLumpur",2074,49.65377654
+"KualaLumpur",2075,50.23508416
+"KualaLumpur",2076,50.82112216
+"KualaLumpur",2077,51.41194412
+"KualaLumpur",2078,52.00801866
+"KualaLumpur",2079,52.60999367
+"KualaLumpur",2080,53.21840265
+"KualaLumpur",2081,53.83350553
+"KualaLumpur",2082,54.45539698
+"KualaLumpur",2083,55.08435421
+"KualaLumpur",2084,55.48848208
+"KualaLumpur",2085,56.13056989
+"KualaLumpur",2086,56.78024673
+"KualaLumpur",2087,57.43746736
+"KualaLumpur",2088,58.10220472
+"KualaLumpur",2089,58.53342224
+"KualaLumpur",2090,59.21082971
+"KualaLumpur",2091,59.89504057
+"KualaLumpur",2092,60.58562743
+"KualaLumpur",2093,61.03394742
+"KualaLumpur",2094,61.73375392
+"KualaLumpur",2095,62.18625853
+"KualaLumpur",2096,62.89220689
+"KualaLumpur",2097,63.60068575
+"KualaLumpur",2098,64.05319524
+"KualaLumpur",2099,64.76109641
+"KualaLumpur",2100,65.20657541
+"Rest of Malaysia",1971,1.695871935
+"Rest of Malaysia",1972,1.824187597
+"Rest of Malaysia",1973,1.940856269
+"Rest of Malaysia",1974,2.019200388
+"Rest of Malaysia",1975,1.994165715
+"Rest of Malaysia",1976,2.186593654
+"Rest of Malaysia",1977,2.28650999
+"Rest of Malaysia",1978,2.338350085
+"Rest of Malaysia",1979,2.516294804
+"Rest of Malaysia",1980,2.729896153
+"Rest of Malaysia",1981,2.90455567
+"Rest of Malaysia",1982,3.048940932
+"Rest of Malaysia",1983,3.167261268
+"Rest of Malaysia",1984,3.370529187
+"Rest of Malaysia",1985,3.300163094
+"Rest of Malaysia",1986,3.204437102
+"Rest of Malaysia",1987,3.216270613
+"Rest of Malaysia",1988,3.376188647
+"Rest of Malaysia",1989,3.542842463
+"Rest of Malaysia",1990,3.709294654
+"Rest of Malaysia",1991,3.932327365
+"Rest of Malaysia",1992,4.145576235
+"Rest of Malaysia",1993,4.403867695
+"Rest of Malaysia",1994,4.653877629
+"Rest of Malaysia",1995,4.933376819
+"Rest of Malaysia",1996,5.352962297
+"Rest of Malaysia",1997,5.997625802
+"Rest of Malaysia",1998,5.618121777
+"Rest of Malaysia",1999,5.769720155
+"Rest of Malaysia",2000,6.196420865
+"Rest of Malaysia",2001,6.126980528
+"Rest of Malaysia",2002,6.311772518
+"Rest of Malaysia",2003,6.521074133
+"Rest of Malaysia",2004,6.768246448
+"Rest of Malaysia",2005,6.98165108
+"Rest of Malaysia",2006,7.186088201
+"Rest of Malaysia",2007,7.358720379
+"Rest of Malaysia",2008,7.610733703
+"Rest of Malaysia",2009,7.383913065
+"Rest of Malaysia",2010,7.727345535
+"Rest of Malaysia",2011,7.945113454
+"Rest of Malaysia",2012,8.254702007
+"Rest of Malaysia",2013,8.483023996
+"Rest of Malaysia",2014,8.961495613
+"Rest of Malaysia",2015,9.345333246
+"Rest of Malaysia",2020,13.01346175
+"Rest of Malaysia",2025,14.38572324
+"Rest of Malaysia",2030,16.17848689
+"Rest of Malaysia",2035,18.35878748
+"Rest of Malaysia",2040,20.73898152
+"Rest of Malaysia",2045,23.11142052
+"Rest of Malaysia",2050,25.32909486
+"Rest of Malaysia",2055,27.32495686
+"Rest of Malaysia",2060,29.17673861
+"Rest of Malaysia",2065,30.94518576
+"Rest of Malaysia",2070,32.7178097
+"Rest of Malaysia",2075,34.56882497
+"Rest of Malaysia",2080,36.61809492
+"Rest of Malaysia",2085,38.92584833
+"Rest of Malaysia",2090,41.45292926
+"Rest of Malaysia",2095,44.16631443
+"Rest of Malaysia",2100,47.04762346

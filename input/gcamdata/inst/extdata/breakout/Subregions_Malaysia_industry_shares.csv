@@ -1,0 +1,201 @@
+# File: Subregions_Malaysia_industry_shares.csv
+# Title: Subregions and rest-of-Malaysia shares for different types of industrial sectors
+# Units: Percentage
+# Description: Computed off-line
+# Column types: cicn
+# ----------
+"region","year","type","share"
+"KualaLumpur",1970,"other",5
+"KualaLumpur",1971,"other",5
+"KualaLumpur",1972,"other",5
+"KualaLumpur",1973,"other",5
+"KualaLumpur",1974,"other",5
+"KualaLumpur",1975,"other",5
+"KualaLumpur",1976,"other",5
+"KualaLumpur",1977,"other",5
+"KualaLumpur",1978,"other",5
+"KualaLumpur",1979,"other",5
+"KualaLumpur",1980,"other",5
+"KualaLumpur",1981,"other",5
+"KualaLumpur",1982,"other",5
+"KualaLumpur",1983,"other",5
+"KualaLumpur",1984,"other",5
+"KualaLumpur",1985,"other",5
+"KualaLumpur",1986,"other",5
+"KualaLumpur",1987,"other",5
+"KualaLumpur",1988,"other",5
+"KualaLumpur",1989,"other",5
+"KualaLumpur",1990,"other",5
+"KualaLumpur",1991,"other",5
+"KualaLumpur",1992,"other",5
+"KualaLumpur",1993,"other",5
+"KualaLumpur",1994,"other",5
+"KualaLumpur",1995,"other",5
+"KualaLumpur",1996,"other",5
+"KualaLumpur",1997,"other",5
+"KualaLumpur",1998,"other",5
+"KualaLumpur",1999,"other",5
+"KualaLumpur",2000,"other",5
+"KualaLumpur",2001,"other",5
+"KualaLumpur",2002,"other",5
+"KualaLumpur",2003,"other",5
+"KualaLumpur",2004,"other",5
+"KualaLumpur",2005,"other",5
+"KualaLumpur",2006,"other",5
+"KualaLumpur",2007,"other",5
+"KualaLumpur",2008,"other",5
+"KualaLumpur",2009,"other",5
+"KualaLumpur",2010,"other",5
+"KualaLumpur",2011,"other",5
+"KualaLumpur",2012,"other",5
+"KualaLumpur",2013,"other",5
+"KualaLumpur",2014,"other",5
+"KualaLumpur",2015,"other",5
+"KualaLumpur",2016,"other",5
+"KualaLumpur",2017,"other",5
+"KualaLumpur",2018,"other",5
+"KualaLumpur",2019,"other",5
+"KualaLumpur",2020,"other",5
+"KualaLumpur",2021,"other",5
+"KualaLumpur",2022,"other",5
+"KualaLumpur",2023,"other",5
+"KualaLumpur",2024,"other",5
+"KualaLumpur",2025,"other",5
+"KualaLumpur",2026,"other",5
+"KualaLumpur",2027,"other",5
+"KualaLumpur",2028,"other",5
+"KualaLumpur",2029,"other",5
+"KualaLumpur",2030,"other",5
+"KualaLumpur",2031,"other",5
+"KualaLumpur",2032,"other",5
+"KualaLumpur",2033,"other",5
+"KualaLumpur",2034,"other",5
+"KualaLumpur",2035,"other",5
+"KualaLumpur",2036,"other",5
+"KualaLumpur",2037,"other",5
+"KualaLumpur",2038,"other",5
+"KualaLumpur",2039,"other",5
+"KualaLumpur",2040,"other",5
+"KualaLumpur",2041,"other",5
+"KualaLumpur",2042,"other",5
+"KualaLumpur",2043,"other",5
+"KualaLumpur",2044,"other",5
+"KualaLumpur",2045,"other",5
+"KualaLumpur",2046,"other",5
+"KualaLumpur",2047,"other",5
+"KualaLumpur",2048,"other",5
+"KualaLumpur",2049,"other",5
+"KualaLumpur",2050,"other",5
+"KualaLumpur",2051,"other",5
+"KualaLumpur",2052,"other",5
+"KualaLumpur",2053,"other",5
+"KualaLumpur",2054,"other",5
+"KualaLumpur",2055,"other",5
+"KualaLumpur",2056,"other",5
+"KualaLumpur",2057,"other",5
+"KualaLumpur",2058,"other",5
+"KualaLumpur",2059,"other",5
+"KualaLumpur",2060,"other",5
+"KualaLumpur",2061,"other",5
+"KualaLumpur",2062,"other",5
+"KualaLumpur",2063,"other",5
+"KualaLumpur",2064,"other",5
+"KualaLumpur",2065,"other",5
+"KualaLumpur",2066,"other",5
+"KualaLumpur",2067,"other",5
+"KualaLumpur",2068,"other",5
+"KualaLumpur",2069,"other",5
+"KualaLumpur",2070,"other",5
+"KualaLumpur",2071,"other",5
+"KualaLumpur",2072,"other",5
+"KualaLumpur",2073,"other",5
+"KualaLumpur",2074,"other",5
+"KualaLumpur",2075,"other",5
+"KualaLumpur",2076,"other",5
+"KualaLumpur",2077,"other",5
+"KualaLumpur",2078,"other",5
+"KualaLumpur",2079,"other",5
+"KualaLumpur",2080,"other",5
+"KualaLumpur",2081,"other",5
+"KualaLumpur",2082,"other",5
+"KualaLumpur",2083,"other",5
+"KualaLumpur",2084,"other",5
+"KualaLumpur",2085,"other",5
+"KualaLumpur",2086,"other",5
+"KualaLumpur",2087,"other",5
+"KualaLumpur",2088,"other",5
+"KualaLumpur",2089,"other",5
+"KualaLumpur",2090,"other",5
+"KualaLumpur",2091,"other",5
+"KualaLumpur",2092,"other",5
+"KualaLumpur",2093,"other",5
+"KualaLumpur",2094,"other",5
+"KualaLumpur",2095,"other",5
+"KualaLumpur",2096,"other",5
+"KualaLumpur",2097,"other",5
+"KualaLumpur",2098,"other",5
+"KualaLumpur",2099,"other",5
+"KualaLumpur",2100,"other",5
+"Rest of Malaysia",1970,"other",95
+"Rest of Malaysia",1971,"other",95
+"Rest of Malaysia",1972,"other",95
+"Rest of Malaysia",1973,"other",95
+"Rest of Malaysia",1974,"other",95
+"Rest of Malaysia",1975,"other",95
+"Rest of Malaysia",1976,"other",95
+"Rest of Malaysia",1977,"other",95
+"Rest of Malaysia",1978,"other",95
+"Rest of Malaysia",1979,"other",95
+"Rest of Malaysia",1980,"other",95
+"Rest of Malaysia",1981,"other",95
+"Rest of Malaysia",1982,"other",95
+"Rest of Malaysia",1983,"other",95
+"Rest of Malaysia",1984,"other",95
+"Rest of Malaysia",1985,"other",95
+"Rest of Malaysia",1986,"other",95
+"Rest of Malaysia",1987,"other",95
+"Rest of Malaysia",1988,"other",95
+"Rest of Malaysia",1989,"other",95
+"Rest of Malaysia",1990,"other",95
+"Rest of Malaysia",1991,"other",95
+"Rest of Malaysia",1992,"other",95
+"Rest of Malaysia",1993,"other",95
+"Rest of Malaysia",1994,"other",95
+"Rest of Malaysia",1995,"other",95
+"Rest of Malaysia",1996,"other",95
+"Rest of Malaysia",1997,"other",95
+"Rest of Malaysia",1998,"other",95
+"Rest of Malaysia",1999,"other",95
+"Rest of Malaysia",2000,"other",95
+"Rest of Malaysia",2001,"other",95
+"Rest of Malaysia",2002,"other",95
+"Rest of Malaysia",2003,"other",95
+"Rest of Malaysia",2004,"other",95
+"Rest of Malaysia",2005,"other",95
+"Rest of Malaysia",2006,"other",95
+"Rest of Malaysia",2007,"other",95
+"Rest of Malaysia",2008,"other",95
+"Rest of Malaysia",2009,"other",95
+"Rest of Malaysia",2010,"other",95
+"Rest of Malaysia",2011,"other",95
+"Rest of Malaysia",2012,"other",95
+"Rest of Malaysia",2013,"other",95
+"Rest of Malaysia",2014,"other",95
+"Rest of Malaysia",2015,"other",95
+"Rest of Malaysia",2020,"other",95
+"Rest of Malaysia",2025,"other",95
+"Rest of Malaysia",2030,"other",95
+"Rest of Malaysia",2035,"other",95
+"Rest of Malaysia",2040,"other",95
+"Rest of Malaysia",2045,"other",95
+"Rest of Malaysia",2050,"other",95
+"Rest of Malaysia",2055,"other",95
+"Rest of Malaysia",2060,"other",95
+"Rest of Malaysia",2065,"other",95
+"Rest of Malaysia",2070,"other",95
+"Rest of Malaysia",2075,"other",95
+"Rest of Malaysia",2080,"other",95
+"Rest of Malaysia",2085,"other",95
+"Rest of Malaysia",2090,"other",95
+"Rest of Malaysia",2095,"other",95
+"Rest of Malaysia",2100,"other",95
