@@ -1,0 +1,23 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<scenario>
+  <world>
+    <region name="Thailand">
+      <supplysector name="electricity">
+        <subsector name="coal">
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2065" delete="1">
+              <interpolation-function name="linear" />
+            </interpolation-rule>
+            <interpolation-rule apply-to="share-weight" from-year="2065" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+            <period year="2015">
+              <share-weight>0.319</share-weight>
+            </period>
+            <period year="2065">
+              <share-weight>0</share-weight>
+            </period>
+        </subsector>
+      </supplysector>
+    </region>
+  </world>
+</scenario>

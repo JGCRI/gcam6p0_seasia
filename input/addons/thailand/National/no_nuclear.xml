@@ -1,0 +1,16 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<scenario>
+  <world>
+    <region name="Thailand">
+      <supplysector name="electricity">
+        <subsector name="nuclear">
+	  <share-weight fillout="1" year ="1975">0</share-weight>
+	  <share-weight year="2015">0</share-weight>
+	  <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100">
+	    <interpolation-function name="fixed" />
+	  </interpolation-rule>
+        </subsector>
+      </supplysector>
+    </region>
+  </world>
+</scenario>

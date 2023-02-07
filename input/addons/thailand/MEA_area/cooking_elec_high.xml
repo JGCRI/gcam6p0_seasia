@@ -1,0 +1,171 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<scenario>
+  <world>
+    <region name="Bangkok">
+      <supplysector name="resid urban cooking">
+        <subsector name="refined liquids">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">1</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.865</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="traditional biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">.001</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+      </supplysector>
+    </region>
+    <region name="Nonthaburi">
+      <supplysector name="resid rural cooking">
+        <subsector name="refined liquids">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.319</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">1</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="traditional biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.001</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+      </supplysector>
+      <supplysector name="resid urban cooking">
+        <subsector name="refined liquids">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">1</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.149</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="traditional biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.001</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+      </supplysector>
+    </region>
+    <region name="SamutPrakan">
+      <supplysector name="resid urban cooking">
+        <subsector name="refined liquids">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">1</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.149</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="traditional biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.001</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+      </supplysector>
+      <supplysector name="resid rural cooking">
+        <subsector name="refined liquids">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.319</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">1</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+        <subsector name="traditional biomass">
+          <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2040" delete="1">
+            <interpolation-function name="linear" />
+          </interpolation-rule>
+          <interpolation-rule apply-to="share-weight" from-year="2040" to-year="2100">
+            <interpolation-function name="fixed" />
+          </interpolation-rule>
+          <share-weight year="2020">0.001</share-weight>
+          <share-weight year="2040">0</share-weight>
+        </subsector>
+      </supplysector>
+    </region>
+  </world>
+</scenario>
