@@ -1,0 +1,4 @@
+# Secondary output from air conditioning to ventilation,,,
+supplysector,subsector,secondary.output,output.ratio
+residential rural air conditioners,electricity,residential rural ventilation,0.05366316
+residential urban air conditioners,electricity,residential urban ventilation,0.05366316

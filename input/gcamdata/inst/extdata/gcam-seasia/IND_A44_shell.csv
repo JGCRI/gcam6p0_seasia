@@ -1,0 +1,10 @@
+# File: IND_A44_shell.csv
+# Title: Assumed shell efficiency trajectories
+# Units: Unitless
+# Source: These values should be based on a shell stock model
+# Column types: cnnnnnnnnnnn
+# ----------
+gcam.consumer,1971,1975,1990,2010,2020,2035,2050,2065,2080,2095,2100
+resid rural,1,1,1,1,1.481,1.421,1.35,1.279,1.202,1.124,1.099
+resid urban,1,1,1,1,0.984,0.942,0.896,0.872,0.832,0.791,0.776
+comm,1,1,1,1,0.984,0.94,0.893,0.87,0.831,0.79,0.775

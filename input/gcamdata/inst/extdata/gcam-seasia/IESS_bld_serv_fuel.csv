@@ -1,0 +1,52 @@
+# File: IESS_bld_serv_fuel.csv
+# Title: Building service fuel shares
+# Units: Unitless
+# Column types: ccccnn
+# ----------
+sector,service,fuel,technology,energy,share
+residential rural,lighting,electricity,bulb,0.021123594,0.021606651
+residential rural,lighting,electricity,tubelight,0.004224719,0.00432133
+residential rural,lighting,electricity,cfl,0.00140824,0.001440443
+residential rural,lighting,electricity,led,0.00140824,0.001440443
+residential rural,lighting,refined liquids,kerosene lamp,0.004958804,0.03038444
+residential rural,ventilation,electricity,ceiling fan,0.010381475,0.010618879
+residential rural,televisions,electricity,television,0.014731707,0.015068593
+residential rural,refrigerators,electricity,refrigerator,0.052348244,0.053545349
+residential rural,air conditioners,electricity,air conditioner,0.018314163,0.018732973
+residential rural,other appliances,electricity,other appliances,0.019152418,0.019590398
+residential urban,lighting,electricity,bulb,0.03094476,0.031652408
+residential urban,lighting,electricity,tubelight,0.006188952,0.006330482
+residential urban,lighting,electricity,cfl,0.002062984,0.002110161
+residential urban,lighting,electricity,led,0.002062984,0.002110161
+residential urban,lighting,refined liquids,kerosene lamp,0,0
+residential urban,ventilation,electricity,ceiling fan,0.021829954,0.022329164
+residential urban,televisions,electricity,television,0.022098833,0.022604191
+residential urban,refrigerators,electricity,refrigerator,0.071574051,0.073210814
+residential urban,air conditioners,electricity,air conditioner,0.066065328,0.067576117
+residential urban,other appliances,electricity,other appliances,0.037746229,0.038609414
+commercial,hvac,electricity,electricity,0.265917155,0.271998177
+commercial,lighting,electricity,electricity,0.132958577,0.135999088
+commercial,others,electricity,electricity,0.132958577,0.135999088
+residential rural,cooking,biomass,biomass,0.013482271,0.740710169
+residential rural,cooking,coal,coal,0,0
+residential rural,cooking,electricity,electricity,0.008721458,0.008920902
+residential rural,cooking,gas,gas,0,0
+residential rural,cooking,refined liquids,refined liquids,0.02588596,0.158612911
+residential rural,cooking,traditional biomass,traditional biomass,0.013482271,0.810786391
+residential urban,cooking,biomass,biomass,0.004719546,0.259289831
+residential urban,cooking,coal,coal,0.000629273,1
+residential urban,cooking,electricity,electricity,0.010997772,0.01124927
+residential urban,cooking,gas,gas,0.000629273,0.017326674
+residential urban,cooking,refined liquids,refined liquids,0.049083279,0.300751514
+residential urban,cooking,traditional biomass,traditional biomass,0.003146364,0.189213609
+commercial,cooking,biomass,biomass,0,0
+commercial,cooking,coal,coal,0,0
+commercial,cooking,electricity,electricity,0.00892222,0.009126255
+commercial,cooking,gas,gas,0.035688881,0.982673326
+commercial,cooking,refined liquids,refined liquids,0.083274056,0.510251134
+residential rural,water heaters,electricity,electric water heater,0.003750407,0.003836172
+residential rural,water heaters,refined liquids,LPG water heater,0,0
+residential rural,water heaters,solar,solar water heater,0.003750407,0.277797251
+residential urban,water heaters,electricity,electric water heater,0.009750112,0.009973078
+residential urban,water heaters,refined liquids,LPG water heater,0,0
+residential urban,water heaters,solar,solar water heater,0.009750112,0.722202749

@@ -1,0 +1,49 @@
+# File: IND_A44_subsector_logit.csv
+# Title: Building subsector default logit exponents
+# Units: Unitless
+# Source: None (GCAM assumptions)
+# Column types: ccnc
+# ----------
+# Building default subsector logit exponents
+# This logit exponent controls the extent of technology substitution. Only applies to services/subsectors with multiple competing technologies
+supplysector,subsector,logit.exponent,logit.type
+resid rural lighting,electricity,-6,
+resid rural lighting,refined liquids,-6,
+resid rural ventilation,electricity,-6,
+resid rural televisions,electricity,-6,
+resid rural refrigerators,electricity,-6,
+resid rural air conditioners,electricity,-6,
+resid rural other appliances,electricity,-6,
+resid rural water heaters,electricity,-6,
+resid rural water heaters,refined liquids,-6,
+resid rural water heaters,solar,-6,
+resid urban lighting,electricity,-6,
+resid urban lighting,refined liquids,-6,
+resid urban ventilation,electricity,-6,
+resid urban televisions,electricity,-6,
+resid urban refrigerators,electricity,-6,
+resid urban air conditioners,electricity,-6,
+resid urban other appliances,electricity,-6,
+resid urban water heaters,electricity,-6,
+resid urban water heaters,refined liquids,-6,
+resid urban water heaters,solar,-6,
+comm hvac,electricity,-6,
+comm lighting,electricity,-6,
+comm others,electricity,-6,
+resid rural cooking,biomass,-6,
+resid rural cooking,coal,-6,
+resid rural cooking,electricity,-6,
+resid rural cooking,gas,-6,
+resid rural cooking,refined liquids,-6,
+resid rural cooking,traditional biomass,-6,
+resid urban cooking,biomass,-6,
+resid urban cooking,coal,-6,
+resid urban cooking,electricity,-6,
+resid urban cooking,gas,-6,
+resid urban cooking,refined liquids,-6,
+resid urban cooking,traditional biomass,-6,
+comm cooking,biomass,-6,
+comm cooking,coal,-6,
+comm cooking,electricity,-6,
+comm cooking,gas,-6,
+comm cooking,refined liquids,-6,

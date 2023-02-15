@@ -1,0 +1,49 @@
+# File: IND_A44_tech_intgains.csv
+# Title: Building sector internal gain coefficients
+# Units: Unitless (heat released within building envelope per unit of energy input)
+# Comments:  NOTE:  this table should include all techs of non-thermal services (even zeroes)
+# Source: Table 12a in https://www.nrel.gov/docs/fy08osti/42011.pdf (some technologies only).
+# Column types: cccn 
+# ----------
+supplysector,subsector,technology,input.ratio
+resid rural lighting,electricity,bulb,0.9
+resid rural lighting,electricity,tubelight,0.9
+resid rural lighting,electricity,cfl,0.9
+resid rural lighting,electricity,led,0.9
+resid rural lighting,refined liquids,kerosene lamp,1
+resid rural ventilation,electricity,ceiling fan (lo-eff),0
+resid rural ventilation,electricity,ceiling fan (hi-eff),0
+resid rural televisions,electricity,television,1
+resid rural refrigerators,electricity,refrigerator (lo-eff),1
+resid rural refrigerators,electricity,refrigerator (hi-eff),1
+resid rural other appliances,electricity,other appliances,0.5
+resid urban lighting,electricity,bulb,0.9
+resid urban lighting,electricity,tubelight,0.9
+resid urban lighting,electricity,cfl,0.9
+resid urban lighting,electricity,led,0.9
+resid urban lighting,refined liquids,kerosene lamp,1
+resid urban ventilation,electricity,ceiling fan (lo-eff),0
+resid urban ventilation,electricity,ceiling fan (hi-eff),0
+resid urban televisions,electricity,television,1
+resid urban refrigerators,electricity,refrigerator (lo-eff),1
+resid urban refrigerators,electricity,refrigerator (hi-eff),1
+resid urban other appliances,electricity,other appliances,0.5
+comm lighting,electricity,electricity,0.9
+comm others,electricity,electricity,0.5
+resid rural cooking,biomass,biomass,0.4
+resid rural cooking,coal,coal,0.4
+resid rural cooking,electricity,electricity,0.4
+resid rural cooking,gas,gas,0.4
+resid rural cooking,refined liquids,refined liquids,0.4
+resid rural cooking,traditional biomass,traditional biomass,0.4
+resid urban cooking,biomass,biomass,0.4
+resid urban cooking,coal,coal,0.4
+resid urban cooking,electricity,electricity,0.4
+resid urban cooking,gas,gas,0.4
+resid urban cooking,refined liquids,refined liquids,0.4
+resid urban cooking,traditional biomass,traditional biomass,0.4
+comm cooking,biomass,biomass,0.4
+comm cooking,coal,coal,0.4
+comm cooking,electricity,electricity,0.4
+comm cooking,gas,gas,0.4
+comm cooking,refined liquids,refined liquids,0.4

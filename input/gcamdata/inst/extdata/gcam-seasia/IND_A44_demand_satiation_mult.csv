@@ -1,0 +1,27 @@
+# File: IND_A44_demand_satiation_mult.csv
+# Title: USA Demand Satiation Multipliers
+# Units: Increase in demand per unit floorspace
+# Source: None (GCAM assumptions)
+# Column types: cn
+# ----------
+supplysector,multiplier
+resid rural lighting,1.1
+resid rural refrigerators,1.01
+resid rural cooking,1.01
+resid rural televisions,1.05
+resid rural ventilation,1.05
+resid rural air conditioners,1.05
+resid rural water heaters,1.05
+resid rural other appliances,1.01
+resid urban lighting,1.1
+resid urban refrigerators,1.01
+resid urban cooking,1.01
+resid urban televisions,1.05
+resid urban air conditioners,1.05
+resid urban water heaters,1.05
+resid urban ventilation,1.05
+resid urban other appliances,1.01
+comm cooking,1.1
+comm lighting,1.1
+comm others,1.01
+comm hvac,1.05

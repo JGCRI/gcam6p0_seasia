@@ -1,0 +1,12 @@
+# File: IND_A44_tech_eff_avg.csv
+# Title: Overall stock average efficiencies of efficiency-partitioned technologies.
+# Units: Unitless
+# Column types: ccccccn
+# ----------
+supplysector,subsector,technology1,technology2,technology3,minicam-energy-input,stockavg
+resid rural ventilation,electricity,ceiling fan,ceiling fan (hi-eff),ceiling fan (lo-eff),elect_td_bld,55
+resid rural refrigerators,electricity,refrigerator,refrigerator (hi-eff),refrigerator (lo-eff),elect_td_bld,0.128
+resid rural air conditioners,electricity,air conditioner,air conditioner (hi-eff),air conditioner (lo-eff),elect_td_bld,2.48
+resid urban ventilation,electricity,ceiling fan,ceiling fan (hi-eff),ceiling fan (lo-eff),elect_td_bld,55
+resid urban refrigerators,electricity,refrigerator,refrigerator (hi-eff),refrigerator (lo-eff),elect_td_bld,0.128
+resid urban air conditioners,electricity,air conditioner,air conditioner (hi-eff),air conditioner (lo-eff),elect_td_bld,2.48

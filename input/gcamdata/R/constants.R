@@ -1044,6 +1044,18 @@ gcamusa.OC_1990_ONROAD_SCALING_FACTOR <- 1/1.4
 # If it is TRUE, onroad dust emissions will be included
 gcamusa.DUST <- TRUE
 
+# SEAsia constants ======================================================================
+
+gcam.SEA_REGION <- c( "Thailand", "Malaysia" )
+gcam.Thailand.subregions <- c( "Bangkok", "Nonthaburi", "SamutPrakan", "Rest of Thailand" )
+gcam.Thailand.parentregion <- c( "Thailand" )
+gcam.Malaysia.subregions <- c( "KualaLumpur", "Rest of Malaysia" )
+gcam.Malaysia.parentregion <- c( "Malaysia" )
+
+# Degree day norms
+gcamSEA.BASE_HDD_SEA <- 11 # calculated in L244.building_seasia.R
+gcamSEA.BASE_CDD_SEA <- 5866
+
 # Time shift conditions ======================================================================
 # Uncomment these lines to run under 'timeshift' conditions
 # # HISTORICAL_YEARS <- 1971:2005       # normally 1971:2010

@@ -1,0 +1,29 @@
+# File: IND_A44_tech_interp.csv
+# Title: Share-weight interpolation rule over-writes for selected technologies
+# Units: NA
+# Comments:  Can be useful for smoothing behavior of efficiency-partitioned technologies
+# Source: None (GCAM assumptions)
+# Column types: ccccccnc
+# ----------
+# Interpolation rule over-writes for selected technologies. Only relevant for subsectors with multiple technologies
+supplysector,subsector,technology,apply.to,from.year,to.year,to.value,interpolation.function
+resid rural lighting,electricity,bulb,share-weight,final-calibration-year,end-year,1,s-curve
+resid rural lighting,electricity,tubelight,share-weight,final-calibration-year,end-year,1,s-curve
+resid rural lighting,electricity,cfl,share-weight,final-calibration-year,end-year,1,s-curve
+resid rural lighting,electricity,led,share-weight,final-calibration-year,end-year,1,s-curve
+resid rural ventilation,electricity,ceiling fan (lo-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid rural ventilation,electricity,ceiling fan (hi-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid rural refrigerators,electricity,refrigerator (lo-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid rural refrigerators,electricity,refrigerator (hi-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid rural air conditioners,electricity,air conditioner (lo-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid rural air conditioners,electricity,air conditioner (hi-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid urban lighting,electricity,bulb,share-weight,final-calibration-year,end-year,1,s-curve
+resid urban lighting,electricity,tubelight,share-weight,final-calibration-year,end-year,1,s-curve
+resid urban lighting,electricity,cfl,share-weight,final-calibration-year,end-year,1,s-curve
+resid urban lighting,electricity,led,share-weight,final-calibration-year,end-year,1,s-curve
+resid urban ventilation,electricity,ceiling fan (lo-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid urban ventilation,electricity,ceiling fan (hi-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid urban refrigerators,electricity,refrigerator (lo-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid urban refrigerators,electricity,refrigerator (hi-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid urban air conditioners,electricity,air conditioner (lo-eff),share-weight,final-calibration-year,end-year,1,s-curve
+resid urban air conditioners,electricity,air conditioner (hi-eff),share-weight,final-calibration-year,end-year,1,s-curve

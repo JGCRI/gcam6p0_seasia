@@ -1,0 +1,59 @@
+# File: IND_bld_techs.csv
+# Title: Mapping between the sectors / services / fuels in Level1 processing to the technology names in GCAM
+# Units: NA
+# Source: None (GCAM assumptions)
+# Column types: cccccccc 
+# ----------
+supplysector,subsector,technology_specific,minicam.energy.input,sector,fuel,technology,service
+resid rural lighting,electricity,bulb,elect_td_bld,resid rural,electricity,bulb,resid rural lighting
+resid rural lighting,electricity,tubelight,elect_td_bld,resid rural,electricity,tubelight,resid rural lighting
+resid rural lighting,electricity,cfl,elect_td_bld,resid rural,electricity,cfl,resid rural lighting
+resid rural lighting,electricity,led,elect_td_bld,resid rural,electricity,led,resid rural lighting
+resid rural lighting,refined liquids,kerosene lamp,refined liquids enduse,resid rural,refined liquids,kerosene lamp,resid rural lighting
+resid rural ventilation,electricity,ceiling fan (lo-eff),elect_td_bld,resid rural,electricity,ceiling fan,resid rural ventilation
+resid rural ventilation,electricity,ceiling fan (hi-eff),elect_td_bld,resid rural,electricity,ceiling fan,resid rural ventilation
+resid rural televisions,electricity,television,elect_td_bld,resid rural,electricity,television,resid rural televisions
+resid rural refrigerators,electricity,refrigerator (lo-eff),elect_td_bld,resid rural,electricity,refrigerator,resid rural refrigerators
+resid rural refrigerators,electricity,refrigerator (hi-eff),elect_td_bld,resid rural,electricity,refrigerator,resid rural refrigerators
+resid rural air conditioners,electricity,air conditioner (lo-eff),elect_td_bld,resid rural,electricity,air conditioner,resid rural air conditioners
+resid rural air conditioners,electricity,air conditioner (hi-eff),elect_td_bld,resid rural,electricity,air conditioner,resid rural air conditioners
+resid rural other appliances,electricity,other appliances,elect_td_bld,resid rural,electricity,other appliances,resid rural other appliances
+resid urban lighting,electricity,bulb,elect_td_bld,resid urban,electricity,bulb,resid urban lighting
+resid urban lighting,electricity,tubelight,elect_td_bld,resid urban,electricity,tubelight,resid urban lighting
+resid urban lighting,electricity,cfl,elect_td_bld,resid urban,electricity,cfl,resid urban lighting
+resid urban lighting,electricity,led,elect_td_bld,resid urban,electricity,led,resid urban lighting
+resid urban lighting,refined liquids,kerosene lamp,refined liquids enduse,resid urban,refined liquids,kerosene lamp,resid urban lighting
+resid urban ventilation,electricity,ceiling fan (lo-eff),elect_td_bld,resid urban,electricity,ceiling fan,resid urban ventilation
+resid urban ventilation,electricity,ceiling fan (hi-eff),elect_td_bld,resid urban,electricity,ceiling fan,resid urban ventilation
+resid urban televisions,electricity,television,elect_td_bld,resid urban,electricity,television,resid urban televisions
+resid urban refrigerators,electricity,refrigerator (lo-eff),elect_td_bld,resid urban,electricity,refrigerator,resid urban refrigerators
+resid urban refrigerators,electricity,refrigerator (hi-eff),elect_td_bld,resid urban,electricity,refrigerator,resid urban refrigerators
+resid urban air conditioners,electricity,air conditioner (lo-eff),elect_td_bld,resid urban,electricity,air conditioner,resid urban air conditioners
+resid urban air conditioners,electricity,air conditioner (hi-eff),elect_td_bld,resid urban,electricity,air conditioner,resid urban air conditioners
+resid urban other appliances,electricity,other appliances,elect_td_bld,resid urban,electricity,other appliances,resid urban other appliances
+comm hvac,electricity,electricity,elect_td_bld,comm,electricity,electricity,comm hvac
+comm lighting,electricity,electricity,elect_td_bld,comm,electricity,electricity,comm lighting
+comm others,electricity,electricity,elect_td_bld,comm,electricity,electricity,comm others
+resid rural cooking,biomass,biomass,delivered biomass,resid rural,biomass,biomass,resid rural cooking
+resid rural cooking,coal,coal,delivered coal,resid rural,coal,coal,resid rural cooking
+resid rural cooking,electricity,electricity,elect_td_bld,resid rural,electricity,electricity,resid rural cooking
+resid rural cooking,gas,gas,delivered gas,resid rural,gas,gas,resid rural cooking
+resid rural cooking,refined liquids,refined liquids,refined liquids enduse,resid rural,refined liquids,refined liquids,resid rural cooking
+resid rural cooking,traditional biomass,traditional biomass,traditional biomass,resid rural,traditional biomass,traditional biomass,resid rural cooking
+resid urban cooking,biomass,biomass,delivered biomass,resid urban,biomass,biomass,resid urban cooking
+resid urban cooking,coal,coal,delivered coal,resid urban,coal,coal,resid urban cooking
+resid urban cooking,electricity,electricity,elect_td_bld,resid urban,electricity,electricity,resid urban cooking
+resid urban cooking,gas,gas,delivered gas,resid urban,gas,gas,resid urban cooking
+resid urban cooking,refined liquids,refined liquids,refined liquids enduse,resid urban,refined liquids,refined liquids,resid urban cooking
+resid urban cooking,traditional biomass,traditional biomass,traditional biomass,resid urban,traditional biomass,traditional biomass,resid urban cooking
+comm cooking,biomass,biomass,delivered biomass,comm,biomass,biomass,comm cooking
+comm cooking,coal,coal,delivered coal,comm,coal,coal,comm cooking
+comm cooking,electricity,electricity,elect_td_bld,comm,electricity,electricity,comm cooking
+comm cooking,gas,gas,delivered gas,comm,gas,gas,comm cooking
+comm cooking,refined liquids,refined liquids,refined liquids enduse,comm,refined liquids,refined liquids,comm cooking
+resid rural water heaters,electricity,electric water heater,elect_td_bld,resid rural,electricity,electric water heater,resid rural water heaters
+resid rural water heaters,refined liquids,LPG water heater,refined liquids enduse,resid rural,refined liquids,LPG water heater,resid rural water heaters
+resid rural water heaters,solar,solar water heater,global solar resource,resid rural,solar,solar water heater,resid rural water heaters
+resid urban water heaters,electricity,electric water heater,elect_td_bld,resid urban,electricity,electric water heater,resid urban water heaters
+resid urban water heaters,refined liquids,LPG water heater,refined liquids enduse,resid urban,refined liquids,LPG water heater,resid urban water heaters
+resid urban water heaters,solar,solar water heater,global solar resource,resid urban,solar,solar water heater,resid urban water heaters

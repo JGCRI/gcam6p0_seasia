@@ -1,0 +1,27 @@
+# File: IND_A44_sector.csv
+# Title: Building sector default supplysector information (units and logit exponents)
+# Units: NA
+# Source: None (GCAM assumptions)
+# Column types: ccccicc 
+# ----------
+supplysector,output.unit,input.unit,price.unit,logit.exponent,logit.type,final.energy
+resid rural lighting,Petalumen-hours,EJ,1975$/GJ,-3,,building
+resid rural ventilation,million km3,EJ,1975$/million m3,-3,,building
+resid rural televisions,billion TVs,EJ,1975$/TV/yr,-3,,building
+resid rural refrigerators,billion m3,EJ,1975$/m3,-3,,building
+resid rural air conditioners,EJ,EJ,1975$/GJ,-3,,building
+resid rural other appliances,EJ,EJ,1975$/GJ,-3,,building
+resid rural water heaters,billion m3,EJ,1975$/m3,-3,,building
+resid urban lighting,Petalumen-hours,EJ,1975$/megalumen-hours,-3,,building
+resid urban ventilation,million km3,EJ,1975$/million m3,-3,,building
+resid urban televisions,billion TVs,EJ,1975$/TV/yr,-3,,building
+resid urban refrigerators,billion m3,EJ,1975$/m3,-3,,building
+resid urban air conditioners,EJ,EJ,1975$/GJ,-3,,building
+resid urban other appliances,EJ,EJ,1975$/GJ,-3,,building
+resid urban water heaters,billion m3,EJ,1975$/m3,-3,,building
+comm hvac,EJ,EJ,1975$/GJ,-3,,building
+comm lighting,Petalumen-hours,EJ,1975$/megalumen-hours,-3,,building
+comm others,EJ,EJ,1975$/GJ,-3,,building
+resid rural cooking,EJ,EJ,1975$/GJ,-3,,building
+resid urban cooking,EJ,EJ,1975$/GJ,-3,,building
+comm cooking,EJ,EJ,1975$/GJ,-3,,building

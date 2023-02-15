@@ -1,0 +1,14 @@
+# File: IND_A44_satiation_flsp.csv
+# Title: Assumed satiation levels of floorspace 
+# Units: m2 per capita
+# Column types: cnnn
+# ----------
+region,resid rural,resid urban,comm
+Thailand,35,35,12
+Viet Nam,35,35,12
+Bangkok,35,35,12
+KualaLumpur,35,35,12
+Rest of Thailand,35,35,12
+Rest of Malaysia,35,35,12
+Nonthaburi,35,35,12
+SamutPrakan,35,35,12
