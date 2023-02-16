@@ -42,7 +42,8 @@ module_gcamseasia_Xbatch_building_breakout_xml_Subregions_Malaysia <- function(c
              "X245.GlobalTechShrwt_bld_Subregions_Malaysia",
              "X245.GlobalTechCost_bld_Subregions_Malaysia",
              "X245.GlobalTechSCurve_bld_Subregions_Malaysia",
-             "X245.HDDCDD_constdds_bld_Subregions_Malaysia"))
+             "X245.HDDCDD_constdds_bld_Subregions_Malaysia",
+             "X245.GompFnParam_Malaysia"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "building_breakout_Subregions_Malaysia.xml"))
   } else if(command == driver.MAKE) {
@@ -81,6 +82,7 @@ module_gcamseasia_Xbatch_building_breakout_xml_Subregions_Malaysia <- function(c
     X245.GlobalTechCost_bld_Subregions_Malaysia <- get_data(all_data, "X245.GlobalTechCost_bld_Subregions_Malaysia")
     X245.GlobalTechSCurve_bld_Subregions_Malaysia <- get_data(all_data, "X245.GlobalTechSCurve_bld_Subregions_Malaysia")
     X245.HDDCDD_constdds_bld_Subregions_Malaysia <- get_data(all_data, "X245.HDDCDD_constdds_bld_Subregions_Malaysia")
+    X245.GompFnParam_Malaysia <- get_data(all_data, "X245.GompFnParam_Malaysia")
 
 
 
@@ -92,6 +94,7 @@ module_gcamseasia_Xbatch_building_breakout_xml_Subregions_Malaysia <- function(c
       add_xml_data(X245.DeleteSupplysector_bld_Subregions_Malaysia, "DeleteSupplysector") %>%
       add_xml_data(X245.SubregionalShares_bld_Subregions_Malaysia, "SubregionalShares") %>%
       add_xml_data(X245.PriceExp_IntGains_bld_Subregions_Malaysia, "PriceExp_IntGains") %>%
+      add_xml_data(X245.GompFnParam_Malaysia, "GompFnParam") %>%
       add_xml_data(X245.Floorspace_bld_Subregions_Malaysia, "Floorspace") %>%
       add_xml_data(X245.DemandFunction_serv_bld_Subregions_Malaysia, "DemandFunction_serv") %>%
       add_xml_data(X245.DemandFunction_flsp_bld_Subregions_Malaysia, "DemandFunction_flsp") %>%
@@ -148,7 +151,8 @@ module_gcamseasia_Xbatch_building_breakout_xml_Subregions_Malaysia <- function(c
                      "X245.GlobalTechShrwt_bld_Subregions_Malaysia",
                      "X245.GlobalTechCost_bld_Subregions_Malaysia",
                      "X245.GlobalTechSCurve_bld_Subregions_Malaysia",
-                     "X245.HDDCDD_constdds_bld_Subregions_Malaysia") ->
+                     "X245.HDDCDD_constdds_bld_Subregions_Malaysia",
+                     "X245.GompFnParam_Malaysia") ->
       building_breakout_Subregions_Malaysia.xml
 
     # # Some data inputs may not actually contain data. If so, do not add_xml_data.

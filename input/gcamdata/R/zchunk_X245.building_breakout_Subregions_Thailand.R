@@ -17,7 +17,7 @@
 #' \code{X245.SubsectorLogit_bld_Subregions_Thailand}, \code{X245.StubTech_bld_Subregions_Thailand}, \code{X245.StubTechCalInput_bld_Subregions_Thailand}, \code{X245.StubTechMarket_bld_Subregions_Thailand},
 #' \code{X245.GlobalTechIntGainOutputRatio_bld_Subregions_Thailand}, \code{X245.GlobalTechInterpTo_bld_Subregions_Thailand}, \code{X245.GlobalTechEff_bld_Subregions_Thailand},
 #' \code{X245.GlobalTechShrwt_bld_Subregions_Thailand}, \code{X245.GlobalTechCost_bld_Subregions_Thailand}, \code{X245.GlobalTechSCurve_bld_Subregions_Thailand}, \code{X245.HDDCDD_A2_GFDL_bld_Subregions_Thailand},
-#' \code{X245.HDDCDD_AEO_2015_bld_Subregions_Thailand}, \code{X245.HDDCDD_constdds_bld_Subregions_Thailand}.
+#' \code{X245.HDDCDD_AEO_2015_bld_Subregions_Thailand}, \code{X245.HDDCDD_constdds_bld_Subregions_Thailand}, \code{X245.GompFnParam_Thailand}.
 #' The corresponding file in the original data system was \code{X245.building_USA.R} (gcam-usa level2).
 #' @details Creates GCAM-SEAsia building output files for writing to xml.
 #' @importFrom assertthat assert_that
@@ -58,7 +58,8 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
              "X244.StubTechCalInput_bld_Subregions_Thailand",
              "L143.HDDCDD_scen_R_Y",
              "X201.Pop_Subregions_Thailand",
-             "X201.GDP_Subregions_Thailand"))
+             "X201.GDP_Subregions_Thailand",
+             "L244.GompFnParam"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("X245.DeleteConsumer_bld_Subregions_Thailand",
              "X245.DeleteSupplysector_bld_Subregions_Thailand",
@@ -92,7 +93,8 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
              "X245.GlobalTechCost_bld_Subregions_Thailand",
              "X245.GlobalTechSCurve_bld_Subregions_Thailand",
              "X245.HDDCDD_A2_GFDL_bld_Subregions_Thailand",
-             "X245.HDDCDD_constdds_bld_Subregions_Thailand"
+             "X245.HDDCDD_constdds_bld_Subregions_Thailand",
+             "X245.GompFnParam_Thailand"
              ))
   } else if(command == driver.MAKE) {
 
@@ -146,6 +148,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
     L143.HDDCDD_scen_R_Y <- get_data(all_data, "L143.HDDCDD_scen_R_Y", strip_attributes = TRUE)
     X201.Pop_Subregions_Thailand <- get_data(all_data, "X201.Pop_Subregions_Thailand", strip_attributes = TRUE)
     X201.GDP_Subregions_Thailand <- get_data(all_data, "X201.GDP_Subregions_Thailand", strip_attributes = TRUE)
+    L244.GompFnParam <- get_data(all_data, "L244.GompFnParam", strip_attributes = TRUE)
 
     # ===================================================
     # Data Processing
@@ -970,7 +973,35 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
              internal.gains.scalar = if_else(variable == "HDD" & degree.days < threshold_HDD, 0, internal.gains.scalar)) %>%
       select(LEVEL2_DATA_NAMES[["Intgains_scalar"]])
 
-    # Check subregional shares
+    # ===================================================
+    # 6. Building Gompertz Function
+    # ===================================================
+    # GCAM 6.0 now uses a different function to model floorpsace in residential buildings.
+    # We will apply the values from the parent region to the subregions.
+    # This table has the region / gcam.consumer / nodeInput / building.node.input information we need
+    resid_subregions <- X245.DemandFunction_serv_bld_Subregions_Thailand %>%
+      # filter for residential only
+      filter(gcam.consumer != "comm") %>%
+      # remove unneeded column
+      select(-prodDmdFnType)
+
+    # Now, modify the National level gompertz table
+    gompertz_subregions <- L244.GompFnParam %>%
+      # filter for parent region
+      filter(region == gcam.Thailand.parentregion) %>%
+      # apply these values to the subregions
+      write_to_all_states(LEVEL2_DATA_NAMES[["GompFnParam"]],
+                          region_list = gcam.Thailand.subregions) %>%
+      # remove the columns we will replace with entries from the resid_subregions table above
+      select(-c(gcam.consumer, nodeInput, building.node.input))
+
+    # Join the two tables together
+    X245.GompFnParam_Thailand <- resid_subregions %>%
+      left_join_error_no_match(gompertz_subregions, by = c("region"))
+
+    # ===================================================
+    # 6. Checking Subregional Shares
+    # ===================================================
     # If the subregional share for any region is 0, it must be removed from all data tables
     # First, figure out if this case exists, and for what regions / years
     zero_subregional_shares <- X245.SubregionalShares_bld_Subregions_Thailand %>%
@@ -1067,6 +1098,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
         unite( "gcam.consumer", c( "resid/comm", "specific" ), sep = " " ) %>%
         anti_join( zero_subregional_shares, by = c( "region", "gcam.consumer", "year" = "inc.year.fillout" ) ) %>%
         select( -gcam.consumer )
+
+      X245.GompFnParam_Thailand <- X245.GompFnParam_Thailand %>%
+        anti_join( zero_subregional_shares, by = c( "region", "gcam.consumer" ) )
 
       }
 
@@ -1389,6 +1423,14 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       same_precursors_as("X245.HDDCDD_A2_GFDL_SEA") ->
       X245.HDDCDD_constdds_bld_Subregions_Thailand
 
+    X245.GompFnParam_Thailand %>%
+      add_title("Parameters for the floorspace Gompertz function") %>%
+      add_units("Unitless") %>%
+      add_comments("Computed offline based on data from RECS and IEA") %>%
+      add_precursors("L244.GompFnParam",
+                     "gcam-seasia/IND_A44_demandFn_serv") ->
+      X245.GompFnParam_Thailand
+
     return_data(X245.DeleteConsumer_bld_Subregions_Thailand,
                 X245.DeleteSupplysector_bld_Subregions_Thailand,
                 X245.SubregionalShares_bld_Subregions_Thailand,
@@ -1421,7 +1463,8 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
                 X245.GlobalTechCost_bld_Subregions_Thailand,
                 X245.GlobalTechSCurve_bld_Subregions_Thailand,
                 X245.HDDCDD_A2_GFDL_bld_Subregions_Thailand,
-                X245.HDDCDD_constdds_bld_Subregions_Thailand)
+                X245.HDDCDD_constdds_bld_Subregions_Thailand,
+                X245.GompFnParam_Thailand)
   } else {
     stop("Unknown command")
   }

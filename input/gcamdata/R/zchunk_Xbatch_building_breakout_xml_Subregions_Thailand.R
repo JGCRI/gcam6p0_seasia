@@ -42,7 +42,8 @@ module_gcamseasia_Xbatch_building_breakout_xml_Subregions_Thailand <- function(c
              "X245.GlobalTechShrwt_bld_Subregions_Thailand",
              "X245.GlobalTechCost_bld_Subregions_Thailand",
              "X245.GlobalTechSCurve_bld_Subregions_Thailand",
-             "X245.HDDCDD_constdds_bld_Subregions_Thailand"))
+             "X245.HDDCDD_constdds_bld_Subregions_Thailand",
+             "X245.GompFnParam_Thailand"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c(XML = "building_breakout_Subregions_Thailand.xml"))
   } else if(command == driver.MAKE) {
@@ -81,6 +82,7 @@ module_gcamseasia_Xbatch_building_breakout_xml_Subregions_Thailand <- function(c
     X245.GlobalTechCost_bld_Subregions_Thailand <- get_data(all_data, "X245.GlobalTechCost_bld_Subregions_Thailand")
     X245.GlobalTechSCurve_bld_Subregions_Thailand <- get_data(all_data, "X245.GlobalTechSCurve_bld_Subregions_Thailand")
     X245.HDDCDD_constdds_bld_Subregions_Thailand <- get_data(all_data, "X245.HDDCDD_constdds_bld_Subregions_Thailand")
+    X245.GompFnParam_Thailand <- get_data(all_data, "X245.GompFnParam_Thailand")
 
 
 
@@ -92,6 +94,7 @@ module_gcamseasia_Xbatch_building_breakout_xml_Subregions_Thailand <- function(c
       add_xml_data(X245.DeleteSupplysector_bld_Subregions_Thailand, "DeleteSupplysector") %>%
       add_xml_data(X245.SubregionalShares_bld_Subregions_Thailand, "SubregionalShares") %>%
       add_xml_data(X245.PriceExp_IntGains_bld_Subregions_Thailand, "PriceExp_IntGains") %>%
+      add_xml_data(X245.GompFnParam_Thailand, "GompFnParam") %>%
       add_xml_data(X245.Floorspace_bld_Subregions_Thailand, "Floorspace") %>%
       add_xml_data(X245.DemandFunction_serv_bld_Subregions_Thailand, "DemandFunction_serv") %>%
       add_xml_data(X245.DemandFunction_flsp_bld_Subregions_Thailand, "DemandFunction_flsp") %>%
