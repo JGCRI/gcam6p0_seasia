@@ -4,48 +4,48 @@
 			<gcam-consumer name="comm">
 				<nodeInput name="comm">
 					<building-node-input name="comm_building">
-						<base-building-size year = "2020">0.3327</base-building-size>
-						<base-building-size year = "2025">0.3673</base-building-size>
-						<base-building-size year = "2030">0.3987</base-building-size>
-						<base-building-size year = "2035">0.4292</base-building-size>
-						<base-building-size year = "2040">0.4605</base-building-size>
-						<base-building-size year = "2045">0.4927</base-building-size>
-						<base-building-size year = "2050">0.5256</base-building-size>
-						<base-building-size year = "2055">0.5593</base-building-size>
-						<base-building-size year = "2060">0.5935</base-building-size>
-						<base-building-size year = "2065">0.6276</base-building-size>
+						<base-building-size year = "2020">0.3279</base-building-size>
+						<base-building-size year = "2025">0.3563</base-building-size>
+						<base-building-size year = "2030">0.3822</base-building-size>
+						<base-building-size year = "2035">0.4067</base-building-size>
+						<base-building-size year = "2040">0.4311</base-building-size>
+						<base-building-size year = "2045">0.4551</base-building-size>
+						<base-building-size year = "2050">0.4781</base-building-size>
+						<base-building-size year = "2055">0.5004</base-building-size>
+						<base-building-size year = "2060">0.5218</base-building-size>
+						<base-building-size year = "2065">0.5426</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
 			<gcam-consumer name="resid rural">
 				<nodeInput name="resid rural">
 					<building-node-input name="resid_rural_building">
-						<base-building-size year = "2020">0.3610</base-building-size>
-						<base-building-size year = "2025">0.3979</base-building-size>
-						<base-building-size year = "2030">0.4312</base-building-size>
-						<base-building-size year = "2035">0.4635</base-building-size>
-						<base-building-size year = "2040">0.4967</base-building-size>
-						<base-building-size year = "2045">0.5308</base-building-size>
-						<base-building-size year = "2050">0.5654</base-building-size>
-						<base-building-size year = "2055">0.6009</base-building-size>
-						<base-building-size year = "2060">0.6368</base-building-size>
-						<base-building-size year = "2065">0.6726</base-building-size>
+						<base-building-size year = "2020">0.7650</base-building-size>
+						<base-building-size year = "2025">0.8555</base-building-size>
+						<base-building-size year = "2030">0.9331</base-building-size>
+						<base-building-size year = "2035">1.0041</base-building-size>
+						<base-building-size year = "2040">1.0726</base-building-size>
+						<base-building-size year = "2045">1.1372</base-building-size>
+						<base-building-size year = "2050">1.1961</base-building-size>
+						<base-building-size year = "2055">1.2496</base-building-size>
+						<base-building-size year = "2060">1.2978</base-building-size>
+						<base-building-size year = "2065">1.3410</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
 			<gcam-consumer name="resid urban">
 				<nodeInput name="resid urban">
 					<building-node-input name="resid_urban_building">
-						<base-building-size year = "2020">0.2039</base-building-size>
-						<base-building-size year = "2025">0.2248</base-building-size>
-						<base-building-size year = "2030">0.2436</base-building-size>
-						<base-building-size year = "2035">0.2619</base-building-size>
-						<base-building-size year = "2040">0.2806</base-building-size>
-						<base-building-size year = "2045">0.2999</base-building-size>
-						<base-building-size year = "2050">0.3194</base-building-size>
-						<base-building-size year = "2055">0.3395</base-building-size>
-						<base-building-size year = "2060">0.3598</base-building-size>
-						<base-building-size year = "2065">0.3800</base-building-size>
+						<base-building-size year = "2020">0.4322</base-building-size>
+						<base-building-size year = "2025">0.4833</base-building-size>
+						<base-building-size year = "2030">0.5272</base-building-size>
+						<base-building-size year = "2035">0.5673</base-building-size>
+						<base-building-size year = "2040">0.6060</base-building-size>
+						<base-building-size year = "2045">0.6425</base-building-size>
+						<base-building-size year = "2050">0.6757</base-building-size>
+						<base-building-size year = "2055">0.7060</base-building-size>
+						<base-building-size year = "2060">0.7332</base-building-size>
+						<base-building-size year = "2065">0.7576</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
@@ -54,32 +54,32 @@
 			<gcam-consumer name="comm">
 				<nodeInput name="comm">
 					<building-node-input name="comm_building">
-						<base-building-size year = "2020">0.0332</base-building-size>
-						<base-building-size year = "2025">0.0366</base-building-size>
-						<base-building-size year = "2030">0.0397</base-building-size>
-						<base-building-size year = "2035">0.0428</base-building-size>
-						<base-building-size year = "2040">0.0459</base-building-size>
-						<base-building-size year = "2045">0.0491</base-building-size>
-						<base-building-size year = "2050">0.0524</base-building-size>
-						<base-building-size year = "2055">0.0557</base-building-size>
-						<base-building-size year = "2060">0.0592</base-building-size>
-						<base-building-size year = "2065">0.0625</base-building-size>
+						<base-building-size year = "2020">0.0327</base-building-size>
+						<base-building-size year = "2025">0.0355</base-building-size>
+						<base-building-size year = "2030">0.0381</base-building-size>
+						<base-building-size year = "2035">0.0405</base-building-size>
+						<base-building-size year = "2040">0.0430</base-building-size>
+						<base-building-size year = "2045">0.0454</base-building-size>
+						<base-building-size year = "2050">0.0477</base-building-size>
+						<base-building-size year = "2055">0.0499</base-building-size>
+						<base-building-size year = "2060">0.0520</base-building-size>
+						<base-building-size year = "2065">0.0541</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
 			<gcam-consumer name="resid urban">
 				<nodeInput name="resid urban">
 					<building-node-input name="resid_urban_building">
-						<base-building-size year = "2020">0.0203</base-building-size>
-						<base-building-size year = "2025">0.0224</base-building-size>
-						<base-building-size year = "2030">0.0243</base-building-size>
-						<base-building-size year = "2035">0.0261</base-building-size>
-						<base-building-size year = "2040">0.0280</base-building-size>
-						<base-building-size year = "2045">0.0299</base-building-size>
-						<base-building-size year = "2050">0.0318</base-building-size>
-						<base-building-size year = "2055">0.0338</base-building-size>
-						<base-building-size year = "2060">0.0358</base-building-size>
-						<base-building-size year = "2065">0.0379</base-building-size>
+						<base-building-size year = "2020">0.0428</base-building-size>
+						<base-building-size year = "2025">0.0478</base-building-size>
+						<base-building-size year = "2030">0.0522</base-building-size>
+						<base-building-size year = "2035">0.0561</base-building-size>
+						<base-building-size year = "2040">0.0600</base-building-size>
+						<base-building-size year = "2045">0.0636</base-building-size>
+						<base-building-size year = "2050">0.0669</base-building-size>
+						<base-building-size year = "2055">0.0699</base-building-size>
+						<base-building-size year = "2060">0.0726</base-building-size>
+						<base-building-size year = "2065">0.0750</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
@@ -88,48 +88,48 @@
 			<gcam-consumer name="comm">
 				<nodeInput name="comm">
 					<building-node-input name="comm_building">
-						<base-building-size year = "2020">0.0066</base-building-size>
-						<base-building-size year = "2025">0.0073</base-building-size>
-						<base-building-size year = "2030">0.0079</base-building-size>
-						<base-building-size year = "2035">0.0086</base-building-size>
-						<base-building-size year = "2040">0.0092</base-building-size>
-						<base-building-size year = "2045">0.0098</base-building-size>
-						<base-building-size year = "2050">0.0105</base-building-size>
-						<base-building-size year = "2055">0.0111</base-building-size>
-						<base-building-size year = "2060">0.0118</base-building-size>
-						<base-building-size year = "2065">0.0125</base-building-size>
+						<base-building-size year = "2020">0.0065</base-building-size>
+						<base-building-size year = "2025">0.0071</base-building-size>
+						<base-building-size year = "2030">0.0076</base-building-size>
+						<base-building-size year = "2035">0.0081</base-building-size>
+						<base-building-size year = "2040">0.0086</base-building-size>
+						<base-building-size year = "2045">0.0091</base-building-size>
+						<base-building-size year = "2050">0.0095</base-building-size>
+						<base-building-size year = "2055">0.0100</base-building-size>
+						<base-building-size year = "2060">0.0104</base-building-size>
+						<base-building-size year = "2065">0.0108</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
 			<gcam-consumer name="resid rural">
 				<nodeInput name="resid rural">
 					<building-node-input name="resid_rural_building">
-						<base-building-size year = "2020">0.0078</base-building-size>
-						<base-building-size year = "2025">0.0085</base-building-size>
-						<base-building-size year = "2030">0.0093</base-building-size>
-						<base-building-size year = "2035">0.0100</base-building-size>
-						<base-building-size year = "2040">0.0107</base-building-size>
-						<base-building-size year = "2045">0.0114</base-building-size>
-						<base-building-size year = "2050">0.0121</base-building-size>
-						<base-building-size year = "2055">0.0129</base-building-size>
-						<base-building-size year = "2060">0.0137</base-building-size>
-						<base-building-size year = "2065">0.0145</base-building-size>
+						<base-building-size year = "2020">0.0159</base-building-size>
+						<base-building-size year = "2025">0.0177</base-building-size>
+						<base-building-size year = "2030">0.0194</base-building-size>
+						<base-building-size year = "2035">0.0208</base-building-size>
+						<base-building-size year = "2040">0.0222</base-building-size>
+						<base-building-size year = "2045">0.0236</base-building-size>
+						<base-building-size year = "2050">0.0248</base-building-size>
+						<base-building-size year = "2055">0.0259</base-building-size>
+						<base-building-size year = "2060">0.0269</base-building-size>
+						<base-building-size year = "2065">0.0278</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
 			<gcam-consumer name="resid urban">
 				<nodeInput name="resid urban">
 					<building-node-input name="resid_urban_building">
-						<base-building-size year = "2020">0.0044</base-building-size>
-						<base-building-size year = "2025">0.0048</base-building-size>
-						<base-building-size year = "2030">0.0052</base-building-size>
-						<base-building-size year = "2035">0.0056</base-building-size>
-						<base-building-size year = "2040">0.0060</base-building-size>
-						<base-building-size year = "2045">0.0064</base-building-size>
-						<base-building-size year = "2050">0.0069</base-building-size>
-						<base-building-size year = "2055">0.0073</base-building-size>
-						<base-building-size year = "2060">0.0077</base-building-size>
-						<base-building-size year = "2065">0.0082</base-building-size>
+						<base-building-size year = "2020">0.0090</base-building-size>
+						<base-building-size year = "2025">0.0100</base-building-size>
+						<base-building-size year = "2030">0.0109</base-building-size>
+						<base-building-size year = "2035">0.0118</base-building-size>
+						<base-building-size year = "2040">0.0126</base-building-size>
+						<base-building-size year = "2045">0.0133</base-building-size>
+						<base-building-size year = "2050">0.0140</base-building-size>
+						<base-building-size year = "2055">0.0146</base-building-size>
+						<base-building-size year = "2060">0.0152</base-building-size>
+						<base-building-size year = "2065">0.0157</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
@@ -138,48 +138,48 @@
 			<gcam-consumer name="comm">
 				<nodeInput name="comm">
 					<building-node-input name="comm_building">
-						<base-building-size year = "2020">0.0077</base-building-size>
-						<base-building-size year = "2025">0.0085</base-building-size>
-						<base-building-size year = "2030">0.0093</base-building-size>
-						<base-building-size year = "2035">0.0100</base-building-size>
-						<base-building-size year = "2040">0.0107</base-building-size>
-						<base-building-size year = "2045">0.0115</base-building-size>
-						<base-building-size year = "2050">0.0122</base-building-size>
-						<base-building-size year = "2055">0.0130</base-building-size>
-						<base-building-size year = "2060">0.0138</base-building-size>
-						<base-building-size year = "2065">0.0146</base-building-size>
+						<base-building-size year = "2020">0.0076</base-building-size>
+						<base-building-size year = "2025">0.0083</base-building-size>
+						<base-building-size year = "2030">0.0089</base-building-size>
+						<base-building-size year = "2035">0.0095</base-building-size>
+						<base-building-size year = "2040">0.0100</base-building-size>
+						<base-building-size year = "2045">0.0106</base-building-size>
+						<base-building-size year = "2050">0.0111</base-building-size>
+						<base-building-size year = "2055">0.0116</base-building-size>
+						<base-building-size year = "2060">0.0121</base-building-size>
+						<base-building-size year = "2065">0.0126</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
 			<gcam-consumer name="resid rural">
 				<nodeInput name="resid rural">
 					<building-node-input name="resid_rural_building">
-						<base-building-size year = "2020">0.0078</base-building-size>
-						<base-building-size year = "2025">0.0085</base-building-size>
-						<base-building-size year = "2030">0.0093</base-building-size>
-						<base-building-size year = "2035">0.0100</base-building-size>
-						<base-building-size year = "2040">0.0107</base-building-size>
-						<base-building-size year = "2045">0.0114</base-building-size>
-						<base-building-size year = "2050">0.0121</base-building-size>
-						<base-building-size year = "2055">0.0129</base-building-size>
-						<base-building-size year = "2060">0.0137</base-building-size>
-						<base-building-size year = "2065">0.0145</base-building-size>
+						<base-building-size year = "2020">0.0170</base-building-size>
+						<base-building-size year = "2025">0.0190</base-building-size>
+						<base-building-size year = "2030">0.0207</base-building-size>
+						<base-building-size year = "2035">0.0223</base-building-size>
+						<base-building-size year = "2040">0.0238</base-building-size>
+						<base-building-size year = "2045">0.0253</base-building-size>
+						<base-building-size year = "2050">0.0266</base-building-size>
+						<base-building-size year = "2055">0.0278</base-building-size>
+						<base-building-size year = "2060">0.0288</base-building-size>
+						<base-building-size year = "2065">0.0298</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
 			<gcam-consumer name="resid urban">
 				<nodeInput name="resid urban">
 					<building-node-input name="resid_urban_building">
-						<base-building-size year = "2020">0.0044</base-building-size>
-						<base-building-size year = "2025">0.0048</base-building-size>
-						<base-building-size year = "2030">0.0052</base-building-size>
-						<base-building-size year = "2035">0.0056</base-building-size>
-						<base-building-size year = "2040">0.0060</base-building-size>
-						<base-building-size year = "2045">0.0064</base-building-size>
-						<base-building-size year = "2050">0.0069</base-building-size>
-						<base-building-size year = "2055">0.0073</base-building-size>
-						<base-building-size year = "2060">0.0077</base-building-size>
-						<base-building-size year = "2065">0.0082</base-building-size>
+						<base-building-size year = "2020">0.0096</base-building-size>
+						<base-building-size year = "2025">0.0107</base-building-size>
+						<base-building-size year = "2030">0.0117</base-building-size>
+						<base-building-size year = "2035">0.0126</base-building-size>
+						<base-building-size year = "2040">0.0135</base-building-size>
+						<base-building-size year = "2045">0.0143</base-building-size>
+						<base-building-size year = "2050">0.0150</base-building-size>
+						<base-building-size year = "2055">0.0157</base-building-size>
+						<base-building-size year = "2060">0.0163</base-building-size>
+						<base-building-size year = "2065">0.0168</base-building-size>
 					</building-node-input>
 				</nodeInput>
 			</gcam-consumer>
