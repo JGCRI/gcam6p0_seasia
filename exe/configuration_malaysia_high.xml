@@ -104,7 +104,8 @@
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Malaysia.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Malaysia.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Malaysia.xml</Value>
-        	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
+        <Value name = "cities">../input/addons/malaysia/exogenous_floorspace.xml</Value>
+        <Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Malaysia.xml</Value>
@@ -112,7 +113,8 @@
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Thailand.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Thailand.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Thailand.xml</Value>
-        	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
+        <Value name = "cities">../input/addons/thailand/National/exogenous_floorspace.xml</Value>
+        <Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Thailand.xml</Value>
@@ -122,7 +124,6 @@
         	<Value name = "scen">../input/addons/malaysia/buildings_led_high.xml</Value>
         	<Value name = "scen">../input/addons/malaysia/efficient_appliances_high.xml</Value>
        		<Value name = "scen">../input/addons/malaysia/shell_eff_high.xml</Value>
-        	<Value name = "scen">../input/addons/malaysia/exogenous_floorspace.xml</Value>
 		<!--Power Generation-->
         	<Value name = "scen">../input/addons/malaysia/elec_gen_shares_high.xml</Value>
         	<Value name = "scen">../input/addons/malaysia/elec_hydro_high.xml</Value>

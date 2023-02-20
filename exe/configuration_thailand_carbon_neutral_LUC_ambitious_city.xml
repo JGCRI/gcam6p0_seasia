@@ -104,7 +104,8 @@
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Malaysia.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Malaysia.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Malaysia.xml</Value>
-        	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
+        <Value name = "cities">../input/addons/malaysia/exogenous_floorspace.xml</Value>
+        <Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Malaysia.xml</Value>
@@ -112,7 +113,8 @@
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Thailand.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Thailand.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Thailand.xml</Value>
-        	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
+        <Value name = "cities">../input/addons/thailand/National/exogenous_floorspace.xml</Value>
+        <Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Thailand.xml</Value>
@@ -129,7 +131,6 @@
 		<Value name = "lighting_led">../input/addons/thailand/Rest_of_Thailand/buildings_led_low.xml</Value>
 		<Value name = "shell_eff">../input/addons/thailand/MEA_area/shell_eff_high.xml</Value>
 		<Value name = "shell_eff">../input/addons/thailand/Rest_of_Thailand/shell_eff_low.xml</Value>
-		<Value name = "floorspace">../input/addons/thailand/National/exogenous_floorspace.xml</Value>
 
 		<!-- POWER POLICIES -->
 		<Value name = "no_new_coal">../input/addons/thailand/National/no_new_coal.xml</Value>
