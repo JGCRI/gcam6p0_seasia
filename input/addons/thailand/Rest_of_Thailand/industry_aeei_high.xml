@@ -2,7 +2,7 @@
 <scenario>
   <world>
     <region name="Rest of Thailand">
-      <energy-final-demand name="industry">
+      <energy-final-demand name="other industry">
         <final-energy-consumer>
           <aeei year="2025">0.01</aeei>
           <aeei year="2030">0.01</aeei>
