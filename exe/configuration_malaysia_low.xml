@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <Configuration>
 	<Files>
 		<Value name="xmlInputFileName">../input/gcamdata/xml/modeltime.xml</Value>
 		<Value name="BatchFileName">batch_ag.xml</Value>
 		<Value name="policy-target-file">../input/policy/forcing_target_4p5.xml</Value>
 		<Value name="GHGInputFileName">../input/magicc/inputs/input_gases.emk</Value>
-		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_seasia_cities_test</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/malaysia_low</Value>
 		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
 		<Value write-output="1" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
 		<Value write-output="1" append-scenario-name="0" name="climatFileName">gas.emk</Value>
@@ -98,7 +99,7 @@
 		<Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
 
         	<Value name = "wind_update">../input/gcamdata/xml/onshore_wind.xml</Value>
-		
+
 		<!-- CITY ADD-ONS -->
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Malaysia.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Malaysia.xml</Value-->
@@ -115,13 +116,29 @@
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Thailand.xml</Value>
+		
+		<!--Malaysia Policy Add Ons-->
+		<!--Buildings-->
+        	<Value name = "scen">../input/addons/malaysia/buildings_led_low.xml</Value>
+        	<Value name = "scen">../input/addons/malaysia/efficient_appliances_low.xml</Value>
+       		<Value name = "scen">../input/addons/malaysia/shell_eff_low.xml</Value>
+        	<Value name = "scen">../input/addons/malaysia/exogenous_floorspace.xml</Value>
+		<!--Power Generation-->
+        	<Value name = "scen">../input/addons/malaysia/elec_gen_shares_low.xml</Value>
+        	<Value name = "scen">../input/addons/malaysia/elec_hydro_low.xml</Value>
+        	<Value name = "scen">../input/addons/malaysia/coal_shutdown_low.xml</Value>
+        	<Value name = "scen">../input/addons/malaysia/no_new_coal.xml</Value>
+		<!--Transportation-->
+        	<Value name = "scen">../input/addons/malaysia/trn_ICE_low.xml</Value>
+		<!--Industry-->
+        	<Value name = "scen">../input/addons/malaysia/industry_aeei_low.xml</Value>
 
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
-		
+
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">BAU_cities</Value>
-		<Value name="debug-region">Malaysia</Value>
+		<Value name="scenarioName">Low</Value>
+		<Value name="debug-region">KualaLumpur</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
 		<Value name="AbatedGasForCostCurves">CO2</Value>

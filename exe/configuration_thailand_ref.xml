@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <Configuration>
 	<Files>
 		<Value name="xmlInputFileName">../input/gcamdata/xml/modeltime.xml</Value>
 		<Value name="BatchFileName">batch_ag.xml</Value>
 		<Value name="policy-target-file">../input/policy/forcing_target_4p5.xml</Value>
 		<Value name="GHGInputFileName">../input/magicc/inputs/input_gases.emk</Value>
-		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_seasia_cities_test</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/thailand_ref</Value>
 		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
 		<Value write-output="1" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
 		<Value write-output="1" append-scenario-name="0" name="climatFileName">gas.emk</Value>
@@ -98,11 +99,12 @@
 		<Value name = "bio_externality">../input/gcamdata/xml/bio_externality.xml</Value>
 
         	<Value name = "wind_update">../input/gcamdata/xml/onshore_wind.xml</Value>
-		
+
 		<!-- CITY ADD-ONS -->
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Malaysia.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Malaysia.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Malaysia.xml</Value>
+		<Value name = "cities">../input/addons/malaysia/exogenous_floorspace.xml</Value>
         	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Malaysia.xml</Value>
@@ -111,17 +113,23 @@
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Thailand.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Thailand.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Thailand.xml</Value>
+		<Value name = "cities">../input/addons/thailand/National/exogenous_floorspace.xml</Value>
         	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Thailand.xml</Value>
+		
+		<!-- ELEC GEN ADD-ONS -->
+		<!--Value name = "no nuclear">../input/addons/thailand/National/no_nuclear.xml</Value-->
+		<!--Value name = "geothermal ceiling">../input/addons/thailand/National/geothermal_ceiling.xml</Value-->
+		<Value name = "hydro fixed output">../input/addons/thailand/National/hydro_constraint.xml</Value>
 
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
-		
+
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">BAU_cities</Value>
-		<Value name="debug-region">Malaysia</Value>
+		<Value name="scenarioName">Ref</Value>
+		<Value name="debug-region">Rest of Thailand</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
 		<Value name="AbatedGasForCostCurves">CO2</Value>
@@ -146,7 +154,7 @@
 		<Value name="climateOutputInterval">5</Value>
 		<Value name="parallel-grain-size">50</Value>
 		<Value name="stop-period">-1</Value>
-		<Value name="stop-year">2100</Value>
+		<Value name="stop-year">2050</Value>
 		<Value name="restart-period">-1</Value>
 		<Value name="restart-year">-1</Value>
 		<Value name="max-parallelism">-1</Value>

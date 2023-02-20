@@ -6,7 +6,7 @@
 		<Value name="BatchFileName">batch_ag.xml</Value>
 		<Value name="policy-target-file">../input/policy/forcing_target_4p5.xml</Value>
 		<Value name="GHGInputFileName">../input/magicc/inputs/input_gases.emk</Value>
-		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/malaysia_ref_bld</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/malaysia_ref</Value>
 		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
 		<Value write-output="1" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
 		<Value write-output="1" append-scenario-name="0" name="climatFileName">gas.emk</Value>
@@ -104,15 +104,17 @@
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Malaysia.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Malaysia.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Malaysia.xml</Value>
-		<!--Value name = "cities">../input/addons/malaysia/exogenous_floorspace.xml</Value-->
+		<Value name = "cities">../input/addons/malaysia/exogenous_floorspace.xml</Value>
         	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Malaysia.xml</Value>
 
+
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Thailand.xml</Value>
-		<Value name = "cities">../input/gcamdata/xml/building_Subregions_Thailand.xml</Value>
-		<!--Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Thailand.xml</Value-->
+		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Thailand.xml</Value-->
+		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Thailand.xml</Value>
+		<Value name = "cities">../input/addons/thailand/National/exogenous_floorspace.xml</Value>
         	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Thailand.xml</Value>
@@ -120,10 +122,9 @@
 
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 
-
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">Ref_bld</Value>
+		<Value name="scenarioName">Ref</Value>
 		<Value name="debug-region">KualaLumpur</Value>
 		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
