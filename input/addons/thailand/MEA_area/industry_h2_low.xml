@@ -2,7 +2,7 @@
 <scenario>
   <world>
     <region name="Bangkok">
-      <supplysector name="industrial energy use">
+      <supplysector name="other industrial energy use">
         <subsector name="hydrogen">
           <share-weight fillout="1" year="1975">0</share-weight>
 	  <share-weight year="2020">0.036</share-weight>
@@ -14,7 +14,7 @@
       </supplysector>
     </region>
     <region name="Nonthaburi">
-      <supplysector name="industrial energy use">
+      <supplysector name="other industrial energy use">
         <subsector name="hydrogen">
           <share-weight fillout="1" year="1975">0</share-weight>
 	  <share-weight year="2020">0.036</share-weight>
@@ -26,7 +26,7 @@
       </supplysector>
     </region>
     <region name="SamutPrakan">
-      <supplysector name="industrial energy use">
+      <supplysector name="other industrial energy use">
         <subsector name="hydrogen">
           <share-weight fillout="1" year="1975">0</share-weight>
 	  <share-weight year="2020">0.036</share-weight>
