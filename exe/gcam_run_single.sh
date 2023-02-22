@@ -29,5 +29,9 @@ date
 time ./gcam.exe -C$CONFIG -Llog_conf.xml
 date
 
+echo 'updating persmissions'
+echo '.......................'
+chmod -R 777 /rcfs/projects/gcims/projects/seasia/gcam6p0_seasia/output
+
 echo 'completed'
 
