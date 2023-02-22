@@ -308,3 +308,27 @@ Brazil,Ship International,All,Ship International,All
 Brazil,Walk,All,Walk,All
 Brazil,Cycle,All,Cycle,All
 Brazil,LDV_4W,All,LDV_4W,All
+Malaysia,LDV_4W,Mini Car,LDV_4W,Mini Car
+Malaysia,LDV_4W,Subcompact Car,LDV_4W,Car
+Malaysia,LDV_4W,Compact Car,LDV_4W,Car
+Malaysia,LDV_4W,Multipurpose Vehicle,LDV_4W,Large Car and Truck
+Malaysia,Truck,Truck (0-2t),Truck,Light truck
+Malaysia,Truck,Truck (2-5t),Truck,Light truck
+Malaysia,Truck,Truck (5-9t),Truck,Medium truck
+Malaysia,Truck,Truck (9-16t),Truck,Heavy truck
+Malaysia,LDV_2W,Moped,LDV_2W_3W,2W and 3W
+Malaysia,LDV_2W,Scooter,LDV_2W_3W,2W and 3W
+Malaysia,LDV_2W,Motorcycle (50-250cc),LDV_2W_3W,2W and 3W
+Malaysia,LDV_3W,Three-Wheeler,LDV_2W_3W,2W and 3W
+Malaysia,Air Domestic,All,Air Domestic,All
+Malaysia,Air International,All,Air International,All
+Malaysia,Bus,All,Bus,All
+Malaysia,HSR,All,HSR,All
+Malaysia,Rail,All,Rail,All
+Malaysia,Ship Domestic,All,Ship Domestic,All
+Malaysia,Ship International,All,Ship International,All
+Malaysia,Walk,All,Walk,All
+Malaysia,Cycle,All,Cycle,All
+Malaysia,LDV_2W,Motorcycle (>250cc),LDV_2W_3W,2W and 3W
+Malaysia,LDV_3W,All,LDV_3W,All
+Malaysia,LDV_4W,All,LDV_4W,All
