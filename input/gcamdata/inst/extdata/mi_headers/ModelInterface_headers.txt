@@ -194,6 +194,8 @@ tranSubsectorShrwtFllt, world/+{name}region, region/+{name}supplysector, supplys
 
 tranSubsectorInterp, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{apply-to}interpolation-rule, tranSubsector/+{from-year}interpolation-rule, tranSubsector/+{to-year}interpolation-rule, interpolation-rule/+{name}interpolation-function, scenario/world, scenario
 
+tranSubsectorInterp_overwrite, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{apply-to}interpolation-rule, tranSubsector/+{from-year}interpolation-rule, tranSubsector/+{to-year}interpolation-rule, interpolation-rule/+{name}interpolation-function, interpolation-rule/+{warn=0}overwrite-policy, scenario/world, scenario
+
 tranSubsectorInterpTo, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{apply-to}interpolation-rule, tranSubsector/+{from-year}interpolation-rule, tranSubsector/+{to-year}interpolation-rule, interpolation-rule/+to-value, interpolation-rule/+{name}interpolation-function, scenario/world, scenario
 
 tranSubsectorSpeed, world/+{name}region, region/+{name}supplysector, supplysector/+{name}tranSubsector, tranSubsector/+{year}speed, tranSubsector/+speed, scenario/world, scenario
