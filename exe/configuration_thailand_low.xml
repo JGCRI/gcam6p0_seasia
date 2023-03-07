@@ -120,7 +120,8 @@
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Thailand.xml</Value>
 
 		<!-- ELEC GEN ADD-ONS -->
-		<!--Value name = "no nuclear">../input/addons/thailand/National/no_nuclear.xml</Value-->
+		<Value name = "no nuclear">../input/addons/thailand/National/no_nuclear.xml</Value>
+		<Value name = "no geothermal">../input/addons/thailand/National/no_geothermal.xml</Value>
 		<!--Value name = "geothermal ceiling">../input/addons/thailand/National/geothermal_ceiling.xml</Value-->
 		<Value name = "hydro fixed output">../input/addons/thailand/National/hydro_constraint.xml</Value>
 
