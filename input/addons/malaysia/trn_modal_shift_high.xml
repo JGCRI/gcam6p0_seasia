@@ -8,14 +8,14 @@
                         <interpolation-function name="linear"/>
                     </interpolation-rule>
           <share-weight year="2020">0.00006</share-weight>
-	      <share-weight year="2100">0.05</share-weight>
+	      <share-weight year="2100">0.005</share-weight>
         </tranSubsector>
         <tranSubsector name="Passenger Rail">
             <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2100">
               <interpolation-function name="linear"/>
             </interpolation-rule>
           <share-weight year="2020">0.002</share-weight>
-	      <share-weight year="2100">0.1</share-weight>
+	      <share-weight year="2100">0.01</share-weight>
         </tranSubsector>
 	  </supplysector>
    <supplysector name="trn_pass_road">
@@ -24,7 +24,7 @@
                         <interpolation-function name="linear"/>
                     </interpolation-rule>
           <share-weight year="2020">.671</share-weight>
-	      <share-weight year="2100">2.5</share-weight>
+	      <share-weight year="2100">1.5</share-weight>
         </tranSubsector>
 	  </supplysector>
     </region>
@@ -35,14 +35,14 @@
                         <interpolation-function name="linear"/>
                     </interpolation-rule>
           <share-weight year="2020">0.00006</share-weight>
-	      <share-weight year="2100">0.0005</share-weight>
+	      <share-weight year="2100">0.00006</share-weight>
         </tranSubsector>
         <tranSubsector name="Passenger Rail">
             <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2100">
               <interpolation-function name="linear"/>
             </interpolation-rule>
           <share-weight year="2020">0.001</share-weight>
-	      <share-weight year="2100">0.005</share-weight>
+	      <share-weight year="2100">0.002</share-weight>
         </tranSubsector>
 	  </supplysector>
    <supplysector name="trn_pass_road">
@@ -51,7 +51,7 @@
                         <interpolation-function name="linear"/>
                     </interpolation-rule>
           <share-weight year="2020">0.45</share-weight>
-	      <share-weight year="2100">1.25</share-weight>
+	      <share-weight year="2100">0.8</share-weight>
         </tranSubsector>
 	  </supplysector>
     </region>
