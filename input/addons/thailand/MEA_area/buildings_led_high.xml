@@ -5,44 +5,44 @@
       <supplysector name="resid urban lighting">
         <subsector name="electricity">
           <stub-technology name="bulb">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1094</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="tubelight">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="cfl">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>0.515</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
@@ -53,44 +53,44 @@
       <supplysector name="resid rural lighting">
         <subsector name="electricity">
           <stub-technology name="bulb">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1094</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="tubelight">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="cfl">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>0.515</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
@@ -99,44 +99,44 @@
       <supplysector name="resid urban lighting">
         <subsector name="electricity">
           <stub-technology name="bulb">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1094</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="tubelight">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="cfl">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>0.514</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
@@ -147,44 +147,44 @@
       <supplysector name="resid rural lighting">
         <subsector name="electricity">
           <stub-technology name="bulb">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1094</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="tubelight">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="cfl">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>0.515</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
@@ -193,44 +193,44 @@
       <supplysector name="resid urban lighting">
         <subsector name="electricity">
           <stub-technology name="bulb">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1094</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="tubelight">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>1</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
           <stub-technology name="cfl">
-            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2030" delete="1">
+            <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2035" delete="1">
               <interpolation-function name="linear" />
             </interpolation-rule>
-            <interpolation-rule apply-to="share-weight" from-year="2030" to-year="2100">
+            <interpolation-rule apply-to="share-weight" from-year="2035" to-year="2100">
               <interpolation-function name="fixed" />
             </interpolation-rule>
             <period year="2020">
               <share-weight>0.515</share-weight>
             </period>
-            <period year="2030">
+            <period year="2035">
               <share-weight>0</share-weight>
             </period>
           </stub-technology>
