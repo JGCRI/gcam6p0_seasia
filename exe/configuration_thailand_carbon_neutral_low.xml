@@ -136,7 +136,8 @@
 		<!-- POWER POLICIES -->
 		<Value name = "no_new_coal">../input/addons/thailand/National/no_new_coal.xml</Value>
 		<Value name = "coal_shutdown">../input/addons/thailand/National/coal_shutdown_low.xml</Value>
-		<Value name = "wind_solar shares">../input/addons/thailand/National/wind_solar_shares_low.xml</Value>
+		<!--Value name = "wind_solar shares">../input/addons/thailand/National/wind_solar_shares_low.xml</Value-->
+		<Value name = "wind_solar_bio shares">../input/addons/thailand/National/wind_solar_bio_shares_low.xml</Value>
 
 		<!-- TRANSPORTATION POLICIES -->
 		<Value name = "ev_cost_parity">../input/addons/thailand/MEA_area/ev_cost_parity_low.xml</Value>
