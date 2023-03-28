@@ -104,8 +104,8 @@
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Malaysia.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Malaysia.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Malaysia.xml</Value>
-        <Value name = "cities">../input/addons/malaysia/exogenous_floorspace.xml</Value>
-        <Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
+        	<Value name = "cities">../input/addons/malaysia/exogenous_floorspace.xml</Value>
+        	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Malaysia.xml</Value>
@@ -113,8 +113,8 @@
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Thailand.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Thailand.xml</Value-->
 		<Value name = "cities">../input/gcamdata/xml/building_breakout_Subregions_Thailand.xml</Value>
-        <Value name = "cities">../input/addons/thailand/National/exogenous_floorspace.xml</Value>
-        <Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
+        	<Value name = "cities">../input/addons/thailand/National/exogenous_floorspace.xml</Value>
+        	<Value name = "cities">../input/gcamdata/xml/water_demand_industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Thailand.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Thailand.xml</Value>
@@ -134,6 +134,7 @@
         	<Value name = "scen">../input/addons/malaysia/trn_modal_shift_low.xml</Value>
 		<!--Industry-->
         	<Value name = "scen">../input/addons/malaysia/industry_aeei_low.xml</Value>
+        	<Value name = "scen">../input/addons/malaysia/industry_h2_low.xml</Value>
 
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 

@@ -134,6 +134,7 @@
         	<Value name = "scen">../input/addons/malaysia/trn_modal_shift_low.xml</Value>
 		<!--Industry-->
         	<Value name = "scen">../input/addons/malaysia/industry_aeei_low.xml</Value>
+        	<Value name = "scen">../input/addons/malaysia/industry_h2_low.xml</Value>
 
 		<!--Malaysia Decarbonization Add Ons-->
 		<Value name = "scen">../input/addons/malaysia/NetZeroC_Malaysia_2035_2050.xml</Value>
