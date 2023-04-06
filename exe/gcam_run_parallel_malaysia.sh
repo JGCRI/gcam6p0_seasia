@@ -4,7 +4,7 @@
 #SBATCH --time=3000
 #SBATCH --job-name=lhs
 #SBATCH -A cities
-#SBATCH --array=0-7
+#SBATCH --array=0-11
 
 # README -----------------------------------------------------------------------
 #
@@ -25,8 +25,8 @@ export RENV_PATHS_CACHE=/rcfs/projects/GCAM/renv
 alias pyenv_activate='source /rcfs/projects/GCAM/pyenv3.7.0/bin/activate'
 
 # Files to run in parallel
-FILES=('configuration_malaysia_carbon_neutral_ambitious_city.xml' 'configuration_malaysia_ambitious_city.xml' 'configuration_malaysia_carbon_neutral_high.xml' 'configuration_malaysia_high.xml' 'configuration_malaysia_carbon_neutral_low.xml' 'configuration_malaysia_low.xml' 'configuration_malaysia_carbon_neutral_ref.xml' 'configuration_malaysia_ref.xml')
-DATABASES=('malaysia_carbon_neutral_ambitious_city' 'malaysia_ambitious_city' 'malaysia_carbon_neutral_high' 'malaysia_high' 'malaysia_carbon_neutral_low' 'malaysia_low' 'malaysia_carbon_neutral_ref' 'malaysia_ref')
+FILES=('configuration_malaysia_carbon_neutral_ambitious_city.xml' 'configuration_malaysia_ambitious_city.xml' 'configuration_malaysia_carbon_neutral_high.xml' 'configuration_malaysia_high.xml' 'configuration_malaysia_carbon_neutral_low.xml' 'configuration_malaysia_low.xml' 'configuration_malaysia_carbon_neutral_ref.xml' 'configuration_malaysia_ref.xml' 'configuration_KL_carbon_neutral_ref.xml' 'configuration_KL_carbon_neutral_high.xml' 'configuration_KL_carbon_neutral_low.xml' 'configuration_KL_carbon_neutral_ambitious_city.xml')
+DATABASES=('malaysia_carbon_neutral_ambitious_city' 'malaysia_ambitious_city' 'malaysia_carbon_neutral_high' 'malaysia_high' 'malaysia_carbon_neutral_low' 'malaysia_low' 'malaysia_carbon_neutral_ref' 'malaysia_ref' 'KL_carbon_neutral_ref' 'KL_carbon_neutral_high' 'KL_carbon_neutral_low' 'KL_carbon_neutral_ambitious_city')
 
 CONFIG=${FILES[$SLURM_ARRAY_TASK_ID]}
 DATABASE=${DATABASES[$SLURM_ARRAY_TASK_ID]}
