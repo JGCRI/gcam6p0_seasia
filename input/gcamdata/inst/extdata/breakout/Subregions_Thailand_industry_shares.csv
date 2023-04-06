@@ -4,460 +4,460 @@
 # Description: Computed off-line
 # Column types: cicn
 # ----------
-"region","year","type","share"
-"SamutPrakan",1970,"other",5
-"SamutPrakan",1971,"other",5
-"SamutPrakan",1972,"other",5
-"SamutPrakan",1973,"other",5
-"SamutPrakan",1974,"other",5
-"SamutPrakan",1975,"other",5
-"SamutPrakan",1976,"other",5
-"SamutPrakan",1977,"other",5
-"SamutPrakan",1978,"other",5
-"SamutPrakan",1979,"other",5
-"SamutPrakan",1980,"other",5
-"SamutPrakan",1981,"other",5
-"SamutPrakan",1982,"other",5
-"SamutPrakan",1983,"other",5
-"SamutPrakan",1984,"other",5
-"SamutPrakan",1985,"other",5
-"SamutPrakan",1986,"other",5
-"SamutPrakan",1987,"other",5
-"SamutPrakan",1988,"other",5
-"SamutPrakan",1989,"other",5
-"SamutPrakan",1990,"other",5
-"SamutPrakan",1991,"other",5
-"SamutPrakan",1992,"other",5
-"SamutPrakan",1993,"other",5
-"SamutPrakan",1994,"other",5
-"SamutPrakan",1995,"other",5
-"SamutPrakan",1996,"other",5
-"SamutPrakan",1997,"other",5
-"SamutPrakan",1998,"other",5
-"SamutPrakan",1999,"other",5
-"SamutPrakan",2000,"other",5
-"SamutPrakan",2001,"other",5
-"SamutPrakan",2002,"other",5
-"SamutPrakan",2003,"other",5
-"SamutPrakan",2004,"other",5
-"SamutPrakan",2005,"other",5
-"SamutPrakan",2006,"other",5
-"SamutPrakan",2007,"other",5
-"SamutPrakan",2008,"other",5
-"SamutPrakan",2009,"other",5
-"SamutPrakan",2010,"other",5
-"SamutPrakan",2011,"other",5
-"SamutPrakan",2012,"other",5
-"SamutPrakan",2013,"other",5
-"SamutPrakan",2014,"other",5
-"SamutPrakan",2015,"other",5
-"SamutPrakan",2016,"other",5
-"SamutPrakan",2017,"other",5
-"SamutPrakan",2018,"other",5
-"SamutPrakan",2019,"other",5
-"SamutPrakan",2020,"other",5
-"SamutPrakan",2021,"other",5
-"SamutPrakan",2022,"other",5
-"SamutPrakan",2023,"other",5
-"SamutPrakan",2024,"other",5
-"SamutPrakan",2025,"other",5
-"SamutPrakan",2026,"other",5
-"SamutPrakan",2027,"other",5
-"SamutPrakan",2028,"other",5
-"SamutPrakan",2029,"other",5
-"SamutPrakan",2030,"other",5
-"SamutPrakan",2031,"other",5
-"SamutPrakan",2032,"other",5
-"SamutPrakan",2033,"other",5
-"SamutPrakan",2034,"other",5
-"SamutPrakan",2035,"other",5
-"SamutPrakan",2036,"other",5
-"SamutPrakan",2037,"other",5
-"SamutPrakan",2038,"other",5
-"SamutPrakan",2039,"other",5
-"SamutPrakan",2040,"other",5
-"SamutPrakan",2041,"other",5
-"SamutPrakan",2042,"other",5
-"SamutPrakan",2043,"other",5
-"SamutPrakan",2044,"other",5
-"SamutPrakan",2045,"other",5
-"SamutPrakan",2046,"other",5
-"SamutPrakan",2047,"other",5
-"SamutPrakan",2048,"other",5
-"SamutPrakan",2049,"other",5
-"SamutPrakan",2050,"other",5
-"SamutPrakan",2051,"other",5
-"SamutPrakan",2052,"other",5
-"SamutPrakan",2053,"other",5
-"SamutPrakan",2054,"other",5
-"SamutPrakan",2055,"other",5
-"SamutPrakan",2056,"other",5
-"SamutPrakan",2057,"other",5
-"SamutPrakan",2058,"other",5
-"SamutPrakan",2059,"other",5
-"SamutPrakan",2060,"other",5
-"SamutPrakan",2061,"other",5
-"SamutPrakan",2062,"other",5
-"SamutPrakan",2063,"other",5
-"SamutPrakan",2064,"other",5
-"SamutPrakan",2065,"other",5
-"SamutPrakan",2066,"other",5
-"SamutPrakan",2067,"other",5
-"SamutPrakan",2068,"other",5
-"SamutPrakan",2069,"other",5
-"SamutPrakan",2070,"other",5
-"SamutPrakan",2071,"other",5
-"SamutPrakan",2072,"other",5
-"SamutPrakan",2073,"other",5
-"SamutPrakan",2074,"other",5
-"SamutPrakan",2075,"other",5
-"SamutPrakan",2076,"other",5
-"SamutPrakan",2077,"other",5
-"SamutPrakan",2078,"other",5
-"SamutPrakan",2079,"other",5
-"SamutPrakan",2080,"other",5
-"SamutPrakan",2081,"other",5
-"SamutPrakan",2082,"other",5
-"SamutPrakan",2083,"other",5
-"SamutPrakan",2084,"other",5
-"SamutPrakan",2085,"other",5
-"SamutPrakan",2086,"other",5
-"SamutPrakan",2087,"other",5
-"SamutPrakan",2088,"other",5
-"SamutPrakan",2089,"other",5
-"SamutPrakan",2090,"other",5
-"SamutPrakan",2091,"other",5
-"SamutPrakan",2092,"other",5
-"SamutPrakan",2093,"other",5
-"SamutPrakan",2094,"other",5
-"SamutPrakan",2095,"other",5
-"SamutPrakan",2096,"other",5
-"SamutPrakan",2097,"other",5
-"SamutPrakan",2098,"other",5
-"SamutPrakan",2099,"other",5
-"SamutPrakan",2100,"other",5
-"Nonthaburi",1970,"other",5
-"Nonthaburi",1971,"other",5
-"Nonthaburi",1972,"other",5
-"Nonthaburi",1973,"other",5
-"Nonthaburi",1974,"other",5
-"Nonthaburi",1975,"other",5
-"Nonthaburi",1976,"other",5
-"Nonthaburi",1977,"other",5
-"Nonthaburi",1978,"other",5
-"Nonthaburi",1979,"other",5
-"Nonthaburi",1980,"other",5
-"Nonthaburi",1981,"other",5
-"Nonthaburi",1982,"other",5
-"Nonthaburi",1983,"other",5
-"Nonthaburi",1984,"other",5
-"Nonthaburi",1985,"other",5
-"Nonthaburi",1986,"other",5
-"Nonthaburi",1987,"other",5
-"Nonthaburi",1988,"other",5
-"Nonthaburi",1989,"other",5
-"Nonthaburi",1990,"other",5
-"Nonthaburi",1991,"other",5
-"Nonthaburi",1992,"other",5
-"Nonthaburi",1993,"other",5
-"Nonthaburi",1994,"other",5
-"Nonthaburi",1995,"other",5
-"Nonthaburi",1996,"other",5
-"Nonthaburi",1997,"other",5
-"Nonthaburi",1998,"other",5
-"Nonthaburi",1999,"other",5
-"Nonthaburi",2000,"other",5
-"Nonthaburi",2001,"other",5
-"Nonthaburi",2002,"other",5
-"Nonthaburi",2003,"other",5
-"Nonthaburi",2004,"other",5
-"Nonthaburi",2005,"other",5
-"Nonthaburi",2006,"other",5
-"Nonthaburi",2007,"other",5
-"Nonthaburi",2008,"other",5
-"Nonthaburi",2009,"other",5
-"Nonthaburi",2010,"other",5
-"Nonthaburi",2011,"other",5
-"Nonthaburi",2012,"other",5
-"Nonthaburi",2013,"other",5
-"Nonthaburi",2014,"other",5
-"Nonthaburi",2015,"other",5
-"Nonthaburi",2016,"other",5
-"Nonthaburi",2017,"other",5
-"Nonthaburi",2018,"other",5
-"Nonthaburi",2019,"other",5
-"Nonthaburi",2020,"other",5
-"Nonthaburi",2021,"other",5
-"Nonthaburi",2022,"other",5
-"Nonthaburi",2023,"other",5
-"Nonthaburi",2024,"other",5
-"Nonthaburi",2025,"other",5
-"Nonthaburi",2026,"other",5
-"Nonthaburi",2027,"other",5
-"Nonthaburi",2028,"other",5
-"Nonthaburi",2029,"other",5
-"Nonthaburi",2030,"other",5
-"Nonthaburi",2031,"other",5
-"Nonthaburi",2032,"other",5
-"Nonthaburi",2033,"other",5
-"Nonthaburi",2034,"other",5
-"Nonthaburi",2035,"other",5
-"Nonthaburi",2036,"other",5
-"Nonthaburi",2037,"other",5
-"Nonthaburi",2038,"other",5
-"Nonthaburi",2039,"other",5
-"Nonthaburi",2040,"other",5
-"Nonthaburi",2041,"other",5
-"Nonthaburi",2042,"other",5
-"Nonthaburi",2043,"other",5
-"Nonthaburi",2044,"other",5
-"Nonthaburi",2045,"other",5
-"Nonthaburi",2046,"other",5
-"Nonthaburi",2047,"other",5
-"Nonthaburi",2048,"other",5
-"Nonthaburi",2049,"other",5
-"Nonthaburi",2050,"other",5
-"Nonthaburi",2051,"other",5
-"Nonthaburi",2052,"other",5
-"Nonthaburi",2053,"other",5
-"Nonthaburi",2054,"other",5
-"Nonthaburi",2055,"other",5
-"Nonthaburi",2056,"other",5
-"Nonthaburi",2057,"other",5
-"Nonthaburi",2058,"other",5
-"Nonthaburi",2059,"other",5
-"Nonthaburi",2060,"other",5
-"Nonthaburi",2061,"other",5
-"Nonthaburi",2062,"other",5
-"Nonthaburi",2063,"other",5
-"Nonthaburi",2064,"other",5
-"Nonthaburi",2065,"other",5
-"Nonthaburi",2066,"other",5
-"Nonthaburi",2067,"other",5
-"Nonthaburi",2068,"other",5
-"Nonthaburi",2069,"other",5
-"Nonthaburi",2070,"other",5
-"Nonthaburi",2071,"other",5
-"Nonthaburi",2072,"other",5
-"Nonthaburi",2073,"other",5
-"Nonthaburi",2074,"other",5
-"Nonthaburi",2075,"other",5
-"Nonthaburi",2076,"other",5
-"Nonthaburi",2077,"other",5
-"Nonthaburi",2078,"other",5
-"Nonthaburi",2079,"other",5
-"Nonthaburi",2080,"other",5
-"Nonthaburi",2081,"other",5
-"Nonthaburi",2082,"other",5
-"Nonthaburi",2083,"other",5
-"Nonthaburi",2084,"other",5
-"Nonthaburi",2085,"other",5
-"Nonthaburi",2086,"other",5
-"Nonthaburi",2087,"other",5
-"Nonthaburi",2088,"other",5
-"Nonthaburi",2089,"other",5
-"Nonthaburi",2090,"other",5
-"Nonthaburi",2091,"other",5
-"Nonthaburi",2092,"other",5
-"Nonthaburi",2093,"other",5
-"Nonthaburi",2094,"other",5
-"Nonthaburi",2095,"other",5
-"Nonthaburi",2096,"other",5
-"Nonthaburi",2097,"other",5
-"Nonthaburi",2098,"other",5
-"Nonthaburi",2099,"other",5
-"Nonthaburi",2100,"other",5
-"Bangkok",1970,"other",5
-"Bangkok",1971,"other",5
-"Bangkok",1972,"other",5
-"Bangkok",1973,"other",5
-"Bangkok",1974,"other",5
-"Bangkok",1975,"other",5
-"Bangkok",1976,"other",5
-"Bangkok",1977,"other",5
-"Bangkok",1978,"other",5
-"Bangkok",1979,"other",5
-"Bangkok",1980,"other",5
-"Bangkok",1981,"other",5
-"Bangkok",1982,"other",5
-"Bangkok",1983,"other",5
-"Bangkok",1984,"other",5
-"Bangkok",1985,"other",5
-"Bangkok",1986,"other",5
-"Bangkok",1987,"other",5
-"Bangkok",1988,"other",5
-"Bangkok",1989,"other",5
-"Bangkok",1990,"other",5
-"Bangkok",1991,"other",5
-"Bangkok",1992,"other",5
-"Bangkok",1993,"other",5
-"Bangkok",1994,"other",5
-"Bangkok",1995,"other",5
-"Bangkok",1996,"other",5
-"Bangkok",1997,"other",5
-"Bangkok",1998,"other",5
-"Bangkok",1999,"other",5
-"Bangkok",2000,"other",5
-"Bangkok",2001,"other",5
-"Bangkok",2002,"other",5
-"Bangkok",2003,"other",5
-"Bangkok",2004,"other",5
-"Bangkok",2005,"other",5
-"Bangkok",2006,"other",5
-"Bangkok",2007,"other",5
-"Bangkok",2008,"other",5
-"Bangkok",2009,"other",5
-"Bangkok",2010,"other",5
-"Bangkok",2011,"other",5
-"Bangkok",2012,"other",5
-"Bangkok",2013,"other",5
-"Bangkok",2014,"other",5
-"Bangkok",2015,"other",5
-"Bangkok",2016,"other",5
-"Bangkok",2017,"other",5
-"Bangkok",2018,"other",5
-"Bangkok",2019,"other",5
-"Bangkok",2020,"other",5
-"Bangkok",2021,"other",5
-"Bangkok",2022,"other",5
-"Bangkok",2023,"other",5
-"Bangkok",2024,"other",5
-"Bangkok",2025,"other",5
-"Bangkok",2026,"other",5
-"Bangkok",2027,"other",5
-"Bangkok",2028,"other",5
-"Bangkok",2029,"other",5
-"Bangkok",2030,"other",5
-"Bangkok",2031,"other",5
-"Bangkok",2032,"other",5
-"Bangkok",2033,"other",5
-"Bangkok",2034,"other",5
-"Bangkok",2035,"other",5
-"Bangkok",2036,"other",5
-"Bangkok",2037,"other",5
-"Bangkok",2038,"other",5
-"Bangkok",2039,"other",5
-"Bangkok",2040,"other",5
-"Bangkok",2041,"other",5
-"Bangkok",2042,"other",5
-"Bangkok",2043,"other",5
-"Bangkok",2044,"other",5
-"Bangkok",2045,"other",5
-"Bangkok",2046,"other",5
-"Bangkok",2047,"other",5
-"Bangkok",2048,"other",5
-"Bangkok",2049,"other",5
-"Bangkok",2050,"other",5
-"Bangkok",2051,"other",5
-"Bangkok",2052,"other",5
-"Bangkok",2053,"other",5
-"Bangkok",2054,"other",5
-"Bangkok",2055,"other",5
-"Bangkok",2056,"other",5
-"Bangkok",2057,"other",5
-"Bangkok",2058,"other",5
-"Bangkok",2059,"other",5
-"Bangkok",2060,"other",5
-"Bangkok",2061,"other",5
-"Bangkok",2062,"other",5
-"Bangkok",2063,"other",5
-"Bangkok",2064,"other",5
-"Bangkok",2065,"other",5
-"Bangkok",2066,"other",5
-"Bangkok",2067,"other",5
-"Bangkok",2068,"other",5
-"Bangkok",2069,"other",5
-"Bangkok",2070,"other",5
-"Bangkok",2071,"other",5
-"Bangkok",2072,"other",5
-"Bangkok",2073,"other",5
-"Bangkok",2074,"other",5
-"Bangkok",2075,"other",5
-"Bangkok",2076,"other",5
-"Bangkok",2077,"other",5
-"Bangkok",2078,"other",5
-"Bangkok",2079,"other",5
-"Bangkok",2080,"other",5
-"Bangkok",2081,"other",5
-"Bangkok",2082,"other",5
-"Bangkok",2083,"other",5
-"Bangkok",2084,"other",5
-"Bangkok",2085,"other",5
-"Bangkok",2086,"other",5
-"Bangkok",2087,"other",5
-"Bangkok",2088,"other",5
-"Bangkok",2089,"other",5
-"Bangkok",2090,"other",5
-"Bangkok",2091,"other",5
-"Bangkok",2092,"other",5
-"Bangkok",2093,"other",5
-"Bangkok",2094,"other",5
-"Bangkok",2095,"other",5
-"Bangkok",2096,"other",5
-"Bangkok",2097,"other",5
-"Bangkok",2098,"other",5
-"Bangkok",2099,"other",5
-"Bangkok",2100,"other",5
-"Rest of Thailand",1970,"other",85
-"Rest of Thailand",1971,"other",85
-"Rest of Thailand",1972,"other",85
-"Rest of Thailand",1973,"other",85
-"Rest of Thailand",1974,"other",85
-"Rest of Thailand",1975,"other",85
-"Rest of Thailand",1976,"other",85
-"Rest of Thailand",1977,"other",85
-"Rest of Thailand",1978,"other",85
-"Rest of Thailand",1979,"other",85
-"Rest of Thailand",1980,"other",85
-"Rest of Thailand",1981,"other",85
-"Rest of Thailand",1982,"other",85
-"Rest of Thailand",1983,"other",85
-"Rest of Thailand",1984,"other",85
-"Rest of Thailand",1985,"other",85
-"Rest of Thailand",1986,"other",85
-"Rest of Thailand",1987,"other",85
-"Rest of Thailand",1988,"other",85
-"Rest of Thailand",1989,"other",85
-"Rest of Thailand",1990,"other",85
-"Rest of Thailand",1991,"other",85
-"Rest of Thailand",1992,"other",85
-"Rest of Thailand",1993,"other",85
-"Rest of Thailand",1994,"other",85
-"Rest of Thailand",1995,"other",85
-"Rest of Thailand",1996,"other",85
-"Rest of Thailand",1997,"other",85
-"Rest of Thailand",1998,"other",85
-"Rest of Thailand",1999,"other",85
-"Rest of Thailand",2000,"other",85
-"Rest of Thailand",2001,"other",85
-"Rest of Thailand",2002,"other",85
-"Rest of Thailand",2003,"other",85
-"Rest of Thailand",2004,"other",85
-"Rest of Thailand",2005,"other",85
-"Rest of Thailand",2006,"other",85
-"Rest of Thailand",2007,"other",85
-"Rest of Thailand",2008,"other",85
-"Rest of Thailand",2009,"other",85
-"Rest of Thailand",2010,"other",85
-"Rest of Thailand",2011,"other",85
-"Rest of Thailand",2012,"other",85
-"Rest of Thailand",2013,"other",85
-"Rest of Thailand",2014,"other",85
-"Rest of Thailand",2015,"other",85
-"Rest of Thailand",2020,"other",85
-"Rest of Thailand",2025,"other",85
-"Rest of Thailand",2030,"other",85
-"Rest of Thailand",2035,"other",85
-"Rest of Thailand",2040,"other",85
-"Rest of Thailand",2045,"other",85
-"Rest of Thailand",2050,"other",85
-"Rest of Thailand",2055,"other",85
-"Rest of Thailand",2060,"other",85
-"Rest of Thailand",2065,"other",85
-"Rest of Thailand",2070,"other",85
-"Rest of Thailand",2075,"other",85
-"Rest of Thailand",2080,"other",85
-"Rest of Thailand",2085,"other",85
-"Rest of Thailand",2090,"other",85
-"Rest of Thailand",2095,"other",85
-"Rest of Thailand",2100,"other",85
+region,year,type,share
+SamutPrakan,1970,other,5.8
+SamutPrakan,1971,other,5.8
+SamutPrakan,1972,other,5.8
+SamutPrakan,1973,other,5.8
+SamutPrakan,1974,other,5.8
+SamutPrakan,1975,other,5.8
+SamutPrakan,1976,other,5.8
+SamutPrakan,1977,other,5.8
+SamutPrakan,1978,other,5.8
+SamutPrakan,1979,other,5.8
+SamutPrakan,1980,other,5.8
+SamutPrakan,1981,other,5.8
+SamutPrakan,1982,other,5.8
+SamutPrakan,1983,other,5.8
+SamutPrakan,1984,other,5.8
+SamutPrakan,1985,other,5.8
+SamutPrakan,1986,other,5.8
+SamutPrakan,1987,other,5.8
+SamutPrakan,1988,other,5.8
+SamutPrakan,1989,other,5.8
+SamutPrakan,1990,other,5.8
+SamutPrakan,1991,other,5.8
+SamutPrakan,1992,other,5.8
+SamutPrakan,1993,other,5.8
+SamutPrakan,1994,other,5.8
+SamutPrakan,1995,other,5.8
+SamutPrakan,1996,other,5.8
+SamutPrakan,1997,other,5.8
+SamutPrakan,1998,other,5.8
+SamutPrakan,1999,other,5.8
+SamutPrakan,2000,other,5.8
+SamutPrakan,2001,other,5.8
+SamutPrakan,2002,other,5.8
+SamutPrakan,2003,other,5.8
+SamutPrakan,2004,other,5.8
+SamutPrakan,2005,other,5.8
+SamutPrakan,2006,other,5.8
+SamutPrakan,2007,other,5.8
+SamutPrakan,2008,other,5.8
+SamutPrakan,2009,other,5.8
+SamutPrakan,2010,other,5.8
+SamutPrakan,2011,other,5.8
+SamutPrakan,2012,other,5.8
+SamutPrakan,2013,other,5.8
+SamutPrakan,2014,other,5.8
+SamutPrakan,2015,other,5.8
+SamutPrakan,2016,other,5.8
+SamutPrakan,2017,other,5.8
+SamutPrakan,2018,other,5.8
+SamutPrakan,2019,other,5.8
+SamutPrakan,2020,other,5.8
+SamutPrakan,2021,other,5.8
+SamutPrakan,2022,other,5.8
+SamutPrakan,2023,other,5.8
+SamutPrakan,2024,other,5.8
+SamutPrakan,2025,other,5.8
+SamutPrakan,2026,other,5.8
+SamutPrakan,2027,other,5.8
+SamutPrakan,2028,other,5.8
+SamutPrakan,2029,other,5.8
+SamutPrakan,2030,other,5.8
+SamutPrakan,2031,other,5.8
+SamutPrakan,2032,other,5.8
+SamutPrakan,2033,other,5.8
+SamutPrakan,2034,other,5.8
+SamutPrakan,2035,other,5.8
+SamutPrakan,2036,other,5.8
+SamutPrakan,2037,other,5.8
+SamutPrakan,2038,other,5.8
+SamutPrakan,2039,other,5.8
+SamutPrakan,2040,other,5.8
+SamutPrakan,2041,other,5.8
+SamutPrakan,2042,other,5.8
+SamutPrakan,2043,other,5.8
+SamutPrakan,2044,other,5.8
+SamutPrakan,2045,other,5.8
+SamutPrakan,2046,other,5.8
+SamutPrakan,2047,other,5.8
+SamutPrakan,2048,other,5.8
+SamutPrakan,2049,other,5.8
+SamutPrakan,2050,other,5.8
+SamutPrakan,2051,other,5.8
+SamutPrakan,2052,other,5.8
+SamutPrakan,2053,other,5.8
+SamutPrakan,2054,other,5.8
+SamutPrakan,2055,other,5.8
+SamutPrakan,2056,other,5.8
+SamutPrakan,2057,other,5.8
+SamutPrakan,2058,other,5.8
+SamutPrakan,2059,other,5.8
+SamutPrakan,2060,other,5.8
+SamutPrakan,2061,other,5.8
+SamutPrakan,2062,other,5.8
+SamutPrakan,2063,other,5.8
+SamutPrakan,2064,other,5.8
+SamutPrakan,2065,other,5.8
+SamutPrakan,2066,other,5.8
+SamutPrakan,2067,other,5.8
+SamutPrakan,2068,other,5.8
+SamutPrakan,2069,other,5.8
+SamutPrakan,2070,other,5.8
+SamutPrakan,2071,other,5.8
+SamutPrakan,2072,other,5.8
+SamutPrakan,2073,other,5.8
+SamutPrakan,2074,other,5.8
+SamutPrakan,2075,other,5.8
+SamutPrakan,2076,other,5.8
+SamutPrakan,2077,other,5.8
+SamutPrakan,2078,other,5.8
+SamutPrakan,2079,other,5.8
+SamutPrakan,2080,other,5.8
+SamutPrakan,2081,other,5.8
+SamutPrakan,2082,other,5.8
+SamutPrakan,2083,other,5.8
+SamutPrakan,2084,other,5.8
+SamutPrakan,2085,other,5.8
+SamutPrakan,2086,other,5.8
+SamutPrakan,2087,other,5.8
+SamutPrakan,2088,other,5.8
+SamutPrakan,2089,other,5.8
+SamutPrakan,2090,other,5.8
+SamutPrakan,2091,other,5.8
+SamutPrakan,2092,other,5.8
+SamutPrakan,2093,other,5.8
+SamutPrakan,2094,other,5.8
+SamutPrakan,2095,other,5.8
+SamutPrakan,2096,other,5.8
+SamutPrakan,2097,other,5.8
+SamutPrakan,2098,other,5.8
+SamutPrakan,2099,other,5.8
+SamutPrakan,2100,other,5.8
+Nonthaburi,1970,other,1.7
+Nonthaburi,1971,other,1.7
+Nonthaburi,1972,other,1.7
+Nonthaburi,1973,other,1.7
+Nonthaburi,1974,other,1.7
+Nonthaburi,1975,other,1.7
+Nonthaburi,1976,other,1.7
+Nonthaburi,1977,other,1.7
+Nonthaburi,1978,other,1.7
+Nonthaburi,1979,other,1.7
+Nonthaburi,1980,other,1.7
+Nonthaburi,1981,other,1.7
+Nonthaburi,1982,other,1.7
+Nonthaburi,1983,other,1.7
+Nonthaburi,1984,other,1.7
+Nonthaburi,1985,other,1.7
+Nonthaburi,1986,other,1.7
+Nonthaburi,1987,other,1.7
+Nonthaburi,1988,other,1.7
+Nonthaburi,1989,other,1.7
+Nonthaburi,1990,other,1.7
+Nonthaburi,1991,other,1.7
+Nonthaburi,1992,other,1.7
+Nonthaburi,1993,other,1.7
+Nonthaburi,1994,other,1.7
+Nonthaburi,1995,other,1.7
+Nonthaburi,1996,other,1.7
+Nonthaburi,1997,other,1.7
+Nonthaburi,1998,other,1.7
+Nonthaburi,1999,other,1.7
+Nonthaburi,2000,other,1.7
+Nonthaburi,2001,other,1.7
+Nonthaburi,2002,other,1.7
+Nonthaburi,2003,other,1.7
+Nonthaburi,2004,other,1.7
+Nonthaburi,2005,other,1.7
+Nonthaburi,2006,other,1.7
+Nonthaburi,2007,other,1.7
+Nonthaburi,2008,other,1.7
+Nonthaburi,2009,other,1.7
+Nonthaburi,2010,other,1.7
+Nonthaburi,2011,other,1.7
+Nonthaburi,2012,other,1.7
+Nonthaburi,2013,other,1.7
+Nonthaburi,2014,other,1.7
+Nonthaburi,2015,other,1.7
+Nonthaburi,2016,other,1.7
+Nonthaburi,2017,other,1.7
+Nonthaburi,2018,other,1.7
+Nonthaburi,2019,other,1.7
+Nonthaburi,2020,other,1.7
+Nonthaburi,2021,other,1.7
+Nonthaburi,2022,other,1.7
+Nonthaburi,2023,other,1.7
+Nonthaburi,2024,other,1.7
+Nonthaburi,2025,other,1.7
+Nonthaburi,2026,other,1.7
+Nonthaburi,2027,other,1.7
+Nonthaburi,2028,other,1.7
+Nonthaburi,2029,other,1.7
+Nonthaburi,2030,other,1.7
+Nonthaburi,2031,other,1.7
+Nonthaburi,2032,other,1.7
+Nonthaburi,2033,other,1.7
+Nonthaburi,2034,other,1.7
+Nonthaburi,2035,other,1.7
+Nonthaburi,2036,other,1.7
+Nonthaburi,2037,other,1.7
+Nonthaburi,2038,other,1.7
+Nonthaburi,2039,other,1.7
+Nonthaburi,2040,other,1.7
+Nonthaburi,2041,other,1.7
+Nonthaburi,2042,other,1.7
+Nonthaburi,2043,other,1.7
+Nonthaburi,2044,other,1.7
+Nonthaburi,2045,other,1.7
+Nonthaburi,2046,other,1.7
+Nonthaburi,2047,other,1.7
+Nonthaburi,2048,other,1.7
+Nonthaburi,2049,other,1.7
+Nonthaburi,2050,other,1.7
+Nonthaburi,2051,other,1.7
+Nonthaburi,2052,other,1.7
+Nonthaburi,2053,other,1.7
+Nonthaburi,2054,other,1.7
+Nonthaburi,2055,other,1.7
+Nonthaburi,2056,other,1.7
+Nonthaburi,2057,other,1.7
+Nonthaburi,2058,other,1.7
+Nonthaburi,2059,other,1.7
+Nonthaburi,2060,other,1.7
+Nonthaburi,2061,other,1.7
+Nonthaburi,2062,other,1.7
+Nonthaburi,2063,other,1.7
+Nonthaburi,2064,other,1.7
+Nonthaburi,2065,other,1.7
+Nonthaburi,2066,other,1.7
+Nonthaburi,2067,other,1.7
+Nonthaburi,2068,other,1.7
+Nonthaburi,2069,other,1.7
+Nonthaburi,2070,other,1.7
+Nonthaburi,2071,other,1.7
+Nonthaburi,2072,other,1.7
+Nonthaburi,2073,other,1.7
+Nonthaburi,2074,other,1.7
+Nonthaburi,2075,other,1.7
+Nonthaburi,2076,other,1.7
+Nonthaburi,2077,other,1.7
+Nonthaburi,2078,other,1.7
+Nonthaburi,2079,other,1.7
+Nonthaburi,2080,other,1.7
+Nonthaburi,2081,other,1.7
+Nonthaburi,2082,other,1.7
+Nonthaburi,2083,other,1.7
+Nonthaburi,2084,other,1.7
+Nonthaburi,2085,other,1.7
+Nonthaburi,2086,other,1.7
+Nonthaburi,2087,other,1.7
+Nonthaburi,2088,other,1.7
+Nonthaburi,2089,other,1.7
+Nonthaburi,2090,other,1.7
+Nonthaburi,2091,other,1.7
+Nonthaburi,2092,other,1.7
+Nonthaburi,2093,other,1.7
+Nonthaburi,2094,other,1.7
+Nonthaburi,2095,other,1.7
+Nonthaburi,2096,other,1.7
+Nonthaburi,2097,other,1.7
+Nonthaburi,2098,other,1.7
+Nonthaburi,2099,other,1.7
+Nonthaburi,2100,other,1.7
+Bangkok,1970,other,12.6
+Bangkok,1971,other,12.6
+Bangkok,1972,other,12.6
+Bangkok,1973,other,12.6
+Bangkok,1974,other,12.6
+Bangkok,1975,other,12.6
+Bangkok,1976,other,12.6
+Bangkok,1977,other,12.6
+Bangkok,1978,other,12.6
+Bangkok,1979,other,12.6
+Bangkok,1980,other,12.6
+Bangkok,1981,other,12.6
+Bangkok,1982,other,12.6
+Bangkok,1983,other,12.6
+Bangkok,1984,other,12.6
+Bangkok,1985,other,12.6
+Bangkok,1986,other,12.6
+Bangkok,1987,other,12.6
+Bangkok,1988,other,12.6
+Bangkok,1989,other,12.6
+Bangkok,1990,other,12.6
+Bangkok,1991,other,12.6
+Bangkok,1992,other,12.6
+Bangkok,1993,other,12.6
+Bangkok,1994,other,12.6
+Bangkok,1995,other,12.6
+Bangkok,1996,other,12.6
+Bangkok,1997,other,12.6
+Bangkok,1998,other,12.6
+Bangkok,1999,other,12.6
+Bangkok,2000,other,12.6
+Bangkok,2001,other,12.6
+Bangkok,2002,other,12.6
+Bangkok,2003,other,12.6
+Bangkok,2004,other,12.6
+Bangkok,2005,other,12.6
+Bangkok,2006,other,12.6
+Bangkok,2007,other,12.6
+Bangkok,2008,other,12.6
+Bangkok,2009,other,12.6
+Bangkok,2010,other,12.6
+Bangkok,2011,other,12.6
+Bangkok,2012,other,12.6
+Bangkok,2013,other,12.6
+Bangkok,2014,other,12.6
+Bangkok,2015,other,12.6
+Bangkok,2016,other,12.6
+Bangkok,2017,other,12.6
+Bangkok,2018,other,12.6
+Bangkok,2019,other,12.6
+Bangkok,2020,other,12.6
+Bangkok,2021,other,12.6
+Bangkok,2022,other,12.6
+Bangkok,2023,other,12.6
+Bangkok,2024,other,12.6
+Bangkok,2025,other,12.6
+Bangkok,2026,other,12.6
+Bangkok,2027,other,12.6
+Bangkok,2028,other,12.6
+Bangkok,2029,other,12.6
+Bangkok,2030,other,12.6
+Bangkok,2031,other,12.6
+Bangkok,2032,other,12.6
+Bangkok,2033,other,12.6
+Bangkok,2034,other,12.6
+Bangkok,2035,other,12.6
+Bangkok,2036,other,12.6
+Bangkok,2037,other,12.6
+Bangkok,2038,other,12.6
+Bangkok,2039,other,12.6
+Bangkok,2040,other,12.6
+Bangkok,2041,other,12.6
+Bangkok,2042,other,12.6
+Bangkok,2043,other,12.6
+Bangkok,2044,other,12.6
+Bangkok,2045,other,12.6
+Bangkok,2046,other,12.6
+Bangkok,2047,other,12.6
+Bangkok,2048,other,12.6
+Bangkok,2049,other,12.6
+Bangkok,2050,other,12.6
+Bangkok,2051,other,12.6
+Bangkok,2052,other,12.6
+Bangkok,2053,other,12.6
+Bangkok,2054,other,12.6
+Bangkok,2055,other,12.6
+Bangkok,2056,other,12.6
+Bangkok,2057,other,12.6
+Bangkok,2058,other,12.6
+Bangkok,2059,other,12.6
+Bangkok,2060,other,12.6
+Bangkok,2061,other,12.6
+Bangkok,2062,other,12.6
+Bangkok,2063,other,12.6
+Bangkok,2064,other,12.6
+Bangkok,2065,other,12.6
+Bangkok,2066,other,12.6
+Bangkok,2067,other,12.6
+Bangkok,2068,other,12.6
+Bangkok,2069,other,12.6
+Bangkok,2070,other,12.6
+Bangkok,2071,other,12.6
+Bangkok,2072,other,12.6
+Bangkok,2073,other,12.6
+Bangkok,2074,other,12.6
+Bangkok,2075,other,12.6
+Bangkok,2076,other,12.6
+Bangkok,2077,other,12.6
+Bangkok,2078,other,12.6
+Bangkok,2079,other,12.6
+Bangkok,2080,other,12.6
+Bangkok,2081,other,12.6
+Bangkok,2082,other,12.6
+Bangkok,2083,other,12.6
+Bangkok,2084,other,12.6
+Bangkok,2085,other,12.6
+Bangkok,2086,other,12.6
+Bangkok,2087,other,12.6
+Bangkok,2088,other,12.6
+Bangkok,2089,other,12.6
+Bangkok,2090,other,12.6
+Bangkok,2091,other,12.6
+Bangkok,2092,other,12.6
+Bangkok,2093,other,12.6
+Bangkok,2094,other,12.6
+Bangkok,2095,other,12.6
+Bangkok,2096,other,12.6
+Bangkok,2097,other,12.6
+Bangkok,2098,other,12.6
+Bangkok,2099,other,12.6
+Bangkok,2100,other,12.6
+Rest of Thailand,1970,other,79.9
+Rest of Thailand,1971,other,79.9
+Rest of Thailand,1972,other,79.9
+Rest of Thailand,1973,other,79.9
+Rest of Thailand,1974,other,79.9
+Rest of Thailand,1975,other,79.9
+Rest of Thailand,1976,other,79.9
+Rest of Thailand,1977,other,79.9
+Rest of Thailand,1978,other,79.9
+Rest of Thailand,1979,other,79.9
+Rest of Thailand,1980,other,79.9
+Rest of Thailand,1981,other,79.9
+Rest of Thailand,1982,other,79.9
+Rest of Thailand,1983,other,79.9
+Rest of Thailand,1984,other,79.9
+Rest of Thailand,1985,other,79.9
+Rest of Thailand,1986,other,79.9
+Rest of Thailand,1987,other,79.9
+Rest of Thailand,1988,other,79.9
+Rest of Thailand,1989,other,79.9
+Rest of Thailand,1990,other,79.9
+Rest of Thailand,1991,other,79.9
+Rest of Thailand,1992,other,79.9
+Rest of Thailand,1993,other,79.9
+Rest of Thailand,1994,other,79.9
+Rest of Thailand,1995,other,79.9
+Rest of Thailand,1996,other,79.9
+Rest of Thailand,1997,other,79.9
+Rest of Thailand,1998,other,79.9
+Rest of Thailand,1999,other,79.9
+Rest of Thailand,2000,other,79.9
+Rest of Thailand,2001,other,79.9
+Rest of Thailand,2002,other,79.9
+Rest of Thailand,2003,other,79.9
+Rest of Thailand,2004,other,79.9
+Rest of Thailand,2005,other,79.9
+Rest of Thailand,2006,other,79.9
+Rest of Thailand,2007,other,79.9
+Rest of Thailand,2008,other,79.9
+Rest of Thailand,2009,other,79.9
+Rest of Thailand,2010,other,79.9
+Rest of Thailand,2011,other,79.9
+Rest of Thailand,2012,other,79.9
+Rest of Thailand,2013,other,79.9
+Rest of Thailand,2014,other,79.9
+Rest of Thailand,2015,other,79.9
+Rest of Thailand,2020,other,79.9
+Rest of Thailand,2025,other,79.9
+Rest of Thailand,2030,other,79.9
+Rest of Thailand,2035,other,79.9
+Rest of Thailand,2040,other,79.9
+Rest of Thailand,2045,other,79.9
+Rest of Thailand,2050,other,79.9
+Rest of Thailand,2055,other,79.9
+Rest of Thailand,2060,other,79.9
+Rest of Thailand,2065,other,79.9
+Rest of Thailand,2070,other,79.9
+Rest of Thailand,2075,other,79.9
+Rest of Thailand,2080,other,79.9
+Rest of Thailand,2085,other,79.9
+Rest of Thailand,2090,other,79.9
+Rest of Thailand,2095,other,79.9
+Rest of Thailand,2100,other,79.9
