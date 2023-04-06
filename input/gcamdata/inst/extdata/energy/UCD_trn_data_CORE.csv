@@ -1,7 +1,7 @@
 # File: UCD_trn_data_CORE.csv
 # Title: UCD transportation database with selected technology updates
 # Units: Various
-# Column types: ccccccccnnnnnnnnnnnnnnnnnnnn 
+# Column types: ccccccccnnnnnnnnnnnnnnnnnnnn
 # ----------
 UCD_region,UCD_sector,mode,size.class,UCD_technology,UCD_fuel,variable,unit,2005,2010,2015,2020,2025,2030,2035,2040,2045,2050,2055,2060,2065,2070,2075,2080,2085,2090,2095,2100
 Africa,Passenger,LDV_2W,Motorcycle (50-250cc),All,All,annual travel per vehicle,vkt/veh/yr,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478,8478
@@ -2987,8 +2987,8 @@ Middle East,Freight,Truck,Truck (9-16t),Liquids,Liquids,load factor,tonnes/veh,6
 Middle East,Freight,Truck,Truck (9-16t),NG,Natural Gas,load factor,tonnes/veh,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
 Southeast Asia,Passenger,Air Domestic,All,Liquids,Liquids,load factor,pers/veh,113.6955,116.6395667,119.5836334,122.5277,124.7252667,126.9228333,129.1204,130.4298333,131.7392667,133.0487,133.0487,133.0487,133.0487,133.0487,133.0487,133.0487,133.0487,133.0487,133.0487,133.0487
 Southeast Asia,Passenger,Air International,All,Liquids,Liquids,load factor,pers/veh,204.0667,209.3508333,214.6349667,219.9191,223.8634333,227.8077667,231.7521,234.1023333,236.4525667,238.8028,238.8028,238.8028,238.8028,238.8028,238.8028,238.8028,238.8028,238.8028,238.8028,238.8028
-Southeast Asia,Passenger,Bus,All,Liquids,Liquids,load factor,pers/veh,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878
-Southeast Asia,Passenger,Bus,All,NG,Natural Gas,load factor,pers/veh,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878,47.4878
+Southeast Asia,Passenger,Bus,All,Liquids,Liquids,load factor,pers/veh,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439
+Southeast Asia,Passenger,Bus,All,NG,Natural Gas,load factor,pers/veh,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439,23.7439
 Southeast Asia,Passenger,HSR,All,Electric,Electricity,load factor,pers/veh,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605,155.6605
 Southeast Asia,Passenger,LDV_2W,Moped,Liquids,Liquids,load factor,pers/veh,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
 Southeast Asia,Passenger,LDV_2W,Moped,BEV,Electricity,load factor,pers/veh,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4,1.4
