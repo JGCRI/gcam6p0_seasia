@@ -3,7 +3,7 @@
   <world>
 
     <region name="KualaLumpur">
-      <supplysector name="industrial energy use">
+      <supplysector name="other industrial energy use">
         <subsector name="hydrogen">
           <share-weight fillout="1" year="1975">0</share-weight>
 	  <share-weight fillout="1" year="2070">1</share-weight>
@@ -15,7 +15,7 @@
     </region>
 
     <region name="Rest of Malaysia">
-      <supplysector name="industrial energy use">
+      <supplysector name="other industrial energy use">
         <subsector name="hydrogen">
           <share-weight fillout="1" year="1975">0</share-weight>
 	  <share-weight fillout="1" year="2050">1</share-weight>
