@@ -1,16 +1,16 @@
 # Copyright 2019 Battelle Memorial Institute; see the LICENSE file.
 
-#' module_energy_Xbatch_transportation_xml_Subregions_Malaysia
+#' module_energy_Xbatch_transportation_xml_Subregions_Malaysia_policy
 #'
-#' Construct XML data structure for \code{transportation_Subregions_Malaysia}.
+#' Construct XML data structure for \code{transportation_Subregions_Malaysia_policy}.
 #'
 #' @param command API command to execute
 #' @param ... other optional parameters, depending on command
 #' @return Depends on \code{command}: either a vector of required inputs,
 #' a vector of output names, or (if \code{command} is "MAKE") all
-#' the generated outputs: \code{transportation_Subregions_Malaysia.xml}. The corresponding file in the
-#' original data system was \code{batch_transportation_Subregions_Malaysia} (energy XML).
-module_energy_Xbatch_transportation_xml_Subregions_Malaysia <- function(command, ...) {
+#' the generated outputs: \code{transportation_Subregions_Malaysia_policy.xml}. The corresponding file in the
+#' original data system was \code{batch_transportation_Subregions_Malaysia_policy} (energy XML).
+module_energy_Xbatch_transportation_xml_Subregions_Malaysia_policy <- function(command, ...) {
   if(command == driver.DECLARE_INPUTS) {
     return(c("X254.DeleteFinalDemand_trn_Subregions_Malaysia",
              "X254.DeleteSupplysector_trn_Subregions_Malaysia",
@@ -46,7 +46,7 @@ module_energy_Xbatch_transportation_xml_Subregions_Malaysia <- function(command,
              "X254.pol_emissions_trn_Subregions_Malaysia",
              "X254.ghg_emissions_trn_Subregions_Malaysia"))
   } else if(command == driver.DECLARE_OUTPUTS) {
-    return(c(XML = "transportation_Subregions_Malaysia.xml"))
+    return(c(XML = "transportation_Subregions_Malaysia_policy.xml"))
   } else if(command == driver.MAKE) {
 
     all_data <- list(...)[[1]]
@@ -59,7 +59,17 @@ module_energy_Xbatch_transportation_xml_Subregions_Malaysia <- function(command,
     X254.tranSubsectorLogit_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorLogit_trn_Subregions_Malaysia")
     X254.tranSubsectorShrwt_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorShrwt_trn_Subregions_Malaysia")
     X254.tranSubsectorShrwtFllt_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorShrwtFllt_trn_Subregions_Malaysia")
-    X254.tranSubsectorInterp_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorInterp_trn_Subregions_Malaysia")
+    X254.tranSubsectorInterp_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorInterp_trn_Subregions_Malaysia") %>%
+      # filter out modes we will be changing shareweights for
+      filter(tranSubsector != "HSR",
+             tranSubsector != "Passenger Rail",
+             tranSubsector != "Bus")
+    X254.tranSubsectorInterp_trn_Subregions_Malaysia_overwrite <- get_data(all_data, "X254.tranSubsectorInterp_trn_Subregions_Malaysia") %>%
+      # filter for modes we will be changing shareweights for
+      filter(tranSubsector == "HSR" |
+             tranSubsector == "Passenger Rail" |
+             tranSubsector == "Bus") %>%
+      mutate(overwrite.policy = "NEVER")
     X254.tranSubsectorSpeed_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorSpeed_trn_Subregions_Malaysia")
     X254.tranSubsectorSpeed_passthru_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorSpeed_passthru_trn_Subregions_Malaysia")
     X254.tranSubsectorSpeed_noVOTT_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorSpeed_noVOTT_trn_Subregions_Malaysia")
@@ -89,7 +99,7 @@ module_energy_Xbatch_transportation_xml_Subregions_Malaysia <- function(command,
     # ===================================================
 
     # Produce outputs
-    create_xml("transportation_Subregions_Malaysia.xml") %>%
+    create_xml("transportation_Subregions_Malaysia_policy.xml") %>%
       add_xml_data(X254.DeleteFinalDemand_trn_Subregions_Malaysia, "DeleteFinalDemand") %>%
       add_xml_data(X254.DeleteSupplysector_trn_Subregions_Malaysia, "DeleteSupplysector") %>%
       add_logit_tables_xml(X254.Supplysector_trn_Subregions_Malaysia, "Supplysector") %>%
@@ -98,6 +108,7 @@ module_energy_Xbatch_transportation_xml_Subregions_Malaysia <- function(command,
       add_xml_data(X254.tranSubsectorShrwt_trn_Subregions_Malaysia, "tranSubsectorShrwt") %>%
       add_xml_data(X254.tranSubsectorShrwtFllt_trn_Subregions_Malaysia, "tranSubsectorShrwtFllt") %>%
       add_xml_data(X254.tranSubsectorInterp_trn_Subregions_Malaysia, "tranSubsectorInterp") %>%
+      add_xml_data(X254.tranSubsectorInterp_trn_Subregions_Malaysia_overwrite, "tranSubsectorInterp_overwrite") %>%
       add_xml_data(X254.tranSubsectorSpeed_trn_Subregions_Malaysia, "tranSubsectorSpeed") %>%
       add_xml_data(X254.tranSubsectorSpeed_passthru_trn_Subregions_Malaysia, "tranSubsectorSpeed") %>%
       add_xml_data(X254.tranSubsectorSpeed_noVOTT_trn_Subregions_Malaysia, "tranSubsectorSpeed") %>%
@@ -156,9 +167,9 @@ module_energy_Xbatch_transportation_xml_Subregions_Malaysia <- function(command,
                      "X254.hfc_future_trn_Subregions_Malaysia",
                      "X254.pol_emissions_trn_Subregions_Malaysia",
                      "X254.ghg_emissions_trn_Subregions_Malaysia") ->
-      transportation_Subregions_Malaysia.xml
+      transportation_Subregions_Malaysia_policy.xml
 
-    return_data(transportation_Subregions_Malaysia.xml)
+    return_data(transportation_Subregions_Malaysia_policy.xml)
   } else {
     stop("Unknown command")
   }
