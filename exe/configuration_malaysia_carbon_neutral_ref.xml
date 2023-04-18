@@ -109,6 +109,7 @@
 		<Value name = "cities">../input/gcamdata/xml/industry_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/transportation_Subregions_Malaysia.xml</Value>
 		<Value name = "cities">../input/gcamdata/xml/liquids_limits_Subregions_Malaysia.xml</Value>
+      	<Value name = "cities">../input/addons/malaysia/no_nuclear.xml</Value>
 
 		<Value name = "cities">../input/gcamdata/xml/socioeconomics_Subregions_Thailand.xml</Value>
 		<!--Value name = "cities">../input/gcamdata/xml/building_Subregions_Thailand.xml</Value-->
