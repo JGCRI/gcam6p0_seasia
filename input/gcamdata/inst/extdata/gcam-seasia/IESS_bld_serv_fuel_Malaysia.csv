@@ -1,0 +1,52 @@
+# File: IESS_bld_serv_fuel_Malaysia.csv
+# Title: Building service fuel shares
+# Units: Unitless
+# Column types: ccccn
+# ----------
+sector,service,fuel,technology,share
+residential rural,lighting,electricity,bulb,0.005
+residential rural,lighting,electricity,tubelight,0.0025
+residential rural,lighting,electricity,cfl,0.0025
+residential rural,lighting,electricity,led,0.01
+residential rural,lighting,refined liquids,kerosene lamp,0.005
+residential rural,ventilation,electricity,ceiling fan,0.03
+residential rural,televisions,electricity,television,0.0025
+residential rural,refrigerators,electricity,refrigerator,0.11
+residential rural,air conditioners,electricity,air conditioner,0.1025
+residential rural,other appliances,electricity,other appliances,0.07
+residential urban,lighting,electricity,bulb,0.005
+residential urban,lighting,electricity,tubelight,0.005
+residential urban,lighting,electricity,cfl,0.015
+residential urban,lighting,electricity,led,0.05
+residential urban,lighting,refined liquids,kerosene lamp,0
+residential urban,ventilation,electricity,ceiling fan,0.04
+residential urban,televisions,electricity,television,0.005
+residential urban,refrigerators,electricity,refrigerator,0.12
+residential urban,air conditioners,electricity,air conditioner,0.24
+residential urban,other appliances,electricity,other appliances,0.09
+residential rural,cooking,biomass,biomass,1
+residential rural,cooking,coal,coal,0
+residential rural,cooking,electricity,electricity,0.05
+residential rural,cooking,gas,gas,0
+residential rural,cooking,refined liquids,refined liquids,0.35
+residential rural,cooking,traditional biomass,traditional biomass,1
+residential urban,cooking,biomass,biomass,0
+residential urban,cooking,coal,coal,0
+residential urban,cooking,electricity,electricity,0.02
+residential urban,cooking,gas,gas,1
+residential urban,cooking,refined liquids,refined liquids,0.645
+residential urban,cooking,traditional biomass,traditional biomass,0
+residential rural,water heaters,electricity,electric water heater,0.005
+residential rural,water heaters,refined liquids,LPG water heater,0
+residential rural,water heaters,solar,solar water heater,0.161816155
+residential urban,water heaters,electricity,electric water heater,0.02
+residential urban,water heaters,refined liquids,LPG water heater,0
+residential urban,water heaters,solar,solar water heater,0.838183845
+commercial,hvac,electricity,electricity,0.5
+commercial,lighting,electricity,electricity,0.1
+commercial,others,electricity,electricity,0.1
+commercial,cooking,biomass,biomass,0
+commercial,cooking,coal,coal,0
+commercial,cooking,electricity,electricity,0.3
+commercial,cooking,gas,gas,1
+commercial,cooking,refined liquids,refined liquids,1
