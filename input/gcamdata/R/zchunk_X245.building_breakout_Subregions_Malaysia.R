@@ -42,7 +42,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
              FILE = "gcam-seasia/IND_A44_subsector_logit",
              FILE = "gcam-seasia/IND_A44_subsector_shrwt",
              FILE = "gcam-seasia/IND_A44_tech_cost",
-             FILE = "gcam-seasia/IND_A44_tech_eff",
+             FILE = "gcam-seasia/IND_A44_tech_eff_Malaysia",
              FILE = "gcam-seasia/IND_A44_tech_eff_avg",
              FILE = "gcam-seasia/IND_A44_globaltech_shares",
              FILE = "gcam-seasia/IND_A44_tech_intgains",
@@ -130,7 +130,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
     IND_A44_subsector_logit <- get_data(all_data, "gcam-seasia/IND_A44_subsector_logit", strip_attributes = TRUE)
     IND_A44_subsector_shrwt <- get_data(all_data, "gcam-seasia/IND_A44_subsector_shrwt", strip_attributes = TRUE)
     IND_A44_tech_cost <- get_data(all_data, "gcam-seasia/IND_A44_tech_cost", strip_attributes = TRUE)
-    IND_A44_tech_eff <- get_data(all_data, "gcam-seasia/IND_A44_tech_eff", strip_attributes = TRUE) %>%
+    IND_A44_tech_eff_Malaysia <- get_data(all_data, "gcam-seasia/IND_A44_tech_eff_Malaysia", strip_attributes = TRUE) %>%
       gather_years()
     IND_A44_tech_eff_avg <- get_data(all_data, "gcam-seasia/IND_A44_tech_eff_avg", strip_attributes = TRUE)
     IND_A44_globaltech_shares <- get_data(all_data, "gcam-seasia/IND_A44_globaltech_shares", strip_attributes = TRUE)
@@ -592,14 +592,14 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
     }
 
     # X245.StubTech_bld_Subregions_Malaysia: Identification of stub technologies for buildings
-    X245.StubTech_bld_Subregions_Malaysia <- IND_A44_tech_eff %>%
+    X245.StubTech_bld_Subregions_Malaysia <- IND_A44_tech_eff_Malaysia %>%
       select(supplysector, subsector, technology) %>%
       distinct() %>%
       write_to_all_states(LEVEL2_DATA_NAMES[["Tech"]], region_list = gcam.Malaysia.subregions) %>%
       rename(stub.technology = technology)
 
     # X245.GlobalTechEff_bld: Assumed efficiencies (all years) of buildings technologies
-    X245.end_use_eff <- IND_A44_tech_eff %>%
+    X245.end_use_eff <- IND_A44_tech_eff_Malaysia %>%
       complete(nesting(supplysector, subsector, technology, minicam.energy.input), year = c(year, MODEL_YEARS)) %>%
       group_by(supplysector, subsector, technology, minicam.energy.input) %>%
       mutate(value = approx_fun(year, value)) %>%
@@ -725,7 +725,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       distinct(region, supplysector, subsector, minicam.energy.input, year, technology, calibrated.value)
 
     # Shares allocated to partitioned technologies need to be computed first using efficiencies
-    X245.globaltech_eff_prt <- IND_A44_tech_eff %>%
+    X245.globaltech_eff_prt <- IND_A44_tech_eff_Malaysia %>%
       semi_join(IND_A44_tech_eff_avg, by = c("supplysector", "subsector")) %>%
       filter(year == gcamusa.EFFICIENCY_PARTITION_YEAR) %>%
       select(supplysector, subsector, technology, efficiency = value)
@@ -1177,7 +1177,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       add_comments("Multiplied energy consumption by efficiency for each technology, then aggregated by service") %>%
       add_legacy_name("X245.ThermalBaseService") %>%
       add_precursors("X244.StubTechCalInput_bld_Subregions_Malaysia", "gcam-seasia/IND_bld_techs",
-                     "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
+                     "gcam-seasia/IND_A44_tech_eff_Malaysia", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
                      "gcam-seasia/A44.gcam_consumer", "gcam-seasia/IESS_bld_serv_fuel_Malaysia") ->
       X245.ThermalBaseService_bld_Subregions_Malaysia
 
@@ -1187,7 +1187,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       add_comments("Multiplied energy consumption by efficiency for each technology, then aggregated by service") %>%
       add_legacy_name("X245.GenericBaseService") %>%
       add_precursors("X244.StubTechCalInput_bld_Subregions_Malaysia", "gcam-seasia/IND_bld_techs",
-                     "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
+                     "gcam-seasia/IND_A44_tech_eff_Malaysia", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
                      "gcam-seasia/A44.gcam_consumer", "gcam-seasia/IESS_bld_serv_fuel_Malaysia") ->
       X245.GenericBaseService_bld_Subregions_Malaysia
 
@@ -1197,7 +1197,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       add_comments("Satiation level = base service / floorspace * exogenous multiplier") %>%
       add_legacy_name("X245.GenericServiceSatiation") %>%
       add_precursors("X244.StubTechCalInput_bld_Subregions_Malaysia", "gcam-seasia/IND_bld_techs",
-                     "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
+                     "gcam-seasia/IND_A44_tech_eff_Malaysia", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
                      "gcam-seasia/A44.gcam_consumer", "X244.Floorspace_Subregions_Malaysia",
                      "gcam-seasia/IND_A44_demand_satiation_mult", "gcam-seasia/IESS_bld_serv_fuel_Malaysia") ->
       X245.GenericServiceSatiation_bld_Subregions_Malaysia
@@ -1208,7 +1208,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       add_comments("Satiation level = base service / floorspace * exogenous multiplier") %>%
       add_legacy_name("X245.ThermalServiceSatiation") %>%
       add_precursors("X244.StubTechCalInput_bld_Subregions_Malaysia", "gcam-seasia/IND_bld_techs",
-                     "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
+                     "gcam-seasia/IND_A44_tech_eff_Malaysia", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
                      "gcam-seasia/A44.gcam_consumer", "X244.Floorspace_Subregions_Malaysia",
                      "gcam-seasia/IND_A44_demand_satiation_mult", "gcam-seasia/IESS_bld_serv_fuel_Malaysia") ->
       X245.ThermalServiceSatiation_bld_Subregions_Malaysia
@@ -1219,7 +1219,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       add_comments("internal.gains.scalar = exogenous scalar * degree.days / exogenous degree day norm") %>%
       add_legacy_name("X245.Intgains_scalar") %>%
       add_precursors("X244.StubTechCalInput_bld_Subregions_Malaysia", "gcam-seasia/IND_bld_techs",
-                     "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
+                     "gcam-seasia/IND_A44_tech_eff_Malaysia", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
                      "gcam-seasia/A44.gcam_consumer", "X244.Floorspace_Subregions_Malaysia",
                      "gcam-seasia/IND_A44_demand_satiation_mult", "L143.HDDCDD_scen_R_Y") ->
       X245.Intgains_scalar_bld_Subregions_Malaysia
@@ -1316,9 +1316,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
     X245.StubTech_bld_Subregions_Malaysia %>%
       add_title("Identification of stub technologies for buildings") %>%
       add_units("NA") %>%
-      add_comments("IND_A44_tech_eff written to all states") %>%
+      add_comments("IND_A44_tech_eff_Malaysia written to all states") %>%
       add_legacy_name("X245.StubTech_bld") %>%
-      add_precursors("gcam-seasia/IND_A44_tech_eff") ->
+      add_precursors("gcam-seasia/IND_A44_tech_eff_Malaysia") ->
       X245.StubTech_bld_Subregions_Malaysia
 
     X245.StubTechCalInput_bld_Subregions_Malaysia %>%
@@ -1327,17 +1327,17 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       add_comments("Energy consumption multiplied by shares to get calibrated energy") %>%
       add_comments("Shares calculated using efficiency averages") %>%
       add_legacy_name("X245.StubTechCalInput_bld") %>%
-      add_precursors("X244.StubTechCalInput_bld_Subregions_Malaysia", "gcam-seasia/IND_bld_techs", "gcam-seasia/IND_A44_tech_eff",
+      add_precursors("X244.StubTechCalInput_bld_Subregions_Malaysia", "gcam-seasia/IND_bld_techs", "gcam-seasia/IND_A44_tech_eff_Malaysia",
                      "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares", "gcam-seasia/IESS_bld_serv_fuel_Malaysia") ->
       X245.StubTechCalInput_bld_Subregions_Malaysia
 
     X245.StubTechMarket_bld_Subregions_Malaysia %>%
       add_title("market names for fuel inputs to all technologies in each state") %>%
       add_units("NA") %>%
-      add_comments("Categories from IND_A44_tech_eff written to all states") %>%
+      add_comments("Categories from IND_A44_tech_eff_Malaysia written to all states") %>%
       add_comments("Market set to states for electricity") %>%
       add_legacy_name("X245.StubTechMarket_bld") %>%
-      add_precursors("gcam-seasia/IND_A44_tech_eff") ->
+      add_precursors("gcam-seasia/IND_A44_tech_eff_Malaysia") ->
       X245.StubTechMarket_bld_Subregions_Malaysia
 
     X245.GlobalTechIntGainOutputRatio %>%
@@ -1346,7 +1346,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       add_comments("internal.gains.output.ratio = input.ratio from IND_A44_tech_intgains divided by efficiency from X245.GlobalTechEff_bld") %>%
       add_legacy_name("X245.GlobalTechIntGainOutputRatio") %>%
       add_precursors("gcam-seasia/IND_A44_tech_intgains", "gcam-seasia/IND_bld_techs",
-                     "gcam-seasia/A44.gcam_consumer", "gcam-seasia/IND_A44_tech_eff") ->
+                     "gcam-seasia/A44.gcam_consumer", "gcam-seasia/IND_A44_tech_eff_Malaysia") ->
       X245.GlobalTechIntGainOutputRatio_bld_Subregions_Malaysia
 
     X245.GlobalTechInterpTo_bld %>%
@@ -1360,9 +1360,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
     X245.GlobalTechEff_bld %>%
       add_title("Assumed efficiencies (all years) of buildings technologies") %>%
       add_units("Unitless") %>%
-      add_comments("Values from IND_A44_tech_eff") %>%
+      add_comments("Values from IND_A44_tech_eff_Malaysia") %>%
       add_legacy_name("X245.GlobalTechEff_bld") %>%
-      add_precursors("gcam-seasia/IND_A44_tech_eff") ->
+      add_precursors("gcam-seasia/IND_A44_tech_eff_Malaysia") ->
       X245.GlobalTechEff_bld_Subregions_Malaysia
 
     X245.GlobalTechShrwt_bld_Subregions_Malaysia %>%

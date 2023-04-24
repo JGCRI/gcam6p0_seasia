@@ -42,11 +42,11 @@ residential rural,water heaters,solar,solar water heater,0.161816155
 residential urban,water heaters,electricity,electric water heater,0.02
 residential urban,water heaters,refined liquids,LPG water heater,0
 residential urban,water heaters,solar,solar water heater,0.838183845
-commercial,hvac,electricity,electricity,0.5
+commercial,hvac,electricity,electricity,0.65
 commercial,lighting,electricity,electricity,0.1
-commercial,others,electricity,electricity,0.1
+commercial,others,electricity,electricity,0.15
 commercial,cooking,biomass,biomass,0
 commercial,cooking,coal,coal,0
-commercial,cooking,electricity,electricity,0.3
+commercial,cooking,electricity,electricity,0.1
 commercial,cooking,gas,gas,1
 commercial,cooking,refined liquids,refined liquids,1
