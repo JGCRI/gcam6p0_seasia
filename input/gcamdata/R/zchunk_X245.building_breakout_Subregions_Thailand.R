@@ -38,9 +38,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
              FILE = "gcam-seasia/A44.gcam_consumer",
              FILE = "gcam-seasia/IND_A44_satiation_flsp",
              FILE = "gcam-seasia/IND_A44_sector",
-             FILE = "gcam-seasia/IND_A44_subsector_interp",
+             FILE = "gcam-seasia/IND_A44_subsector_interp_thailand",
              FILE = "gcam-seasia/IND_A44_subsector_logit",
-             FILE = "gcam-seasia/IND_A44_subsector_shrwt",
+             FILE = "gcam-seasia/IND_A44_subsector_shrwt_thailand",
              FILE = "gcam-seasia/IND_A44_tech_cost",
              FILE = "gcam-seasia/IND_A44_tech_eff",
              FILE = "gcam-seasia/IND_A44_tech_eff_avg",
@@ -52,7 +52,8 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
              FILE = "gcam-seasia/IND_A44_demand_satiation_mult",
              FILE = "gcam-seasia/IND_A44_subregional_shares",
              FILE = "gcam-seasia/Various_flsp_Mm2",
-             FILE = "gcam-seasia/IESS_bld_serv_fuel",
+             FILE = "gcam-seasia/IESS_bld_serv_fuel_thailand",
+             "L244.StubTechCalInput_bld",
              "X244.Floorspace_Subregions_Thailand",
              "X244.Satiation_flsp_Subregions_Thailand",
              "X244.StubTechCalInput_bld_Subregions_Thailand",
@@ -126,9 +127,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
     A44.gcam_consumer <- get_data(all_data, "gcam-seasia/A44.gcam_consumer", strip_attributes = TRUE)
     IND_A44_satiation_flsp <- get_data(all_data, "gcam-seasia/IND_A44_satiation_flsp", strip_attributes = TRUE)
     IND_A44_sector <- get_data(all_data, "gcam-seasia/IND_A44_sector", strip_attributes = TRUE)
-    IND_A44_subsector_interp <- get_data(all_data, "gcam-seasia/IND_A44_subsector_interp", strip_attributes = TRUE)
+    IND_A44_subsector_interp <- get_data(all_data, "gcam-seasia/IND_A44_subsector_interp_thailand", strip_attributes = TRUE)
     IND_A44_subsector_logit <- get_data(all_data, "gcam-seasia/IND_A44_subsector_logit", strip_attributes = TRUE)
-    IND_A44_subsector_shrwt <- get_data(all_data, "gcam-seasia/IND_A44_subsector_shrwt", strip_attributes = TRUE)
+    IND_A44_subsector_shrwt <- get_data(all_data, "gcam-seasia/IND_A44_subsector_shrwt_thailand", strip_attributes = TRUE)
     IND_A44_tech_cost <- get_data(all_data, "gcam-seasia/IND_A44_tech_cost", strip_attributes = TRUE)
     IND_A44_tech_eff <- get_data(all_data, "gcam-seasia/IND_A44_tech_eff", strip_attributes = TRUE) %>%
       gather_years()
@@ -141,7 +142,8 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
     IND_A44_demand_satiation_mult <- get_data(all_data, "gcam-seasia/IND_A44_demand_satiation_mult", strip_attributes = TRUE)
     IND_A44_subregional_shares <- get_data(all_data, "gcam-seasia/IND_A44_subregional_shares", strip_attributes = TRUE)
     Various_flsp_Mm2 <- get_data(all_data, "gcam-seasia/Various_flsp_Mm2", strip_attributes = TRUE)
-    IESS_bld_serv_fuel <- get_data(all_data, "gcam-seasia/IESS_bld_serv_fuel", strip_attributes = TRUE)
+    IESS_bld_serv_fuel <- get_data(all_data, "gcam-seasia/IESS_bld_serv_fuel_thailand", strip_attributes = TRUE)
+    L244.StubTechCalInput_bld <- get_data(all_data, "L244.StubTechCalInput_bld", strip_attributes = TRUE)
     X244.Floorspace_Subregions_Thailand <- get_data(all_data, "X244.Floorspace_Subregions_Thailand", strip_attributes = TRUE)
     X244.Satiation_flsp_Subregions_Thailand <- get_data(all_data, "X244.Satiation_flsp_Subregions_Thailand", strip_attributes = TRUE)
     X244.StubTechCalInput_bld_Subregions_Thailand <- get_data(all_data, "X244.StubTechCalInput_bld_Subregions_Thailand", strip_attributes = TRUE)
@@ -554,6 +556,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
     # 4. Buildings Sectors, Subsectors, etc.
     # ===================================================
 
+
     # The remainder of the building-level parameters require information about the output of each service, which we do not have yet
 
     # X245.Supplysector_bld: Supplysector info for buildings
@@ -625,112 +628,123 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
     # This needs to be done separately for the Bangkok and the other subregions
     # Since we are assuming there is no rural energy consumption in Bangkok.
     # For robustness, we will list the subregions with no rural shares, and those with rural shares
-    # Take the subregional shares table
-    IND_A44_subregional_shares %>%
-      # filter for the subregions
-      filter( region %in% gcam.Thailand.subregions,
-              # filter for a value of 100 in a single year, indicating it is 100% urban
-              `2010` == 100 ) -> subregional_100
-    # assign the subregions with 100% residential urban shares to a variable
-    unique( subregional_100$region ) -> res_urban_subregions
 
-    # Now list those that do not have 100% residential urban
-    setdiff( gcam.Thailand.subregions, res_urban_subregions ) -> res_rural_subregions
 
-    # The input that has energy consumption is at an aggregated level and needs to be broken out
-    # the IESS file has fuel shares for "buildings" as a whole
-    bld_agg_energy_consumption_urban_only <- X244.StubTechCalInput_bld_Subregions_Thailand %>%
-      filter( region %in% res_urban_subregions ) %>%
-      # aggregate energy consumption by fuel and year for building sector by comm and resid
-      separate( supplysector, c( "resid/comm", "specific" ) ) %>%
+    # get subregion shares of Thailand's urban and rural gdp
+    gdp_share_urban_rural_Subregions_Thailand <-
+      # start with urban/rural shares for each subregion
+      IND_A44_subregional_shares %>%
+      filter(region %in% c(gcam.Thailand.parentregion, gcam.Thailand.subregions),
+             # get urban/rural gdp shares
+             item == "urban share of GDP") %>%
+      select(-c(scenario, unit, item)) %>%
+      gather_years() %>%
+      # join with gdp by subregion
+      left_join_error_no_match(X201.GDP_Subregions_Thailand) %>%
+      filter(region != gcam.Thailand.parentregion) %>%
+      # calculate total urban and rural gdp for each subregion
+      mutate(urban_gdp = value*GDP, rural_gdp = (100-value)*GDP) %>%
+      group_by(year) %>%
+      # calculate each subregion's share of the whole country's urban gdp
+      # and rural gdp
+      mutate(share_urban_gdp = urban_gdp/sum(urban_gdp),
+             share_rural_gdp = rural_gdp/sum(rural_gdp)) %>%
+      ungroup() %>%
+      select(region, year, share_urban_gdp, share_rural_gdp) %>%
+      # interpolate back through historical years
+      complete( nesting( region), year = HISTORICAL_YEARS) %>%
+      group_by(region) %>%
+      mutate(share_urban_gdp = approx_fun( year, share_urban_gdp, rule = 2),
+             share_rural_gdp = approx_fun( year, share_rural_gdp, rule = 2)) %>%
+      ungroup() %>%
+      filter(year %in% MODEL_BASE_YEARS)
+
+    # get subregion shares of Thailand's total gdp
+    X244.pop_gdp_share_Subregions_Thailand <- X201.GDP_Subregions_Thailand %>%
+      group_by(year) %>%
+      dplyr::filter(region != gcam.Thailand.parentregion) %>%
+      mutate(gdpshare = GDP / sum(GDP)) %>%
+      ungroup() %>%
+      select(region, year, gdpshare)
+
+    # get the aggregate energy consumption by fuel for commercial and residential
+    bld_agg_energy_consumption <- L244.StubTechCalInput_bld %>%
+      filter(region == gcam.Thailand.parentregion) %>%
+      separate(supplysector, c( "resid/comm", "specific")) %>%
       group_by( `resid/comm`, subsector, year, region ) %>%
       mutate( value = sum( calibrated.value ) ) %>%
       rename( fuel = subsector ) %>%
       distinct( `resid/comm`, fuel, year, region, value )
 
-    bld_agg_energy_consumption_has_rural <- X244.StubTechCalInput_bld_Subregions_Thailand %>%
-      filter( region %in% res_rural_subregions ) %>%
-      # aggregate energy consumption by fuel and year for building sector by comm and resid
-      separate( supplysector, c( "resid/comm", "specific" ) ) %>%
-      group_by( `resid/comm`, subsector, year, region ) %>%
-      mutate( value = sum( calibrated.value ) ) %>%
-      rename( fuel = subsector ) %>%
-      distinct( `resid/comm`, fuel, year, region, value )
 
-    # create a table that has service fuel shares for the model base years
-    # TODO: get regional fuel consumption by service by year- using India for now
-    # For the IESS, instead of having shares by fuel for buildings as a whole,
-    # we want it by resid/comm and fuel
-    # For the subregions with 100% urban, we are assuming there is no residential rural area,
-    # Since the other subregions have rural, we need to make two tables with different shares.
-    IESS_bld_serv_fuel_resid_comm_urban_only <- IESS_bld_serv_fuel %>%
-      filter( sector != "residential rural" ) %>%
-      separate( sector, c( "resid/comm", "drop" ), remove = F ) %>%
-      select( -c( energy, drop ) ) %>%
-      group_by( `resid/comm`, fuel ) %>%
-      mutate( "total" = sum( share ),
-              "share" = share / total ) %>%
-      ungroup() %>%
-      select( -c( `resid/comm`, total ) )
-
-    IESS_bld_serv_fuel_resid_comm_has_rural <- IESS_bld_serv_fuel %>%
-      separate( sector, c( "resid/comm", "drop" ), remove = F ) %>%
-      select( -c( energy, drop ) ) %>%
-      group_by( `resid/comm`, fuel ) %>%
-      mutate( "total" = sum( share ),
-              "share" = share / total ) %>%
-      ungroup() %>%
-      select( -c( `resid/comm`, total ) )
-
-
-    bld_service_fuel_energy_consumption_urban_only <- IESS_bld_serv_fuel_resid_comm_urban_only %>%
+    # combine IESS shares with total building consumption by resid/comm
+    # to calculate consumption by service
+    bld_service_fuel_energy_consumption <- IESS_bld_serv_fuel %>%
+      mutate(type = gsub("residential", "resid", type),
+             type = gsub("commercial", "comm", type)) %>%
       repeat_add_columns( tibble( year = MODEL_BASE_YEARS ) ) %>%
-      mutate( "resid/comm" = sector ) %>%
-      separate( `resid/comm`, c( "resid/comm", "drop" ) ) %>%
-      mutate( `resid/comm` = gsub( "residential", "resid", `resid/comm` ),
-              `resid/comm` = gsub( "commercial", "comm", `resid/comm` ) ) %>%
-      select( -drop ) %>%
+      rename("resid/comm" = type) %>%
       # join with the table that has energy consumption by resid/comm, fuel and year
       # TODO: fuel "solar" is not in bld_agg_energy_consumption, which is why solar water heaters are not included
-      left_join( bld_agg_energy_consumption_urban_only, by = c( "year", "fuel", "resid/comm" ) ) %>%
+      left_join( bld_agg_energy_consumption, by = c( "year", "fuel", "resid/comm" ) ) %>%
       # omit NAs (solar water heater)
       filter(!is.na(value)) %>%
       # multiply the energy consumption value by share to get energy consumption for detailed services
-      mutate( value = share * value,
-      # change sector names to match format
-              sector = gsub( "commercial", "comm", sector ),
-              sector = gsub( "residential urban", "resid urban", sector ) ) %>%
+      mutate(value = share * value,
+             # change sector names to match format
+             sector = gsub( "commercial", "comm", sector),
+             sector = gsub( "residential rural", "resid rural", sector),
+             sector = gsub( "residential urban", "resid urban", sector)) %>%
       # combine sector and service columns to get supplysector
-      unite( supplysector, sector, service, sep = " " ) %>%
-      # change NAs to 0
-      mutate( value = ifelse(is.na(value), 0, value))
-
-    bld_service_fuel_energy_consumption_has_rural <- IESS_bld_serv_fuel_resid_comm_has_rural %>%
-      repeat_add_columns( tibble( year = MODEL_BASE_YEARS ) ) %>%
-      mutate( "resid/comm" = sector ) %>%
-      separate( `resid/comm`, c( "resid/comm", "drop" ) ) %>%
-      mutate( `resid/comm` = gsub( "residential", "resid", `resid/comm` ),
-              `resid/comm` = gsub( "commercial", "comm", `resid/comm` ) ) %>%
-      select( -drop ) %>%
-      # join with the table that has energy consumption by resid/comm, fuel and year
-      # TODO: fuel "solar" is not in bld_agg_energy_consumption, which is why solar water heaters are not included
-      left_join( bld_agg_energy_consumption_has_rural, by = c( "year", "fuel", "resid/comm" ) ) %>%
-      # omit NAs (solar water heater)
-      filter(!is.na(value)) %>%
-      # multiply the energy consumption value by share to get energy consumption for detailed services
-      mutate( value = share * value,
-              # change sector names to match format
-              sector = gsub( "commercial", "comm", sector ),
-              sector = gsub( "residential rural", "resid rural", sector ),
-              sector = gsub( "residential urban", "resid urban", sector ) ) %>%
-      # combine sector and service columns to get supplysector
-      unite( supplysector, sector, service, sep = " " ) %>%
-      # change NAs to 0
-      mutate( value = ifelse(is.na(value), 0, value))
+      unite(supplysector, sector, service, sep = " ") %>%
+      select(-c(`resid/comm`, share))
 
 
-    X245.in_EJ_R_bld_serv_F_Yh <- bld_service_fuel_energy_consumption_urban_only %>%
-      bind_rows( bld_service_fuel_energy_consumption_has_rural ) %>%
+    # calculate energy consumption shares for each subregion based on gdp shares
+    bld_service_fuel_energy_consumption_rural <- bld_service_fuel_energy_consumption %>%
+      filter(grepl("rural", supplysector))
+
+    bld_service_fuel_energy_consumption_urban <- bld_service_fuel_energy_consumption %>%
+      filter(grepl("urban", supplysector))
+
+    bld_service_fuel_energy_consumption_comm <- bld_service_fuel_energy_consumption %>%
+      filter(grepl("comm", supplysector))
+
+    # for rural services, downscale to subregions based on share of rural gdp
+    subregions_bld_service_fuel_energy_consumption_rural <- bld_service_fuel_energy_consumption_rural %>%
+      downscale_to_breakout_regions(data = .,
+                                    composite_region = gcam.Thailand.parentregion,
+                                    disag_regions = c(gcam.Thailand.subregions),
+                                    share_data = gdp_share_urban_rural_Subregions_Thailand,
+                                    value.column = "value",
+                                    share.column = "share_rural_gdp")
+
+    # for urban services, downscale to subregions based on share of urban gdp
+    subregions_bld_service_fuel_energy_consumption_urban <- bld_service_fuel_energy_consumption_urban %>%
+      downscale_to_breakout_regions(data = .,
+                                    composite_region = gcam.Thailand.parentregion,
+                                    disag_regions = c(gcam.Thailand.subregions),
+                                    share_data = gdp_share_urban_rural_Subregions_Thailand,
+                                    value.column = "value",
+                                    share.column = "share_urban_gdp")
+
+    # for comm services, downscale to subregions based on share of total gdp
+    subregions_bld_service_fuel_energy_consumption_comm <- bld_service_fuel_energy_consumption_comm %>%
+      downscale_to_breakout_regions(data = .,
+                                    composite_region = gcam.Thailand.parentregion,
+                                    disag_regions = c(gcam.Thailand.subregions),
+                                    share_data = X244.pop_gdp_share_Subregions_Thailand,
+                                    value.column = "value",
+                                    share.column = "gdpshare")
+
+    # combine subregional urban, rural, and commercial back together
+    subregions_bld_service_fuel_energy_consumption <-
+      rbind(subregions_bld_service_fuel_energy_consumption_rural,
+            subregions_bld_service_fuel_energy_consumption_urban,
+            subregions_bld_service_fuel_energy_consumption_comm)
+
+
+    X245.in_EJ_R_bld_serv_F_Yh <- subregions_bld_service_fuel_energy_consumption %>%
       mutate(calibrated.value = round(value, energy.DIGITS_CALOUTPUT)) %>%
       # Add subsector and energy.input
       # IND_bld_techs has hi and lo efficiency, so left_join_error_no_match does not work
@@ -816,7 +830,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
     # If there are missing entries, we need to add them to the calibrated input dataframe
     if ( dim(missing_entries)[1] != 0 ) {
       X245.StubTechCalInput_bld_Subregions_Thailand <- missing_entries %>%
-        select( -c( energy, share ) ) %>%
+        select( -c(share, type ) ) %>%
         rename( subsector = fuel,
                 stub.technology = technology ) %>%
         mutate( year = 0 ) %>%

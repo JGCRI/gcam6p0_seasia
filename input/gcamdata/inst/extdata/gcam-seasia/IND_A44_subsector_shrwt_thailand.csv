@@ -1,0 +1,47 @@
+# File: IND_A44_subsector_shrwt_thailand.csv
+# Title: Building subsector default shareweights
+# Units: Unitless
+# Source: None (GCAM assumptions)
+# Column types: ccccn
+# ----------
+supplysector,subsector,year.fillout,year,share.weight
+resid rural lighting,electricity,start-year,,1
+resid rural lighting,refined liquids,2025,,0
+resid rural ventilation,electricity,start-year,,1
+resid rural televisions,electricity,start-year,,1
+resid rural refrigerators,electricity,start-year,,1
+resid rural air conditioners,electricity,start-year,,1
+resid rural other appliances,electricity,start-year,,1
+resid rural water heaters,electricity,start-year,,1
+resid rural water heaters,refined liquids,start-year,,1
+resid rural water heaters,solar,2020,,0.7
+resid urban lighting,electricity,start-year,,1
+resid urban lighting,refined liquids,2025,,0
+resid urban ventilation,electricity,start-year,,1
+resid urban televisions,electricity,start-year,,1
+resid urban refrigerators,electricity,start-year,,1
+resid urban air conditioners,electricity,start-year,,1
+resid urban other appliances,electricity,start-year,,1
+resid urban water heaters,electricity,start-year,,1
+resid urban water heaters,refined liquids,start-year,,1
+resid urban water heaters,solar,2020,,0.7
+comm hvac,electricity,start-year,,1
+comm lighting,electricity,start-year,,1
+comm others,electricity,start-year,,1
+resid rural cooking,biomass,start-year,,1
+resid rural cooking,coal,start-year,,1
+resid rural cooking,electricity,start-year,,1
+resid rural cooking,gas,start-year,,1
+resid rural cooking,refined liquids,start-year,,1
+resid rural cooking,traditional biomass,2040,,0
+resid urban cooking,biomass,start-year,,1
+resid urban cooking,coal,start-year,,1
+resid urban cooking,electricity,start-year,,1
+resid urban cooking,gas,start-year,,1
+resid urban cooking,refined liquids,start-year,,1
+resid urban cooking,traditional biomass,2020,,0
+comm cooking,biomass,start-year,,1
+comm cooking,coal,start-year,,1
+comm cooking,electricity,start-year,,1
+comm cooking,gas,start-year,,1
+comm cooking,refined liquids,start-year,,1
