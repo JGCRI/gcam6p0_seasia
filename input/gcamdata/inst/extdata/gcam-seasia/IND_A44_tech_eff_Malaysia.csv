@@ -1,0 +1,58 @@
+# File: IND_A44_tech_eff_Malaysia.csv
+# Title: Building default technology efficiency
+# Units: Unitless
+# Column types: ccccnnnnnnnnnn
+# ----------
+supplysector,subsector,technology,minicam.energy.input,1971,1990,2010,2020,2035,2050,2065,2080,2095,2100
+resid rural lighting,electricity,bulb,elect_td_bld,3.984,3.984,3.984,3.984,4.174,4.174,4.174,4.364,4.364,4.364
+resid rural lighting,electricity,tubelight,elect_td_bld,22.767,22.767,22.767,23.146,23.526,23.905,24.095,24.474,24.854,24.854
+resid rural lighting,electricity,cfl,elect_td_bld,15.937,15.937,15.937,15.937,16.696,16.696,16.696,17.454,17.454,17.454
+resid rural lighting,electricity,led,elect_td_bld,29.217,29.217,29.217,29.217,30.356,31.494,32.632,33.96,35.099,35.099
+resid rural lighting,refined liquids,kerosene lamp,refined liquids enduse,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001
+resid rural ventilation,electricity,ceiling fan (lo-eff),elect_td_bld,33.333,33.333,33.333,33.333,33.333,33.333,33.333,33.333,33.333,33.333
+resid rural ventilation,electricity,ceiling fan (hi-eff),elect_td_bld,66.667,66.667,66.667,66.667,66.667,66.667,66.667,66.667,66.667,66.667
+resid rural televisions,electricity,television,elect_td_bld,1.587,1.587,1.587,1.587,1.587,1.587,1.587,1.587,1.587,1.587
+resid rural refrigerators,electricity,refrigerator (lo-eff),elect_td_bld,0.128,0.128,0.128,0.128,0.133,0.138,0.143,0.148,0.154,0.156
+resid rural refrigerators,electricity,refrigerator (hi-eff),elect_td_bld,0.256,0.256,0.256,0.256,0.266,0.276,0.287,0.297,0.309,0.313
+resid rural air conditioners,electricity,air conditioner (lo-eff),elect_td_bld,2.3,2.3,2.3,2.3,2.388,2.479,2.574,2.672,2.774,2.809
+resid rural air conditioners,electricity,air conditioner (hi-eff),elect_td_bld,3.1,3.1,3.1,3.1,3.218,3.341,3.469,3.601,3.738,3.785
+resid rural other appliances,electricity,other appliances,elect_td_bld,1,1,1,1,1.038,1.078,1.119,1.162,1.206,1.221
+resid rural water heaters,electricity,electric water heater,elect_td_bld,20.541,20.541,20.541,20.541,20.541,20.541,20.541,20.541,20.541,20.541
+resid rural water heaters,refined liquids,LPG water heater,refined liquids enduse,12.838,12.838,12.838,12.838,12.838,12.838,12.838,12.838,12.838,12.838
+resid rural water heaters,solar,solar water heater,global solar resource,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
+resid urban lighting,electricity,bulb,elect_td_bld,3.984,3.984,3.984,3.984,4.174,4.174,4.174,4.364,4.364,4.364
+resid urban lighting,electricity,tubelight,elect_td_bld,22.767,22.767,22.767,23.146,23.526,23.905,24.095,24.474,24.854,24.854
+resid urban lighting,electricity,cfl,elect_td_bld,15.937,15.937,15.937,15.937,16.696,16.696,16.696,17.454,17.454,17.454
+resid urban lighting,electricity,led,elect_td_bld,29.217,29.217,29.217,29.217,30.356,31.494,32.632,33.96,35.099,35.099
+resid urban lighting,refined liquids,kerosene lamp,refined liquids enduse,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001,0.001
+resid urban ventilation,electricity,ceiling fan (lo-eff),elect_td_bld,33.333,33.333,33.333,33.333,33.333,33.333,33.333,33.333,33.333,33.333
+resid urban ventilation,electricity,ceiling fan (hi-eff),elect_td_bld,66.667,66.667,66.667,66.667,66.667,66.667,66.667,66.667,66.667,66.667
+resid urban televisions,electricity,television,elect_td_bld,1.587,1.587,1.587,1.587,1.587,1.587,1.587,1.587,1.587,1.587
+resid urban refrigerators,electricity,refrigerator (lo-eff),elect_td_bld,0.128,0.128,0.128,0.128,0.133,0.138,0.143,0.148,0.154,0.156
+resid urban refrigerators,electricity,refrigerator (hi-eff),elect_td_bld,0.256,0.256,0.256,0.256,0.266,0.276,0.287,0.297,0.309,0.313
+resid urban air conditioners,electricity,air conditioner (lo-eff),elect_td_bld,2.3,2.3,2.3,2.3,2.388,2.479,2.574,2.672,2.774,2.809
+resid urban air conditioners,electricity,air conditioner (hi-eff),elect_td_bld,3.1,3.1,3.1,3.1,3.218,3.341,3.469,3.601,3.738,3.785
+resid urban other appliances,electricity,other appliances,elect_td_bld,1,1,1,1,1.038,1.078,1.119,1.162,1.206,1.221
+resid urban water heaters,electricity,electric water heater,elect_td_bld,20.541,20.541,20.541,20.541,20.541,20.541,20.541,20.541,20.541,20.541
+resid urban water heaters,refined liquids,LPG water heater,refined liquids enduse,12.838,12.838,12.838,12.838,12.838,12.838,12.838,12.838,12.838,12.838
+resid urban water heaters,solar,solar water heater,global solar resource,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
+comm hvac,electricity,electricity,elect_td_bld,2.4,2.4,2.4,2.782,2.888,2.998,3.113,3.231,3.355,3.355
+comm lighting,electricity,electricity,elect_td_bld,15.937,15.937,15.937,15.937,16.696,16.696,16.696,17.454,17.454,17.454
+comm others,electricity,electricity,elect_td_bld,1,1,1,1,1.038,1.078,1.119,1.162,1.206,1.221
+resid rural cooking,biomass,biomass,delivered biomass,0.1,0.1,0.1,0.1,0.104,0.108,0.112,0.116,0.121,0.122
+resid rural cooking,coal,coal,delivered coal,0.1,0.1,0.1,0.1,0.104,0.108,0.112,0.116,0.121,0.122
+resid rural cooking,electricity,electricity,elect_td_bld,0.73,0.73,0.73,0.73,1,1.5,1.5,1.5,1.5,1.5
+resid rural cooking,gas,gas,delivered gas,0.4,0.4,0.4,0.4,0.75,1,1,1,1,1
+resid rural cooking,refined liquids,refined liquids,refined liquids enduse,0.4,0.4,0.4,0.4,0.75,1,1,1,1,1
+resid rural cooking,traditional biomass,traditional biomass,traditional biomass,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1
+resid urban cooking,biomass,biomass,delivered biomass,0.1,0.1,0.1,0.1,0.104,0.108,0.112,0.116,0.121,0.122
+resid urban cooking,coal,coal,delivered coal,0.1,0.1,0.1,0.1,0.104,0.108,0.112,0.116,0.121,0.122
+resid urban cooking,electricity,electricity,elect_td_bld,0.73,0.73,0.73,0.73,1,1.5,1.5,1.5,1.5,1.5
+resid urban cooking,gas,gas,delivered gas,0.4,0.4,0.4,0.4,0.75,1,1,1,1,1
+resid urban cooking,refined liquids,refined liquids,refined liquids enduse,0.4,0.4,0.4,0.4,0.75,1,1,1,1,1
+resid urban cooking,traditional biomass,traditional biomass,traditional biomass,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1
+comm cooking,biomass,biomass,delivered biomass,0.1,0.1,0.1,0.1,0.104,0.108,0.112,0.116,0.121,0.122
+comm cooking,coal,coal,delivered coal,0.1,0.1,0.1,0.1,0.104,0.108,0.112,0.116,0.121,0.122
+comm cooking,electricity,electricity,elect_td_bld,0.73,0.73,0.73,0.73,0.73,0.73,0.73,0.73,0.73,0.73
+comm cooking,gas,gas,delivered gas,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4
+comm cooking,refined liquids,refined liquids,refined liquids enduse,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4
