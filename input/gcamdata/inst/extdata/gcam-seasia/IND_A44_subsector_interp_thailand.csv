@@ -1,0 +1,47 @@
+# File: IND_A44_subsector_interp_thailand.csv
+# Title: Building subsector default shareweight interpolation
+# Units: NA
+# Source: None (GCAM assumptions)
+# Column types: cccccnc
+# ----------
+supplysector,subsector,apply.to,from.year,to.year,to.value,interpolation.function
+resid rural lighting,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural lighting,refined liquids,share-weight,final-calibration-year,2025,,linear
+resid rural ventilation,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural televisions,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural refrigerators,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural air conditioners,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural other appliances,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural water heaters,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural water heaters,refined liquids,share-weight,final-calibration-year,end-year,,fixed
+resid rural water heaters,solar,share-weight,final-calibration-year,2050,,linear
+resid urban lighting,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid urban lighting,refined liquids,share-weight,final-calibration-year,2025,,linear
+resid urban ventilation,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid urban televisions,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid urban refrigerators,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid urban air conditioners,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid urban other appliances,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid urban water heaters,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid urban water heaters,refined liquids,share-weight,final-calibration-year,end-year,,fixed
+resid urban water heaters,solar,share-weight,final-calibration-year,2050,,linear
+comm hvac,electricity,share-weight,final-calibration-year,end-year,,fixed
+comm lighting,electricity,share-weight,final-calibration-year,end-year,,fixed
+comm others,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural cooking,biomass,share-weight,final-calibration-year,end-year,,fixed
+resid rural cooking,coal,share-weight,final-calibration-year,end-year,,fixed
+resid rural cooking,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid rural cooking,gas,share-weight,final-calibration-year,end-year,,fixed
+resid rural cooking,refined liquids,share-weight,final-calibration-year,end-year,,fixed
+resid rural cooking,traditional biomass,share-weight,final-calibration-year,2040,,s-curve
+resid urban cooking,biomass,share-weight,final-calibration-year,end-year,,fixed
+resid urban cooking,coal,share-weight,final-calibration-year,end-year,,fixed
+resid urban cooking,electricity,share-weight,final-calibration-year,end-year,,fixed
+resid urban cooking,gas,share-weight,final-calibration-year,end-year,,fixed
+resid urban cooking,refined liquids,share-weight,final-calibration-year,end-year,,fixed
+resid urban cooking,traditional biomass,share-weight,final-calibration-year,end-year,,fixed
+comm cooking,biomass,share-weight,final-calibration-year,end-year,,fixed
+comm cooking,coal,share-weight,final-calibration-year,end-year,,fixed
+comm cooking,electricity,share-weight,final-calibration-year,end-year,,fixed
+comm cooking,gas,share-weight,final-calibration-year,end-year,,fixed
+comm cooking,refined liquids,share-weight,final-calibration-year,end-year,,fixed
