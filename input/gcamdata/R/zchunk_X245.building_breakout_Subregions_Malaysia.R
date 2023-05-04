@@ -53,6 +53,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
              FILE = "gcam-seasia/IND_A44_subregional_shares",
              FILE = "gcam-seasia/Various_flsp_Mm2",
              FILE = "gcam-seasia/IESS_bld_serv_fuel_Malaysia",
+             "L244.StubTechCalInput_bld",
              "X244.Floorspace_Subregions_Malaysia",
              "X244.Satiation_flsp_Subregions_Malaysia",
              "X244.StubTechCalInput_bld_Subregions_Malaysia",
@@ -95,7 +96,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
              "X245.HDDCDD_A2_GFDL_bld_Subregions_Malaysia",
              "X245.HDDCDD_constdds_bld_Subregions_Malaysia",
              "X245.GompFnParam_Malaysia"
-             ))
+    ))
   } else if(command == driver.MAKE) {
 
     # Silence package checks
@@ -142,6 +143,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
     IND_A44_subregional_shares <- get_data(all_data, "gcam-seasia/IND_A44_subregional_shares", strip_attributes = TRUE)
     Various_flsp_Mm2 <- get_data(all_data, "gcam-seasia/Various_flsp_Mm2", strip_attributes = TRUE)
     IESS_bld_serv_fuel_Malaysia <- get_data(all_data, "gcam-seasia/IESS_bld_serv_fuel_Malaysia", strip_attributes = TRUE)
+    L244.StubTechCalInput_bld <- get_data(all_data, "L244.StubTechCalInput_bld", strip_attributes = TRUE)
     X244.Floorspace_Subregions_Malaysia <- get_data(all_data, "X244.Floorspace_Subregions_Malaysia", strip_attributes = TRUE)
     X244.Satiation_flsp_Subregions_Malaysia <- get_data(all_data, "X244.Satiation_flsp_Subregions_Malaysia", strip_attributes = TRUE)
     X244.StubTechCalInput_bld_Subregions_Malaysia <- get_data(all_data, "X244.StubTechCalInput_bld_Subregions_Malaysia", strip_attributes = TRUE)
@@ -232,12 +234,12 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
               inc.year.fillout = pop.year.fillout )
 
     X245.SubregionalShares_bld_Subregions_Malaysia <- write_to_all_states(A44.gcam_consumer, c("region", "gcam.consumer"),
-                                                                       region_list = gcam.Malaysia.subregions ) %>%
+                                                                          region_list = gcam.Malaysia.subregions ) %>%
       filter( gcam.consumer == "comm" ) %>%
       repeat_add_columns( tibble::tibble( year = MODEL_YEARS ) ) %>%
       mutate( pop.year.fillout = year,
-             subregional.population.share = 1,
-             subregional.income.share = 1) %>%
+              subregional.population.share = 1,
+              subregional.income.share = 1) %>%
       rename( inc.year.fillout = year ) %>%
       bind_rows( urban_subregional_shares, rural_subregional_shares )
 
@@ -254,7 +256,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
 
     # X245.PriceExp_IntGains_bld_Subregions_Malaysia: price exponent on floorspace and naming of internal gains trial markets
     X245.PriceExp_IntGains_bld_Subregions_Malaysia <- write_to_all_states(A44.gcam_consumer, LEVEL2_DATA_NAMES[["PriceExp_IntGains"]],
-                                                          region_list = gcam.Malaysia.subregions )
+                                                                          region_list = gcam.Malaysia.subregions )
 
     # ===================================================
     # 1. Floorspace
@@ -268,7 +270,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
     X245.Floorspace_resid <- X244.Floorspace_Subregions_Malaysia %>%
       # filter for target region(s)
       filter( region %in% gcam.Malaysia.subregions,
-             gcam.consumer == "resid" ) %>%
+              gcam.consumer == "resid" ) %>%
       # add column that contains gcam.consumer
       mutate( base.building.size = round( base.building.size, energy.DIGITS_FLOORSPACE ) )
 
@@ -294,16 +296,16 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
     rural_share_final <- ( flsp_shares$rural_share[ flsp_shares$year == last_scale_year ] )
 
     # Linearly interpolate residential shares between the initial and final years/shares
-     res_rural_shares <- flsp_shares %>%
-    #   # remove all columns except for year
-       select( year ) %>%
-       mutate( share = case_when( year == first_scale_year ~ rural_share_initial,
-                                  year == last_scale_year ~ rural_share_final,
-                                  TRUE ~  as.numeric( NA ) ),
-               share = approx( x = year,
-                                y = share,
-                                xout = year,
-                                rule = 2 )$y)
+    res_rural_shares <- flsp_shares %>%
+      #   # remove all columns except for year
+      select( year ) %>%
+      mutate( share = case_when( year == first_scale_year ~ rural_share_initial,
+                                 year == last_scale_year ~ rural_share_final,
+                                 TRUE ~  as.numeric( NA ) ),
+              share = approx( x = year,
+                              y = share,
+                              xout = year,
+                              rule = 2 )$y)
 
     # copy the minimum year rural share back to all other historical years, and the max year rural share to all future years
     res_rural_shares_his <- res_rural_shares %>%
@@ -326,7 +328,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
 
     # Multiply the residential floorspace total by the rural and urban shares
     X245.Floorspace_resid_rural_Yh <- X245.Floorspace_resid %>%
-    # can't use a left_join_error_no_match due to differing years
+      # can't use a left_join_error_no_match due to differing years
       left_join( res_shares_all, by = c( "year" ) ) %>%
       mutate(  base.building.size = base.building.size * rural_share,
                gcam.consumer = "resid rural",
@@ -362,9 +364,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
 
     # X245.DemandFunction_serv_bld_Subregions_Malaysia and X245.DemandFunction_flsp_bld_Subregions_Malaysia: demand function types
     X245.DemandFunction_serv_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_demandFn_serv, LEVEL2_DATA_NAMES[["DemandFunction_serv"]],
-                                                            region_list = gcam.Malaysia.subregions )
+                                                                            region_list = gcam.Malaysia.subregions )
     X245.DemandFunction_flsp_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_demandFn_flsp, LEVEL2_DATA_NAMES[["DemandFunction_flsp"]],
-                                                            region_list = gcam.Malaysia.subregions )
+                                                                            region_list = gcam.Malaysia.subregions )
 
     # ===================================================
     # 1.3. Floorspace Satiation Levels
@@ -455,7 +457,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       ungroup() %>%
       # rename to target region(s)
       write_to_all_states(c( "region", "variable", "degree.days" ),
-                        region_list = gcam.Malaysia.subregions )
+                          region_list = gcam.Malaysia.subregions )
 
     # X245.HDDCDD: Heating and cooling degree days for USA, used to calculate internal gains
     X245.HDDCDD_normal_USA <- L143.HDDCDD_scen_R_Y %>%
@@ -557,38 +559,38 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
 
     # X245.Supplysector_bld: Supplysector info for buildings
     X245.Supplysector_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_sector, c(LEVEL2_DATA_NAMES[["Supplysector"]], LOGIT_TYPE_COLNAME),
-                                                         region_list = gcam.Malaysia.subregions)
+                                                                     region_list = gcam.Malaysia.subregions)
 
     # X245.FinalEnergyKeyword_bld: Supply sector keywords for detailed building sector
     X245.FinalEnergyKeyword_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_sector, LEVEL2_DATA_NAMES[["FinalEnergyKeyword"]],
-                                                               region_list = gcam.Malaysia.subregions)
+                                                                           region_list = gcam.Malaysia.subregions)
 
     # X245.SubsectorLogit_bld: Subsector logit exponents of building sector
     X245.SubsectorLogit_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_subsector_logit, c(LEVEL2_DATA_NAMES[["SubsectorLogit"]], LOGIT_TYPE_COLNAME),
-                                                           region_list = gcam.Malaysia.subregions)
+                                                                       region_list = gcam.Malaysia.subregions)
 
     # X245.SubsectorShrwt_bld and X245.SubsectorShrwtFllt_bld: Subsector shareweights of building sector
     if(any(!is.na(IND_A44_subsector_shrwt$year))) {
       X245.SubsectorShrwt_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_subsector_shrwt %>%
-                                                               filter(!is.na(year)), LEVEL2_DATA_NAMES[["SubsectorShrwt"]],
-                                                             region_list = gcam.Malaysia.subregions)
+                                                                           filter(!is.na(year)), LEVEL2_DATA_NAMES[["SubsectorShrwt"]],
+                                                                         region_list = gcam.Malaysia.subregions)
     }
     if(any(!is.na(IND_A44_subsector_shrwt$year.fillout))) {
       X245.SubsectorShrwtFllt_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_subsector_shrwt %>%
-                                                                   filter(!is.na(year.fillout)), LEVEL2_DATA_NAMES[["SubsectorShrwtFllt"]],
-                                                                 region_list = gcam.Malaysia.subregions)
+                                                                               filter(!is.na(year.fillout)), LEVEL2_DATA_NAMES[["SubsectorShrwtFllt"]],
+                                                                             region_list = gcam.Malaysia.subregions)
     }
 
     # X245.SubsectorInterp_bld and X245.SubsectorInterpTo_bld: Subsector shareweight interpolation of building sector
     if(any(is.na(IND_A44_subsector_interp$to.value))) {
       X245.SubsectorInterp_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_subsector_interp %>%
-                                                                filter(is.na(to.value)), LEVEL2_DATA_NAMES[["SubsectorInterp"]],
-                                                              region_list = gcam.Malaysia.subregions)
+                                                                            filter(is.na(to.value)), LEVEL2_DATA_NAMES[["SubsectorInterp"]],
+                                                                          region_list = gcam.Malaysia.subregions)
     }
     if(any(!is.na(IND_A44_subsector_interp$to.value))) {
       X245.SubsectorInterpTo_bld_Subregions_Malaysia <- write_to_all_states(IND_A44_subsector_interp %>%
-                                                                  filter(!is.na(to.value)), LEVEL2_DATA_NAMES[["SubsectorInterpTo"]],
-                                                                region_list = gcam.Malaysia.subregions)
+                                                                              filter(!is.na(to.value)), LEVEL2_DATA_NAMES[["SubsectorInterpTo"]],
+                                                                            region_list = gcam.Malaysia.subregions)
     }
 
     # X245.StubTech_bld_Subregions_Malaysia: Identification of stub technologies for buildings
@@ -625,98 +627,122 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
     # Since we are assuming there is no rural energy consumption in the cities.
     # The input that has energy consumption is at an aggregated level and needs to be broken out
     # the IESS file has fuel shares for "buildings" as a whole
-    bld_agg_energy_consumption_city <- X244.StubTechCalInput_bld_Subregions_Malaysia %>%
-      filter( !grepl("Rest of", region ) ) %>%
-      # aggregate energy consumption by fuel and year for building sector by comm and resid
-      separate( supplysector, c( "resid/comm", "specific" ) ) %>%
+
+    # get subregion shares of Malaysia's urban and rural gdp
+    gdp_share_urban_rural_Subregions_Malaysia <-
+      # start with urban/rural shares for each subregion
+      IND_A44_subregional_shares %>%
+      filter(region %in% c(gcam.Malaysia.parentregion, gcam.Malaysia.subregions),
+             # get urban/rural gdp shares
+             item == "urban share of GDP") %>%
+      select(-c(scenario, unit, item)) %>%
+      gather_years() %>%
+      # join with gdp by subregion
+      left_join_error_no_match(X201.GDP_Subregions_Malaysia) %>%
+      filter(region != gcam.Malaysia.parentregion) %>%
+      # calculate total urban and rural gdp for each subregion
+      mutate(urban_gdp = value*GDP, rural_gdp = (100-value)*GDP) %>%
+      group_by(year) %>%
+      # calculate each subregion's share of the whole country's urban gdp
+      # and rural gdp
+      mutate(share_urban_gdp = urban_gdp/sum(urban_gdp),
+             share_rural_gdp = rural_gdp/sum(rural_gdp)) %>%
+      ungroup() %>%
+      select(region, year, share_urban_gdp, share_rural_gdp) %>%
+      # interpolate back through historical years
+      complete( nesting( region), year = HISTORICAL_YEARS) %>%
+      group_by(region) %>%
+      mutate(share_urban_gdp = approx_fun( year, share_urban_gdp, rule = 2),
+             share_rural_gdp = approx_fun( year, share_rural_gdp, rule = 2)) %>%
+      ungroup() %>%
+      filter(year %in% MODEL_BASE_YEARS)
+
+    # get subregion shares of Malaysia's total gdp
+    X244.pop_gdp_share_Subregions_Malaysia <- X201.GDP_Subregions_Malaysia %>%
+      group_by(year) %>%
+      dplyr::filter(region != gcam.Malaysia.parentregion) %>%
+      mutate(gdpshare = GDP / sum(GDP)) %>%
+      ungroup() %>%
+      select(region, year, gdpshare)
+
+    # get the aggregate energy consumption by fuel for commercial and residential
+    bld_agg_energy_consumption <- L244.StubTechCalInput_bld %>%
+      filter(region == gcam.Malaysia.parentregion) %>%
+      separate(supplysector, c( "resid/comm", "specific")) %>%
       group_by( `resid/comm`, subsector, year, region ) %>%
       mutate( value = sum( calibrated.value ) ) %>%
       rename( fuel = subsector ) %>%
       distinct( `resid/comm`, fuel, year, region, value )
 
-    bld_agg_energy_consumption_RoR <- X244.StubTechCalInput_bld_Subregions_Malaysia %>%
-      filter( grepl("Rest of", region ) ) %>%
-      # aggregate energy consumption by fuel and year for building sector by comm and resid
-      separate( supplysector, c( "resid/comm", "specific" ) ) %>%
-      group_by( `resid/comm`, subsector, year, region ) %>%
-      mutate( value = sum( calibrated.value ) ) %>%
-      rename( fuel = subsector ) %>%
-      distinct( `resid/comm`, fuel, year, region, value )
 
-    # create a table that has service fuel shares for the model base years
-    # TODO: get regional fuel consumption by service by year- using India for now
-    # For the IESS, instead of having shares by fuel for buildings as a whole,
-    # we want it by resid/comm and fuel
-    # For the cities, we are assuming there is no residential rural area,
-    # Since the "Rest of Region" has rural, we need to make two tables with different shares.
-    IESS_bld_serv_fuel_Malaysia_resid_comm_city <- IESS_bld_serv_fuel_Malaysia %>%
-      filter( sector != "residential rural" ) %>%
-      separate( sector, c( "resid/comm", "drop" ), remove = F ) %>%
-      select( -drop ) %>%
-      group_by( `resid/comm`, fuel ) %>%
-      mutate( "total" = sum( share ),
-              "share" = share / total ) %>%
-      ungroup() %>%
-      select( -c( `resid/comm`, total ) )
-
-    IESS_bld_serv_fuel_Malaysia_resid_comm_RoR <- IESS_bld_serv_fuel_Malaysia %>%
-      separate( sector, c( "resid/comm", "drop" ), remove = F ) %>%
-      select( -drop ) %>%
-      group_by( `resid/comm`, fuel ) %>%
-      mutate( "total" = sum( share ),
-              "share" = share / total ) %>%
-      ungroup() %>%
-      select( -c( `resid/comm`, total ) )
-
-
-    bld_service_fuel_energy_consumption_city <- IESS_bld_serv_fuel_Malaysia_resid_comm_city %>%
+    # combine IESS shares with total building consumption by resid/comm
+    # to calculate consumption by service
+    bld_service_fuel_energy_consumption <- IESS_bld_serv_fuel_Malaysia %>%
+      mutate(type = case_when(grepl("resid", sector) ~ "resid",
+                              T ~ "comm")) %>%
       repeat_add_columns( tibble( year = MODEL_BASE_YEARS ) ) %>%
-      mutate( "resid/comm" = sector ) %>%
-      separate( `resid/comm`, c( "resid/comm", "drop" ) ) %>%
-      mutate( `resid/comm` = gsub( "residential", "resid", `resid/comm` ),
-              `resid/comm` = gsub( "commercial", "comm", `resid/comm` ) ) %>%
-      select( -drop ) %>%
+      rename("resid/comm" = type) %>%
       # join with the table that has energy consumption by resid/comm, fuel and year
       # TODO: fuel "solar" is not in bld_agg_energy_consumption, which is why solar water heaters are not included
-      left_join( bld_agg_energy_consumption_city, by = c( "year", "fuel", "resid/comm" ) ) %>%
+      left_join( bld_agg_energy_consumption, by = c( "year", "fuel", "resid/comm" ) ) %>%
       # omit NAs (solar water heater)
       filter(!is.na(value)) %>%
       # multiply the energy consumption value by share to get energy consumption for detailed services
-      mutate( value = share * value,
-      # change sector names to match format
-              sector = gsub( "commercial", "comm", sector ),
-              sector = gsub( "residential urban", "resid urban", sector ) ) %>%
+      mutate(value = share * value,
+             # change sector names to match format
+             sector = gsub( "commercial", "comm", sector),
+             sector = gsub( "residential rural", "resid rural", sector),
+             sector = gsub( "residential urban", "resid urban", sector)) %>%
       # combine sector and service columns to get supplysector
-      unite( supplysector, sector, service, sep = " " ) %>%
-      # change NAs to 0
-      mutate( value = ifelse(is.na(value), 0, value))
-
-    bld_service_fuel_energy_consumption_RoR <- IESS_bld_serv_fuel_Malaysia_resid_comm_RoR %>%
-      repeat_add_columns( tibble( year = MODEL_BASE_YEARS ) ) %>%
-      mutate( "resid/comm" = sector ) %>%
-      separate( `resid/comm`, c( "resid/comm", "drop" ) ) %>%
-      mutate( `resid/comm` = gsub( "residential", "resid", `resid/comm` ),
-              `resid/comm` = gsub( "commercial", "comm", `resid/comm` ) ) %>%
-      select( -drop ) %>%
-      # join with the table that has energy consumption by resid/comm, fuel and year
-      # TODO: fuel "solar" is not in bld_agg_energy_consumption, which is why solar water heaters are not included
-      left_join( bld_agg_energy_consumption_RoR, by = c( "year", "fuel", "resid/comm" ) ) %>%
-      # omit NAs (solar water heater)
-      filter(!is.na(value)) %>%
-      # multiply the energy consumption value by share to get energy consumption for detailed services
-      mutate( value = share * value,
-              # change sector names to match format
-              sector = gsub( "commercial", "comm", sector ),
-              sector = gsub( "residential rural", "resid rural", sector ),
-              sector = gsub( "residential urban", "resid urban", sector ) ) %>%
-      # combine sector and service columns to get supplysector
-      unite( supplysector, sector, service, sep = " " ) %>%
-      # change NAs to 0
-      mutate( value = ifelse(is.na(value), 0, value))
+      unite(supplysector, sector, service, sep = " ") %>%
+      select(-c(`resid/comm`, share))
 
 
-    X245.in_EJ_R_bld_serv_F_Yh <- bld_service_fuel_energy_consumption_city %>%
-      bind_rows( bld_service_fuel_energy_consumption_RoR ) %>%
+    # calculate energy consumption shares for each subregion based on gdp shares
+    bld_service_fuel_energy_consumption_rural <- bld_service_fuel_energy_consumption %>%
+      filter(grepl("rural", supplysector))
+
+    bld_service_fuel_energy_consumption_urban <- bld_service_fuel_energy_consumption %>%
+      filter(grepl("urban", supplysector))
+
+    bld_service_fuel_energy_consumption_comm <- bld_service_fuel_energy_consumption %>%
+      filter(grepl("comm", supplysector))
+
+    # for rural services, downscale to subregions based on share of rural gdp
+    subregions_bld_service_fuel_energy_consumption_rural <- bld_service_fuel_energy_consumption_rural %>%
+      downscale_to_breakout_regions(data = .,
+                                    composite_region = gcam.Malaysia.parentregion,
+                                    disag_regions = c(gcam.Malaysia.subregions),
+                                    share_data = gdp_share_urban_rural_Subregions_Malaysia,
+                                    value.column = "value",
+                                    share.column = "share_rural_gdp")
+
+    # for urban services, downscale to subregions based on share of urban gdp
+    subregions_bld_service_fuel_energy_consumption_urban <- bld_service_fuel_energy_consumption_urban %>%
+      downscale_to_breakout_regions(data = .,
+                                    composite_region = gcam.Malaysia.parentregion,
+                                    disag_regions = c(gcam.Malaysia.subregions),
+                                    share_data = gdp_share_urban_rural_Subregions_Malaysia,
+                                    value.column = "value",
+                                    share.column = "share_urban_gdp")
+
+    # for comm services, downscale to subregions based on share of total gdp
+    subregions_bld_service_fuel_energy_consumption_comm <- bld_service_fuel_energy_consumption_comm %>%
+      downscale_to_breakout_regions(data = .,
+                                    composite_region = gcam.Malaysia.parentregion,
+                                    disag_regions = c(gcam.Malaysia.subregions),
+                                    share_data = X244.pop_gdp_share_Subregions_Malaysia,
+                                    value.column = "value",
+                                    share.column = "gdpshare")
+
+    # combine subregional urban, rural, and commercial back together
+    subregions_bld_service_fuel_energy_consumption <-
+      rbind(subregions_bld_service_fuel_energy_consumption_rural,
+            subregions_bld_service_fuel_energy_consumption_urban,
+            subregions_bld_service_fuel_energy_consumption_comm)
+
+
+    X245.in_EJ_R_bld_serv_F_Yh <- subregions_bld_service_fuel_energy_consumption %>%
       mutate(calibrated.value = round(value, energy.DIGITS_CALOUTPUT)) %>%
       # Add subsector and energy.input
       # IND_bld_techs has hi and lo efficiency, so left_join_error_no_match does not work
@@ -797,7 +823,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       unite( supplysector, c( sector, service ), sep = " " )
     # Then, anti-join the two dataframes of interest to see what is missing
     missing_entries <- anti_join( IESS_reformat, X245.StubTechCalInput_bld_Subregions_Malaysia,
-               by = c( "supplysector", "fuel" = "subsector" ) )
+                                  by = c( "supplysector", "fuel" = "subsector" ) )
 
     # If there are missing entries, we need to add them to the calibrated input dataframe
     if ( dim(missing_entries)[1] != 0 ) {
@@ -1092,7 +1118,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
       X245.GompFnParam_Malaysia <- X245.GompFnParam_Malaysia %>%
         anti_join( zero_subregional_shares, by = c( "region", "gcam.consumer" ) )
 
-      }
+    }
 
 
     # ===================================================
@@ -1293,10 +1319,10 @@ module_gcamseasia_X245.building_breakout_Subregions_Malaysia <- function(command
 
     if(exists("X245.SubsectorInterpTo_bld_Subregions_Malaysia")) {
       X245.SubsectorInterpTo_bld_Subregions_Malaysia %>%
-        add_title("Subsector shareweight interpolation of building sector") %>%
+        add_title("Subsector shareweight interpolation of building sector", overwrite = T) %>%
         add_units("NA") %>%
         add_comments("IND_A44_subsector_interp written to all regions") %>%
-        add_legacy_name("X245.SubsectorInterpTo_bld") %>%
+        add_legacy_name("X245.SubsectorInterpTo_bld", overwrite = T) %>%
         add_precursors("gcam-seasia/IND_A44_subsector_interp") ->
         X245.SubsectorInterpTo_bld_Subregions_Malaysia
     } else {
