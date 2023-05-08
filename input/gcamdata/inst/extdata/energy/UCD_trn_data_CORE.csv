@@ -5221,8 +5221,8 @@ Malaysia,Passenger,LDV_4W,Multipurpose Vehicle,BEV,Electricity,Operating costs (
 Malaysia,Passenger,LDV_4W,Multipurpose Vehicle,FCEV,Hydrogen,Operating costs (tolls),2005$/veh/yr,0.0001,6.67E-05,0.00003335,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 Malaysia,Passenger,LDV_3W,Three-Wheeler,Liquids,Liquids,Operating costs (total non-fuel),2005$/veh/yr,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233
 Malaysia,Passenger,LDV_3W,Three-Wheeler,NG,Natural Gas,Operating costs (total non-fuel),2005$/veh/yr,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233,111.8233
-Malaysia,Passenger,Walk,All,All,All,service output,billion pkm,310.183,,,,,,,,,,,,,,,,,,,
-Malaysia,Passenger,Cycle,All,All,All,service output,billion pkm,164.214,,,,,,,,,,,,,,,,,,,
+Malaysia,Passenger,Walk,All,All,All,service output,billion pkm,31.0183,,,,,,,,,,,,,,,,,,,
+Malaysia,Passenger,Cycle,All,All,All,service output,billion pkm,16.4214,,,,,,,,,,,,,,,,,,,
 Malaysia,Passenger,Air Domestic,All,All,All,speed,km/hr,227,227,227,227,227,227,227,227,227,227,227,227,227,227,227,227,227,227,227,227
 Malaysia,Passenger,Air International,All,All,All,speed,km/hr,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382,382
 Malaysia,Passenger,Bus,All,All,All,speed,km/hr,21,21.33333333,21.66666667,22,22.33333333,22.66666667,23,23.33333333,23.66666667,24,24.33333333,24.66666667,25,25,25,25,25,25,25,25
