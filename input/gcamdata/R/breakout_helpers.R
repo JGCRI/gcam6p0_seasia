@@ -74,3 +74,45 @@ downscale_to_breakout_regions <- function(
   return(data_new)
 }
 
+#' downscale_to_breakout_regions
+#'
+#' Downscale (apportion) Thailand data to disaggregated Bangkok and Rest of Thailand regions
+#'
+#' @param data Data frame with a "region" column
+#' @param composite_region Composite (larger) region that data are being downscaled from (e.g. "Thailand")
+#' @param disag_regions Disaggregated regions that data are being assigned to (e.g. c("Bangkok", "Rest of Thailand"))
+#' @param share_data Data frame with the disaggregated regions' shares to use for downscaling
+#' @param value.column Name of the column in data to be downscaled (e.g. "value")
+#' @param share.column Name of the column in share_data to use for the downscaling (e.g. "popshare", "gdpshare")
+#' @return Table with both regions and values that are properly assigned
+#' @details Uses some share proxy to apportion some physical quantity from the composite
+#' region to its constituent disaggregated regions. The default is to use population shares.
+#' @importFrom dplyr mutate select
+downscale_to_breakout_regions_by_sector <- function(
+    data = NULL,
+    composite_region = NULL,
+    disag_regions = NULL,
+    share_data = NULL,
+    value.column = NULL,
+    share.column = NULL,
+    sector.columns = NULL,
+    ndigits = energy.DIGITS_CALOUTPUT){
+
+  if(is.null(data) | is.null(composite_region) | is.null(disag_regions) | is.null(share_data) |
+     is.null(value.column) | is.null(share.column)){
+    stop("Null data passed to breakout-helpers.R write_to_breakout_regions()")
+  }
+
+  if(!is.null(sector.columns)){
+    join_cols <- c("region", "year", sector.columns)
+  } else(join_cols <- c("region", "year"))
+
+  data_new <- subset(data, region == composite_region) %>%
+    repeat_add_columns(tibble(new_region = disag_regions)) %>%
+    mutate(region = new_region) %>%
+    select(-new_region) %>%
+    left_join_error_no_match(share_data, by = join_cols)
+  data_new[[value.column]] = round(data_new[[value.column]] * data_new[[share.column]], digits = ndigits)
+  data_new <- data_new[names(data)]
+  return(data_new)
+}

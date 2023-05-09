@@ -1,0 +1,59 @@
+# File: Subregions_Thailand_trn_shares.csv
+# Title: Subregions and rest-of-Thailand shares for various transport modes
+# Units: Percentage
+# Description: Computed off-line
+# Column types: cccn
+# ----------
+region,supplysector,tranSubsector,share
+Bangkok,trn_pass_road_LDV,2W and 3W,0.0717
+Bangkok,trn_pass_road_LDV_4W,Car,0.0717
+Bangkok,trn_pass_road_LDV_4W,Mini Car,0.0717
+Bangkok,trn_pass_road_LDV_4W,Large Car and Truck,0.0717
+Nonthaburi,trn_pass_road_LDV,2W and 3W,0.0304
+Nonthaburi,trn_pass_road_LDV_4W,Car,0.0304
+Nonthaburi,trn_pass_road_LDV_4W,Mini Car,0.0304
+Nonthaburi,trn_pass_road_LDV_4W,Large Car and Truck,0.0304
+SamutPrakan,trn_pass_road_LDV,2W and 3W,0.0254
+SamutPrakan,trn_pass_road_LDV_4W,Car,0.0254
+SamutPrakan,trn_pass_road_LDV_4W,Mini Car,0.0254
+SamutPrakan,trn_pass_road_LDV_4W,Large Car and Truck,0.0254
+Rest of Thailand,trn_pass_road_LDV,2W and 3W,0.8725
+Rest of Thailand,trn_pass_road_LDV_4W,Car,0.8725
+Rest of Thailand,trn_pass_road_LDV_4W,Mini Car,0.8725
+Rest of Thailand,trn_pass_road_LDV_4W,Large Car and Truck,0.8725
+Bangkok,trn_pass_road,Bus,0.03
+Nonthaburi,trn_pass_road,Bus,0.0259
+SamutPrakan,trn_pass_road,Bus,0.0353
+Rest of Thailand,trn_pass_road,Bus,0.9088
+Bangkok,trn_freight,road,0.044
+Bangkok,trn_freight_road,Light truck,0.044
+Bangkok,trn_freight_road,Medium truck,0.044
+Bangkok,trn_freight_road,Heavy truck,0.044
+Nonthaburi,trn_freight,road,0.0139
+Nonthaburi,trn_freight_road,Light truck,0.0139
+Nonthaburi,trn_freight_road,Medium truck,0.0139
+Nonthaburi,trn_freight_road,Heavy truck,0.0139
+SamutPrakan,trn_freight,road,0.0201
+SamutPrakan,trn_freight_road,Light truck,0.0201
+SamutPrakan,trn_freight_road,Medium truck,0.0201
+SamutPrakan,trn_freight_road,Heavy truck,0.0201
+Rest of Thailand,trn_freight,road,0.922
+Rest of Thailand,trn_freight_road,Light truck,0.922
+Rest of Thailand,trn_freight_road,Medium truck,0.922
+Rest of Thailand,trn_freight_road,Heavy truck,0.922
+Bangkok,trn_shipping_intl,International Ship,0.001
+Bangkok,trn_aviation_intl,International Aviation,0.001
+Bangkok,trn_pass,Domestic Aviation,0.001
+Nonthaburi,trn_shipping_intl,International Ship,0.001
+Nonthaburi,trn_aviation_intl,International Aviation,0.001
+Nonthaburi,trn_pass,Domestic Aviation,0.001
+SamutPrakan,trn_shipping_intl,International Ship,0.001
+SamutPrakan,trn_aviation_intl,International Aviation,0.001
+SamutPrakan,trn_pass,Domestic Aviation,0.001
+Rest of Thailand,trn_pass,Domestic Aviation,0.997
+Rest of Thailand,trn_shipping_intl,International Ship,0.997
+Rest of Thailand,trn_aviation_intl,International Aviation,0.997
+Bangkok,trn_pass,Passenger Rail,0.5
+Nonthaburi,trn_pass,Passenger Rail,0.1
+SamutPrakan,trn_pass,Passenger Rail,0.1
+Rest of Thailand,trn_pass,Passenger Rail,0.3
