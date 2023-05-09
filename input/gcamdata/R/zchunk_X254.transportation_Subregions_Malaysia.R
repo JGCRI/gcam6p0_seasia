@@ -50,7 +50,9 @@ module_energy_X254.transportation_Subregions_Malaysia <- function(command, ...) 
              "L201.nonghg_steepness",
              "L241.hfc_future",
              "L201.en_pol_emissions",
-             "L201.en_ghg_emissions"))
+             "L201.en_ghg_emissions",
+             FILE = "breakout/Subregions_Malaysia_trn_shares",
+             FILE = "energy/A54.sector"))
   } else if(command == driver.DECLARE_OUTPUTS) {
     return(c("X254.DeleteFinalDemand_trn_Subregions_Malaysia",
              "X254.DeleteSupplysector_trn_Subregions_Malaysia",
@@ -95,6 +97,8 @@ module_energy_X254.transportation_Subregions_Malaysia <- function(command, ...) 
     # Load required inputs
     X201.Pop_Subregions_Malaysia <- get_data(all_data, "X201.Pop_Subregions_Malaysia", strip_attributes = TRUE)
     X201.GDP_Subregions_Malaysia <- get_data(all_data, "X201.GDP_Subregions_Malaysia", strip_attributes = TRUE)
+    Subregions_Malaysia_trn_shares <- get_data(all_data, "breakout/Subregions_Malaysia_trn_shares")
+    A54.sector <- get_data(all_data, "energy/A54.sector")
     L254.Supplysector_trn <- get_data(all_data, "L254.Supplysector_trn", strip_attributes = TRUE)
     L254.FinalEnergyKeyword_trn <- get_data(all_data, "L254.FinalEnergyKeyword_trn", strip_attributes = TRUE)
     L254.tranSubsectorLogit <- get_data(all_data, "L254.tranSubsectorLogit", strip_attributes = TRUE)
@@ -131,6 +135,15 @@ module_energy_X254.transportation_Subregions_Malaysia <- function(command, ...) 
     # ===================================================
 
     Transport_sectors <- unique(L254.Supplysector_trn$supplysector)
+    Transport_subsectors <- c(unique(L254.StubTranTechCalInput$tranSubsector),
+                              unique(L254.StubTechCalInput_passthru$tranSubsector))
+    Transport_sector_subsectors <- rbind(L254.StubTranTechCalInput %>%
+                                           select(supplysector, tranSubsector) %>%
+                                           unique(),
+                                         L254.StubTechCalInput_passthru %>%
+                                           select(supplysector, tranSubsector) %>%
+                                           unique()) %>%
+      mutate(supplysector.subsector = paste(supplysector, tranSubsector, sep = "."))
 
     X254.DeleteFinalDemand_trn_Subregions_Malaysia <- tibble(region = "Malaysia",
                                                   energy.final.demand = unique(L254.PerCapitaBased_trn$energy.final.demand))
@@ -192,6 +205,8 @@ module_energy_X254.transportation_Subregions_Malaysia <- function(command, ...) 
                                       composite_region = "Malaysia",
                                       disag_regions = c(subregions))
 
+    # get population and gdp shares of subregions
+
     X254.pop_gdp_share_Subregions_Malaysia <- X201.Pop_Subregions_Malaysia %>%
       left_join_error_no_match(X201.GDP_Subregions_Malaysia, by = c("region", "year")) %>%
       group_by(year) %>%
@@ -201,19 +216,48 @@ module_energy_X254.transportation_Subregions_Malaysia <- function(command, ...) 
       ungroup() %>%
       select(region, year, popshare, gdpshare)
 
+
+    # exogenous trn shares are by supplysector/subsector (but not all
+    # supplysector/ subsector combinations may be included). Need to
+    # write exogenous trn share data to all historical years and fill in
+    # the supplysector/subsector combinations not included with population share
+
+    trn_shares <- Subregions_Malaysia_trn_shares %>%
+      mutate(year = min(MODEL_BASE_YEARS)) %>%
+      rbind(Subregions_Malaysia_trn_shares %>% mutate(year = max(MODEL_BASE_YEARS))) %>%
+      complete(nesting(region, supplysector, tranSubsector),
+               year = MODEL_BASE_YEARS) %>%
+      group_by(region, supplysector, tranSubsector) %>%
+      mutate(share = approx_fun(year, share, rule = 2)) %>%
+      ungroup() %>%
+      # fill in missing supplysector- subsector combinations
+      mutate(supplysector.subsector = paste(supplysector, tranSubsector, sep = ".")) %>%
+      complete(nesting(region, year),
+               supplysector.subsector = Transport_sector_subsectors$supplysector.subsector) %>%
+      left_join(Transport_sector_subsectors,
+                by = c("supplysector.subsector")) %>%
+      mutate(supplysector = supplysector.y, tranSubsector = tranSubsector.y) %>%
+      select(-c(supplysector.x, supplysector.y, tranSubsector.x, tranSubsector.y, supplysector.subsector)) %>%
+      # fill in missing shares with population share
+      left_join_error_no_match(X254.pop_gdp_share_Subregions_Malaysia,
+                               by = c("region", "year")) %>%
+      mutate(share = case_when(is.na(share) ~ popshare, T ~ share)) %>%
+      select(-c(popshare, gdpshare))
+
+    # get subregional shares of calibrated inputs using the new trn shares
+
     X254.StubTranTechCalInput_trn_Subregions_Malaysia <- L254.StubTranTechCalInput %>%
       filter(sce == "CORE") %>%
-      downscale_to_breakout_regions(data = .,
-                                  composite_region = "Malaysia",
-                                  disag_regions = c(subregions),
-                                  share_data = X254.pop_gdp_share_Subregions_Malaysia, value.column = "calibrated.value", share.column = "popshare")
+      downscale_to_breakout_regions_by_sector(data = .,
+                                              composite_region = "Malaysia",
+                                              disag_regions = c(subregions),
+                                              share_data = trn_shares,
+                                              value.column = "calibrated.value",
+                                              share.column = "share",
+                                              sector.columns = c("supplysector", "tranSubsector"))
 
-    X254.StubTechCalInput_passthru_trn_Subregions_Malaysia <- L254.StubTechCalInput_passthru %>%
-      filter(sce == "CORE") %>%
-      downscale_to_breakout_regions(data = .,
-                                    composite_region = "Malaysia",
-                                    disag_regions = c(subregions),
-                                    share_data = X254.pop_gdp_share_Subregions_Malaysia, value.column = "calibrated.value", share.column = "popshare")
+
+    # nonmotor transportation modes can just be downscaled by population
 
     X254.StubTechProd_nonmotor <- L254.StubTechProd_nonmotor %>%
       filter(sce == "CORE") %>%
@@ -223,27 +267,90 @@ module_energy_X254.transportation_Subregions_Malaysia <- function(command, ...) 
                                     share_data = X254.pop_gdp_share_Subregions_Malaysia, value.column = "calOutputValue", share.column = "popshare",
                                     ndigits = energy.DIGITS_MPKM)
 
-    X254.BaseService_trn_Subregions_Malaysia <- L254.BaseService_trn %>%
-      filter(sce == "CORE") %>%
-      downscale_to_breakout_regions(data = .,
-                                    composite_region = "Malaysia",
-                                    disag_regions = c(subregions),
-                                    share_data = X254.pop_gdp_share_Subregions_Malaysia, value.column = "base.service", share.column = "popshare",
-                                    ndigits = energy.DIGITS_MPKM)
+    # since shares differ by supplysector/subsector and X254.BaseService is by
+    # energy.final.demand (more aggregated level), we need to recalculate
+    # base service from calibrated inputs, intensities, and load factors
+
+    X254.StubTranTechCalInput_trn_Subregions_Malaysia %>%
+      select(-contains("share")) %>%
+      left_join(X254.list_nochange_data_Subregions_Malaysia[["L254.StubTranTechLoadFactor"]],
+                by = c("region", "supplysector", "tranSubsector",
+                       "stub.technology", "year", "sce")) %>%
+      left_join(X254.list_nochange_data_Subregions_Malaysia[["L254.StubTranTechCoef"]],
+                by = c("region", "supplysector", "tranSubsector",
+                       "stub.technology", "minicam.energy.input", "year","sce")) %>%
+      mutate(loadFactor=if_else(is.na(loadFactor),0,loadFactor),
+             coefficient=if_else(is.na(coefficient),0,coefficient),
+             output = calibrated.value * loadFactor * CONV_EJ_GJ / (coefficient * CONV_BTU_KJ),
+             output = if_else(is.na(output),0,output)) %>%
+      select(region, supplysector, tranSubsector, stub.technology, year, minicam.energy.input,
+             calibrated.value, loadFactor, coefficient, output,sce) ->
+      L254.StubTranTechOutput_Subregions_Malaysia
+
+    # aggregate outputs to energy.final.demand level
+    L254.StubTranTechOutput_Subregions_Malaysia %>%
+      select(LEVEL2_DATA_NAMES[["StubTranTech"]], year, output,sce) %>%
+      bind_rows(
+        select(X254.StubTechProd_nonmotor, one_of(LEVEL2_DATA_NAMES[["StubTranTech"]]), year, calOutputValue,sce)) %>%
+      mutate(base.service = if_else(!is.na(output), output, calOutputValue)) %>%
+      # Match in energy.final.demand from transportation supplysector information
+      # NAs will be introduced, so use left-join
+      left_join(A54.sector, by = "supplysector") %>%
+      # Aggregate base-year service output to region, energy.final.demand, and year
+      group_by(region, energy.final.demand, year,sce) %>%
+      summarise(base.service = sum(base.service)) %>%
+      ungroup() %>%
+      filter(sce=="CORE") ->
+      #kbn 2020-06-02 Base service values only needed for CORE.
+      X254.BaseService_trn_Subregions_Malaysia # OUTPUT
+
+
+    # need to recalculate pass thru sector calibrated inputs since these are combinations
+    # of various sector-subsector combinations. The units are service output,
+    # so we will start from the outputs calculated above
+    X254.StubTechCalInput_passthru_trn_Subregions_Malaysia <- L254.StubTranTechOutput_Subregions_Malaysia %>%
+      mutate(
+        trn_pass_road_LDV.4W = case_when(tranSubsector %in% c("Car", "Large Car and Truck", "Mini Car") ~ 1, T ~ 0),
+        trn_pass_road.LDV = case_when(trn_pass_road_LDV.4W | tranSubsector == "2W and 3W" ~ 1, T ~ 0),
+        trn_pass.road = case_when(trn_pass_road.LDV | tranSubsector == "Bus" ~ 1, T ~ 0),
+        trn_freight.road = case_when(grepl("truck", tranSubsector) ~ 1, T ~ 0)) %>%
+      filter(trn_pass_road_LDV.4W | trn_pass_road.LDV | trn_pass.road | trn_freight.road) %>%
+      tidyr::pivot_longer(c(trn_pass_road_LDV.4W, trn_pass_road.LDV, trn_pass.road, trn_freight.road),
+                          names_to = "pass.thru.sector.subsector", values_to = "in.pass.thru.sector.subsector") %>%
+      filter(in.pass.thru.sector.subsector == 1) %>%
+      group_by(region, year, sce, pass.thru.sector.subsector) %>%
+      summarize(calibrated.value = sum(output)) %>%
+      ungroup() %>%
+      separate(pass.thru.sector.subsector, into = c("supplysector", "tranSubsector"), sep = "\\.") %>%
+      mutate(stub.technology = tranSubsector,
+             minicam.energy.input = paste0(supplysector, "_", tranSubsector)) %>%
+      left_join_error_no_match(unique(select(L254.StubTechCalInput_passthru,
+                                             -c(region, calibrated.value))))
+
+
+    # emissions inputs are by supplysector and subsector, so we can use the
+    # same trn_shares data that we used for calibrated inputs (just need to
+    # rename tranSubsector to subsector)
 
     X254.pol_emissions_trn_Subregions_Malaysia <- L201.en_pol_emissions %>%
       filter(supplysector %in% Transport_sectors) %>%
-      downscale_to_breakout_regions(data = .,
-                                    composite_region = "Malaysia",
-                                    disag_regions = c(subregions),
-                                    share_data = X254.pop_gdp_share_Subregions_Malaysia, value.column = "input.emissions", share.column = "popshare")
+      downscale_to_breakout_regions_by_sector(data = .,
+                                              composite_region = "Malaysia",
+                                              disag_regions = c(subregions),
+                                              share_data = rename(trn_shares, subsector = tranSubsector),
+                                              value.column = "input.emissions",
+                                              share.column = "share",
+                                              sector.columns = c("supplysector", "subsector"))
 
     X254.ghg_emissions_trn_Subregions_Malaysia <- L201.en_ghg_emissions %>%
       filter(supplysector %in% Transport_sectors) %>%
-      downscale_to_breakout_regions(data = .,
-                                    composite_region = "Malaysia",
-                                    disag_regions = c(subregions),
-                                    share_data = X254.pop_gdp_share_Subregions_Malaysia, value.column = "input.emissions", share.column = "popshare")
+      downscale_to_breakout_regions_by_sector(data = .,
+                                              composite_region = "Malaysia",
+                                              disag_regions = c(subregions),
+                                              share_data = rename(trn_shares, subsector = tranSubsector),
+                                              value.column = "input.emissions",
+                                              share.column = "share",
+                                              sector.columns = c("supplysector", "subsector"))
 
 
     # ===================================================

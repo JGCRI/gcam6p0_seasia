@@ -1,0 +1,13 @@
+# File: Subregions_Malaysia_trn_shares.csv
+# Title: KL and rest-of-Malaysia shares for various transport modes
+# Units: Percentage
+# Description: Computed off-line
+# Column types: cccn
+# ----------
+region,supplysector,tranSubsector,share
+KualaLumpur,trn_shipping_intl,International Ship,0.001
+KualaLumpur,trn_aviation_intl,International Aviation,0.001
+KualaLumpur,trn_pass,Domestic Aviation,0.001
+Rest of Malaysia,trn_pass,Domestic Aviation,0.997
+Rest of Malaysia,trn_shipping_intl,International Ship,0.997
+Rest of Malaysia,trn_aviation_intl,International Aviation,0.997
