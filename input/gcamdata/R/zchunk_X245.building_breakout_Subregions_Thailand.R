@@ -1206,7 +1206,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       add_legacy_name("X245.ThermalBaseService") %>%
       add_precursors("X244.StubTechCalInput_bld_Subregions_Thailand", "gcam-seasia/IND_bld_techs",
                      "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
-                     "gcam-seasia/A44.gcam_consumer", "gcam-seasia/IESS_bld_serv_fuel") ->
+                     "gcam-seasia/A44.gcam_consumer", "gcam-seasia/IESS_bld_serv_fuel_thailand") ->
       X245.ThermalBaseService_bld_Subregions_Thailand
 
     X245.GenericBaseService_bld_Subregions_Thailand %>%
@@ -1216,7 +1216,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       add_legacy_name("X245.GenericBaseService") %>%
       add_precursors("X244.StubTechCalInput_bld_Subregions_Thailand", "gcam-seasia/IND_bld_techs",
                      "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
-                     "gcam-seasia/A44.gcam_consumer", "gcam-seasia/IESS_bld_serv_fuel") ->
+                     "gcam-seasia/A44.gcam_consumer", "gcam-seasia/IESS_bld_serv_fuel_thailand") ->
       X245.GenericBaseService_bld_Subregions_Thailand
 
     X245.GenericServiceSatiation_bld_Subregions_Thailand %>%
@@ -1227,7 +1227,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       add_precursors("X244.StubTechCalInput_bld_Subregions_Thailand", "gcam-seasia/IND_bld_techs",
                      "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
                      "gcam-seasia/A44.gcam_consumer", "X244.Floorspace_Subregions_Thailand",
-                     "gcam-seasia/IND_A44_demand_satiation_mult", "gcam-seasia/IESS_bld_serv_fuel") ->
+                     "gcam-seasia/IND_A44_demand_satiation_mult", "gcam-seasia/IESS_bld_serv_fuel_thailand") ->
       X245.GenericServiceSatiation_bld_Subregions_Thailand
 
     X245.ThermalServiceSatiation_bld_Subregions_Thailand %>%
@@ -1238,7 +1238,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       add_precursors("X244.StubTechCalInput_bld_Subregions_Thailand", "gcam-seasia/IND_bld_techs",
                      "gcam-seasia/IND_A44_tech_eff", "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares",
                      "gcam-seasia/A44.gcam_consumer", "X244.Floorspace_Subregions_Thailand",
-                     "gcam-seasia/IND_A44_demand_satiation_mult", "gcam-seasia/IESS_bld_serv_fuel") ->
+                     "gcam-seasia/IND_A44_demand_satiation_mult", "gcam-seasia/IESS_bld_serv_fuel_thailand") ->
       X245.ThermalServiceSatiation_bld_Subregions_Thailand
 
     X245.Intgains_scalar_bld_Subregions_Thailand %>%
@@ -1280,9 +1280,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       X245.SubsectorShrwt_bld_Subregions_Thailand %>%
         add_title("Subsector shareweights of building sector") %>%
         add_units("Unitless") %>%
-        add_comments("IND_A44_subsector_shrwt written to all regions") %>%
+        add_comments("IND_A44_subsector_shrwt_thailand written to all regions") %>%
         add_legacy_name("X245.SubsectorShrwt_bld") %>%
-        add_precursors("gcam-seasia/IND_A44_subsector_shrwt") ->
+        add_precursors("gcam-seasia/IND_A44_subsector_shrwt_thailand") ->
         X245.SubsectorShrwt_bld_Subregions_Thailand
     } else {
       missing_data() %>%
@@ -1294,9 +1294,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       X245.SubsectorShrwtFllt_bld_Subregions_Thailand %>%
         add_title("Subsector shareweights of building sector") %>%
         add_units("Unitless") %>%
-        add_comments("IND_A44_subsector_shrwt written to all regions") %>%
+        add_comments("IND_A44_subsector_shrwt_thailand written to all regions") %>%
         add_legacy_name("X245.SubsectorShrwtFllt_bld") %>%
-        add_precursors("gcam-seasia/IND_A44_subsector_shrwt") ->
+        add_precursors("gcam-seasia/IND_A44_subsector_shrwt_thailand") ->
         X245.SubsectorShrwtFllt_bld_Subregions_Thailand
     } else {
       missing_data() %>%
@@ -1309,9 +1309,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       X245.SubsectorInterp_bld_Subregions_Thailand %>%
         add_title("Subsector shareweight interpolation of building sector") %>%
         add_units("NA") %>%
-        add_comments("IND_A44_subsector_interp written to all regions") %>%
+        add_comments("IND_A44_subsector_interp_thailand written to all regions") %>%
         add_legacy_name("X245.SubsectorInterp_bld") %>%
-        add_precursors("gcam-seasia/IND_A44_subsector_interp") ->
+        add_precursors("gcam-seasia/IND_A44_subsector_interp_thailand") ->
         X245.SubsectorInterp_bld_Subregions_Thailand
     } else {
       missing_data() %>%
@@ -1323,9 +1323,9 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       X245.SubsectorInterpTo_bld_Subregions_Thailand %>%
         add_title("Subsector shareweight interpolation of building sector") %>%
         add_units("NA") %>%
-        add_comments("IND_A44_subsector_interp written to all regions") %>%
+        add_comments("IND_A44_subsector_interp_thailand written to all regions") %>%
         add_legacy_name("X245.SubsectorInterpTo_bld") %>%
-        add_precursors("gcam-seasia/IND_A44_subsector_interp") ->
+        add_precursors("gcam-seasia/IND_A44_subsector_interp_thailand") ->
         X245.SubsectorInterpTo_bld_Subregions_Thailand
     } else {
       missing_data() %>%
@@ -1356,7 +1356,7 @@ module_gcamseasia_X245.building_breakout_Subregions_Thailand <- function(command
       add_comments("Shares calculated using efficiency averages") %>%
       add_legacy_name("X245.StubTechCalInput_bld") %>%
       add_precursors("X244.StubTechCalInput_bld_Subregions_Thailand", "gcam-seasia/IND_bld_techs", "gcam-seasia/IND_A44_tech_eff",
-                     "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares", "gcam-seasia/IESS_bld_serv_fuel") ->
+                     "gcam-seasia/IND_A44_tech_eff_avg", "gcam-seasia/IND_A44_globaltech_shares", "gcam-seasia/IESS_bld_serv_fuel_thailand") ->
       X245.StubTechCalInput_bld_Subregions_Thailand
 
     X245.StubTechMarket_bld_Subregions_Thailand %>%
