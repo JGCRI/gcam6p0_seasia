@@ -63,16 +63,12 @@ module_energy_Xbatch_transportation_xml_Subregions_Malaysia_policy <- function(c
       # filter out modes we will be changing shareweights for
       filter(tranSubsector != "HSR",
              tranSubsector != "Passenger Rail",
-             tranSubsector != "Bus",
-             tranSubsector != "Walk",
-             tranSubsector != "Cycle")
+             tranSubsector != "Bus")
     X254.tranSubsectorInterp_trn_Subregions_Malaysia_overwrite <- get_data(all_data, "X254.tranSubsectorInterp_trn_Subregions_Malaysia") %>%
       # filter for modes we will be changing shareweights for
       filter(tranSubsector == "HSR" |
              tranSubsector == "Passenger Rail" |
-             tranSubsector == "Bus",
-             tranSubsector == "Walk",
-             tranSubsector == "Cycle") %>%
+             tranSubsector == "Bus") %>%
       mutate(overwrite.policy = "NEVER")
     X254.tranSubsectorSpeed_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorSpeed_trn_Subregions_Malaysia")
     X254.tranSubsectorSpeed_passthru_trn_Subregions_Malaysia <- get_data(all_data, "X254.tranSubsectorSpeed_passthru_trn_Subregions_Malaysia")
