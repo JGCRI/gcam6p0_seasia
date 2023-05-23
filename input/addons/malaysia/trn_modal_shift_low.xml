@@ -8,28 +8,14 @@
                         <interpolation-function name="linear"/>
                     </interpolation-rule>
           <share-weight year="2020">0.00006</share-weight>
-	      <share-weight year="2100">0.025</share-weight>
+	      <share-weight year="2100">0.15</share-weight>
         </tranSubsector>
         <tranSubsector name="Passenger Rail">
             <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2100">
               <interpolation-function name="linear"/>
             </interpolation-rule>
           <share-weight year="2020">0.002</share-weight>
-	      <share-weight year="2100">0.05</share-weight>
-        </tranSubsector>
-        <tranSubsector name="Walk">
-                    <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2100">
-                        <interpolation-function name="linear"/>
-                    </interpolation-rule>
-          <share-weight year="2020">2.883</share-weight>
-	      <share-weight year="2100">15.0</share-weight>
-        </tranSubsector>
-        <tranSubsector name="Cycle">
-                    <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2100">
-                        <interpolation-function name="linear"/>
-                    </interpolation-rule>
-          <share-weight year="2020">0.156</share-weight>
-	      <share-weight year="2100">1.0</share-weight>
+	      <share-weight year="2100">0.50</share-weight>
         </tranSubsector>
 	  </supplysector>
    <supplysector name="trn_pass_road">
@@ -49,28 +35,14 @@
                         <interpolation-function name="linear"/>
                     </interpolation-rule>
           <share-weight year="2020">0.00006</share-weight>
-	      <share-weight year="2100">0.00015</share-weight>
+	      <share-weight year="2100">0.075</share-weight>
         </tranSubsector>
         <tranSubsector name="Passenger Rail">
             <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2100">
               <interpolation-function name="linear"/>
             </interpolation-rule>
           <share-weight year="2020">0.002</share-weight>
-	      <share-weight year="2100">0.0025</share-weight>
-        </tranSubsector>
-        <tranSubsector name="Walk">
-                    <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2100">
-                        <interpolation-function name="linear"/>
-                    </interpolation-rule>
-          <share-weight year="2020">2.883</share-weight>
-	      <share-weight year="2100">3.0</share-weight>
-        </tranSubsector>
-        <tranSubsector name="Cycle">
-                    <interpolation-rule apply-to="share-weight" from-year="2020" to-year="2100">
-                        <interpolation-function name="linear"/>
-                    </interpolation-rule>
-          <share-weight year="2020">0.156</share-weight>
-	      <share-weight year="2100">0.35</share-weight>
+	      <share-weight year="2100">0.05</share-weight>
         </tranSubsector>
 	  </supplysector>
    <supplysector name="trn_pass_road">
@@ -79,7 +51,7 @@
                         <interpolation-function name="linear"/>
                     </interpolation-rule>
           <share-weight year="2020">.671</share-weight>
-	      <share-weight year="2100">0.9</share-weight>
+	      <share-weight year="2100">3.0</share-weight>
         </tranSubsector>
 	  </supplysector>
     </region>
