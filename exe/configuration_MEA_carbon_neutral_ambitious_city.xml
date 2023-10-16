@@ -6,7 +6,7 @@
 		<Value name="BatchFileName">batch_ag.xml</Value>
 		<Value name="policy-target-file">../input/policy/forcing_target_4p5.xml</Value>
 		<Value name="GHGInputFileName">../input/magicc/inputs/input_gases.emk</Value>
-		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/thailand_carbon_neutral_high</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/MEA_carbon_neutral_ambitious_city</Value>
 		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
 		<Value write-output="1" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
 		<Value write-output="1" append-scenario-name="0" name="climatFileName">gas.emk</Value>
@@ -127,44 +127,44 @@
 
 		<!-- BUILDINGS POLICIES -->
 		<Value name = "ac_eff">../input/addons/thailand/MEA_area/ac_eff_high.xml</Value>
-		<Value name = "ac_eff">../input/addons/thailand/Rest_of_Thailand/ac_eff_high.xml</Value>
+		<Value name = "ac_eff">../input/addons/thailand/Rest_of_Thailand/ac_eff_low.xml</Value>
 		<Value name = "lighting_led">../input/addons/thailand/MEA_area/buildings_led_high.xml</Value>
-		<Value name = "lighting_led">../input/addons/thailand/Rest_of_Thailand/buildings_led_high.xml</Value>
+		<Value name = "lighting_led">../input/addons/thailand/Rest_of_Thailand/buildings_led_low.xml</Value>
 		<Value name = "shell_eff">../input/addons/thailand/MEA_area/shell_eff_high.xml</Value>
-		<Value name = "shell_eff">../input/addons/thailand/Rest_of_Thailand/shell_eff_high.xml</Value>
+		<Value name = "shell_eff">../input/addons/thailand/Rest_of_Thailand/shell_eff_low.xml</Value>
 
 		<!-- POWER POLICIES -->
 		<Value name = "no_new_coal">../input/addons/thailand/National/no_new_coal.xml</Value>
-		<Value name = "coal_shutdown">../input/addons/thailand/National/coal_shutdown_high.xml</Value>
-		<!--Value name = "wind_solar shares">../input/addons/thailand/National/wind_solar_shares_high.xml</Value-->
-		<Value name = "RE shares">../input/addons/thailand/National/res_high.xml</Value>
+		<Value name = "coal_shutdown">../input/addons/thailand/National/coal_shutdown_low.xml</Value>
+		<!--Value name = "wind_solar shares">../input/addons/thailand/National/wind_solar_shares_low.xml</Value-->
+		<Value name = "RE shares">../input/addons/thailand/National/res_low.xml</Value>
 
 		<!-- TRANSPORTATION POLICIES -->
 		<Value name = "ev_cost_parity">../input/addons/thailand/MEA_area/ev_cost_parity_high.xml</Value>
-		<Value name = "ev_cost_parity">../input/addons/thailand/Rest_of_Thailand/ev_cost_parity_high.xml</Value>
+		<Value name = "ev_cost_parity">../input/addons/thailand/Rest_of_Thailand/ev_cost_parity_low.xml</Value>
 		<Value name = "liquids_phaseout">../input/addons/thailand/MEA_area/ldv_liquids_phaseout_high.xml</Value>
-		<Value name = "liquids_phaseout">../input/addons/thailand/Rest_of_Thailand/ldv_liquids_phaseout_high.xml</Value>
+		<Value name = "liquids_phaseout">../input/addons/thailand/Rest_of_Thailand/ldv_liquids_phaseout_low.xml</Value>
 
 		<!-- INDUSTRY POLICIES -->
 		<Value name = "industry_aeei">../input/addons/thailand/MEA_area/industry_aeei_high.xml</Value>
-		<Value name = "industry_aeei">../input/addons/thailand/Rest_of_Thailand/industry_aeei_high.xml</Value>
+		<Value name = "industry_aeei">../input/addons/thailand/Rest_of_Thailand/industry_aeei_low.xml</Value>
 		<Value name = "industry_h2">../input/addons/thailand/MEA_area/industry_h2_high.xml</Value>
-		<Value name = "industry_h2">../input/addons/thailand/Rest_of_Thailand/industry_h2_high.xml</Value>
+		<Value name = "industry_h2">../input/addons/thailand/Rest_of_Thailand/industry_h2_low.xml</Value>
 
 		<!-- CARBON NEUTRAL 2050 (without exogenous LUC) -->
-		<Value name = "co2_constraint">../input/addons/thailand/emissions_constraints/carbon_neutral_Thailand_2050_noLUC.xml</Value>
+		<Value name = "co2_constraint">../input/addons/thailand/emissions_constraints/carbon_neutral_MEA_2050_noLUC.xml</Value>
+		<Value name = "co2_constraint">../input/addons/thailand/emissions_constraints/carbon_neutral_ROT_2050_noLUC.xml</Value>
 		<Value name = "co2_constraint">../input/addons/thailand/emissions_constraints/carbon_neutral_row_2050.xml</Value>
 		<Value name = "LUC_link">../input/addons/thailand/emissions_constraints/Thailand_LUC_link.xml</Value>
 		<Value name = "LUC_link">../input/addons/thailand/emissions_constraints/ROW_LUC_link.xml</Value>
 
-		
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 
 	</ScenarioComponents>
 	<Strings>
-		<Value name="scenarioName">High_CarbonNeutral</Value>
+		<Value name="scenarioName">AmbitiousCity_CarbonNeutral_MEA</Value>
 		<Value name="debug-region">Rest of Thailand</Value>
-				<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
+		<Value name="MAGICC-input-dir">../input/magicc/inputs</Value>
 		<Value name="MAGICC-output-dir">../output</Value>
 		<Value name="AbatedGasForCostCurves">CO2</Value>
 	</Strings>

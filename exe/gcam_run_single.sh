@@ -23,7 +23,7 @@ module load gcc/10.2.0
 export RENV_PATHS_CACHE=/rcfs/projects/GCAM/renv
 alias pyenv_activate='source /rcfs/projects/GCAM/pyenv3.7.0/bin/activate'
 
-CONFIG='configuration_thailand_high.xml'
+CONFIG='configuration_malaysia_ambitious_city.xml'
 
 date
 time ./gcam.exe -C$CONFIG -Llog_conf.xml

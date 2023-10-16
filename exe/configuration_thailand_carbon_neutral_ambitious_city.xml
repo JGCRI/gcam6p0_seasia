@@ -151,9 +151,12 @@
 		<Value name = "industry_h2">../input/addons/thailand/MEA_area/industry_h2_high.xml</Value>
 		<Value name = "industry_h2">../input/addons/thailand/Rest_of_Thailand/industry_h2_low.xml</Value>
 
-		<!-- CARBON NEUTRAL 2050 (without LUC) -->
+		<!-- CARBON NEUTRAL 2050 (without exogenous LUC) -->
 		<Value name = "co2_constraint">../input/addons/thailand/emissions_constraints/carbon_neutral_Thailand_2050_noLUC.xml</Value>
 		<Value name = "co2_constraint">../input/addons/thailand/emissions_constraints/carbon_neutral_row_2050.xml</Value>
+		<Value name = "LUC_link">../input/addons/thailand/emissions_constraints/Thailand_LUC_link.xml</Value>
+		<Value name = "LUC_link">../input/addons/thailand/emissions_constraints/ROW_LUC_link.xml</Value>
+
 
 		<Value name = "solver">../input/solution/cal_broyden_config.xml</Value>
 

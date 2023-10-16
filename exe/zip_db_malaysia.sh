@@ -13,7 +13,7 @@
 #
 # ------------------------------------------------------------------------------
 
-DATABASES=('malaysia_carbon_neutral_LUC_high' 'malaysia_carbon_neutral_LUC_low' 'malaysia_carbon_neutral_LUC_ref' 'malaysia_carbon_neutral_LUC_ambitious_city' 'malaysia_carbon_neutral_high' 'malaysia_carbon_neutral_ambitious_city' 'malaysia_carbon_neutral_low' 'malaysia_carbon_neutral_ref' 'malaysia_high' 'malaysia_ambitious_city' 'malaysia_low' 'malaysia_ref')
+DATABASES=('KL_carbon_neutral_high' 'KL_carbon_neutral_low' 'KL_carbon_neutral_ref' 'KL_carbon_neutral_ambitious_city' 'malaysia_carbon_neutral_high' 'malaysia_carbon_neutral_ambitious_city' 'malaysia_carbon_neutral_low' 'malaysia_carbon_neutral_ref' 'malaysia_high' 'malaysia_ambitious_city' 'malaysia_low' 'malaysia_ref')
 
 echo "zipping database ${DATABASES[$SLURM_ARRAY_TASK_ID]}"
 
