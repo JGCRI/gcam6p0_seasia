@@ -125,6 +125,11 @@
 		<!--Value name = "geothermal ceiling">../input/addons/thailand/National/geothermal_ceiling.xml</Value-->
 		<Value name = "hydro fixed output">../input/addons/thailand/National/hydro_constraint.xml</Value>
 
+		<!-- TRANSPORTATION ADD-ONS -->
+		<Value name = "bus shareweights">../input/addons/thailand/bus_tech_shareweights.xml</Value>
+		<Value name = "no hybrid trucks">../input/addons/thailand/no_hybrid_trucks.xml</Value>
+
+
 		<!-- BUILDINGS POLICIES -->
 		<Value name = "ac_eff">../input/addons/thailand/MEA_area/ac_eff_high.xml</Value>
 		<Value name = "ac_eff">../input/addons/thailand/Rest_of_Thailand/ac_eff_high.xml</Value>
