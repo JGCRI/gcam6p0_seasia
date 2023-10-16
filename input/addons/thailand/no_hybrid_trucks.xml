@@ -1,0 +1,129 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<scenario>
+  <world>
+    <region name="Bangkok">
+      <supplysector name="trn_freight_road">
+        <tranSubsector name="Light truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+        <tranSubsector name="Medium truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+        <tranSubsector name="Heavy truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+      </supplysector>
+    </region>
+    <region name="Nonthaburi">
+      <supplysector name="trn_freight_road">
+        <tranSubsector name="Light truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+        <tranSubsector name="Medium truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+        <tranSubsector name="Heavy truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+      </supplysector>
+    </region>
+    <region name="SamutPrakan">
+      <supplysector name="trn_freight_road">
+        <tranSubsector name="Light truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+        <tranSubsector name="Medium truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+        <tranSubsector name="Heavy truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+      </supplysector>
+    </region>
+    <region name="Rest of Thailand">
+      <supplysector name="trn_freight_road">
+        <tranSubsector name="Light truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+        <tranSubsector name="Medium truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+        <tranSubsector name="Heavy truck">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+        </tranSubsector>
+      </supplysector>
+    </region>
+  </world>
+</scenario>

@@ -1,0 +1,32 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<scenario>
+  <world>
+    <region name="Thailand">
+      <ghgpolicy name="CO2">
+        <market>Rest of Country</market>
+        <constraint year="2025">77.35</constraint>
+        <constraint year="2030">64.68</constraint>
+        <constraint year="2035">52.01</constraint>
+        <constraint year="2040">25.34</constraint>
+        <constraint year="2045">12.67</constraint>
+        <constraint year="2050">0</constraint>
+      </ghgpolicy>
+    </region>
+    <region name="Rest of Thailand">
+      <ghgpolicy name="CO2">
+        <market>Rest of Country</market>
+      </ghgpolicy>
+    </region>
+    <region name="Nonthaburi">
+      <ghgpolicy name="CO2">
+        <market>Rest of Country</market>
+      </ghgpolicy>
+    </region>
+    <region name="SamutPrakan">
+      <ghgpolicy name="CO2">
+        <market>Rest of Country</market>
+      </ghgpolicy>
+    </region>
+
+  </world>
+</scenario>

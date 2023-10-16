@@ -1,0 +1,16 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<scenario>
+  <world>
+    <region name="Bangkok">
+      <ghgpolicy name="CO2">
+        <market>Bangkok</market>
+        <constraint year="2025">6.65</constraint>
+        <constraint year="2030">5.32</constraint>
+        <constraint year="2035">3.99</constraint>
+        <constraint year="2040">2.66</constraint>
+        <constraint year="2045">1.33</constraint>
+        <constraint year="2050">0</constraint>
+      </ghgpolicy>
+    </region>
+  </world>
+</scenario>

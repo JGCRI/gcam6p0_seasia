@@ -1,0 +1,117 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<scenario>
+  <world>
+    <region name="Bangkok">
+      <supplysector name="trn_pass_road">
+        <tranSubsector name="Bus">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+	  <stub-technology name="FCEV">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2300" to-value="1" delete="1">
+              <interpolation-function name="s-curve" />
+            </interpolation-rule>
+          </stub-technology>
+	  <stub-technology name="BEV">
+	    <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+	    <share-weight fillout="1" year="2075">1</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="s-curve" />
+            </interpolation-rule>
+	  </stub-technology>
+        </tranSubsector>
+      </supplysector>
+    </region>
+    <region name="Nonthaburi">
+      <supplysector name="trn_pass_road">
+        <tranSubsector name="Bus">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+	  <stub-technology name="FCEV">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2300" to-value="1" delete="1">
+              <interpolation-function name="s-curve" />
+            </interpolation-rule>
+          </stub-technology>
+	  <stub-technology name="BEV">
+	    <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+	    <share-weight fillout="1" year="2075">1</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="s-curve" />
+            </interpolation-rule>
+	  </stub-technology>
+        </tranSubsector>
+      </supplysector>
+    </region>
+    <region name="SamutPrakan">
+      <supplysector name="trn_pass_road">
+        <tranSubsector name="Bus">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+	  <stub-technology name="FCEV">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2300" to-value="1" delete="1">
+              <interpolation-function name="s-curve" />
+            </interpolation-rule>
+          </stub-technology>
+	  <stub-technology name="BEV">
+	    <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+	    <share-weight fillout="1" year="2075">1</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="s-curve" />
+            </interpolation-rule>
+	  </stub-technology>
+        </tranSubsector>
+      </supplysector>
+    </region>
+    <region name="Rest of Thailand">
+      <supplysector name="trn_pass_road">
+        <tranSubsector name="Bus">
+	  <stub-technology name="Hybrid Liquids">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="fixed" />
+            </interpolation-rule>
+          </stub-technology>
+	  <stub-technology name="FCEV">
+            <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2300" to-value="1" delete="1">
+              <interpolation-function name="s-curve" />
+            </interpolation-rule>
+          </stub-technology>
+	  <stub-technology name="BEV">
+	    <share-weight fillout="1" year="1975">0</share-weight>
+	    <share-weight fillout="1" year="2015">0</share-weight>
+	    <share-weight fillout="1" year="2075">1</share-weight>
+            <interpolation-rule apply-to="share-weight" from-year="2015" to-year="2100" delete="1">
+              <interpolation-function name="s-curve" />
+            </interpolation-rule>
+	  </stub-technology>
+        </tranSubsector>
+      </supplysector>
+    </region>
+   </world>
+</scenario>
